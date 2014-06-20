@@ -38,3 +38,19 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# https://github.com/haml/haml
+gem 'haml'
+
+# https://github.com/seyhunak/twitter-bootstrap-rails/tree/bootstrap3
+gem 'twitter-bootstrap-rails'
+
+
+# https://github.com/justinfrench/formtastic
+gem 'formtastic'
+
+gem 'select2-rails'
+
+group :development do
+  gem 'better_errors'
+end
+
