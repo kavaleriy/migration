@@ -1,0 +1,22 @@
+<div class="menu row">
+  <ul class="home-view nav nav-tabs col-lg-12">
+    <li class="active col-lg-6"><a href="<%= welcome_map_os_url %>"><i class="fa fa-home"></i> <%= t('welcome.menu.search') %></a></li>
+    <li class="col-lg-6"><a href="<%= welcome_map_ua_url %>"><i class="fa fa-map-marker"></i> <%= t('welcome.menu.search_map') %></a></li>
+  </ul>
+</div>
+
+
+
+
+<div class="row">
+
+  <form class="form-vertical" role="search">
+    <div class="form-group">
+      <%= label_tag 'name' %>
+      <%= select_tag(:area_id, options_from_collection_for_select(Area.all, :id, :name), class: 'form-control') %>
+    </div>
+  </form>
+
+
+
+</div>

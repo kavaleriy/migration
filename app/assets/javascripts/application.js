@@ -14,4 +14,18 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require openlayers-rails
+//= require jquery.flexslider-min
 //= require_tree .
+
+
+$(window).load(function() {
+    $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 166,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 10
+    });
+});

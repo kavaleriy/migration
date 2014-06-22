@@ -1,0 +1,44 @@
+<%= form_for @housing, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label t('housings.index.area'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :area_id, :as => :select,      :collection => Area.all, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label t('housings.index.type'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :type_id, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label t('housings.index.qttplaces'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :qty_places, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label t('housings.index.qttwork'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :qty_work, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label t('housings.index.school'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :has_school, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label t('housings.index.kgarten'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :has_kgarden, :class => 'form-control' %>
+    </div>
+  </div>
+
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            housings_path, :class => 'btn btn-default' %>
+ 
+<% end %>

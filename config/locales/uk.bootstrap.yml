@@ -1,0 +1,18 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+uk:
+  helpers:
+    actions: "Дії"
+    links:
+      back: "Назад"
+      cancel: "Відміна"
+      confirm: "Ви впевнені?"
+      destroy: "Видалити"
+      new: "Додати"
+      edit: "Редагувати"
+    titles:
+      edit: "Редагувати %{model}"
+      save: "Зберегти %{model}"
+      new: "Додати %{model}"
+      delete: "Видалити %{model}"

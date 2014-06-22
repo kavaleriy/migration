@@ -42,13 +42,18 @@ gem 'spring',        group: :development
 gem 'haml'
 
 # https://github.com/seyhunak/twitter-bootstrap-rails/tree/bootstrap3
-gem 'twitter-bootstrap-rails'
-
+gem 'twitter-bootstrap-rails', :git => 'git@github.com:seyhunak/twitter-bootstrap-rails.git',  :branch => 'bootstrap3'
 
 # https://github.com/justinfrench/formtastic
 gem 'formtastic'
 
 gem 'select2-rails'
+
+# https://github.com/tmikoss/openlayers-rails
+gem 'openlayers-rails'
+
+# https://github.com/constantm/Flexslider-2-Rails-Gem
+gem 'flexslider'
 
 group :development do
   gem 'better_errors'

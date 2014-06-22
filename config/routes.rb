@@ -1,9 +1,29 @@
 Rails.application.routes.draw do
+  resources :housings
+
+  get 'housing/index'
+
+  get 'housing/show'
+
+  get 'housing/new'
+
+  get 'housing/edit'
+
+  resources :types
+
+  get 'welcome/map_os'
+
+  get 'welcome/map_ua'
+
+  get 'welcome/index'
+
+  resources :areas
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

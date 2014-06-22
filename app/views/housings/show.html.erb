@@ -1,0 +1,29 @@
+<%- model_class = Housing -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= t('housings.index.area') %>:</strong></dt>
+  <dd><%= @housing.area.name %></dd>
+  <dt><strong><%= t('housings.index.type') %>:</strong></dt>
+  <dd><%= @housing.type.name %></dd>
+  <dt><strong><%= t('housings.index.qttplaces') %>:</strong></dt>
+  <dd><%= @housing.qty_places %></dd>
+  <dt><strong><%= t('housings.index.qttwork') %>:</strong></dt>
+  <dd><%= @housing.qty_work %></dd>
+  <dt><strong><%= t('housings.index.school') %>:</strong></dt>
+  <dd><%= @housing.has_school %></dd>
+  <dt><strong><%= t('housings.index.kgarten') %>:</strong></dt>
+  <dd><%= @housing.has_kgarden %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              housings_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_housing_path(@housing), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              housing_path(@housing),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
