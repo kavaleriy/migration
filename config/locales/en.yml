@@ -20,9 +20,3 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  layout:
-    header:
-      note: ""
-  areas:
-    show:
-      title: "aa"

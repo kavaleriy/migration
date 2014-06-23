@@ -1,3 +1,4 @@
 class Area < ActiveRecord::Base
-  has_many :housings, dependent: :destroy
+  has_many :regions
+  has_many :housings
 end

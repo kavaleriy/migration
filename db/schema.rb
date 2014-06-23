@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622175509) do
+ActiveRecord::Schema.define(version: 20140623093747) do
 
   create_table "areas", force: true do |t|
     t.string   "name"
     t.string   "geo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.string   "geo"
+    t.integer  "region_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,6 +35,21 @@ ActiveRecord::Schema.define(version: 20140622175509) do
     t.integer  "qty_work"
     t.integer  "has_school"
     t.integer  "has_kgarden"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "koatuus", force: true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "regions", force: true do |t|
+    t.string   "name"
+    t.string   "geo"
+    t.integer  "area_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

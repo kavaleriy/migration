@@ -1,0 +1,26 @@
+<%= form_for @region, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :geo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :geo, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :area_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :area_id, Area.all.collect {|p| [ p.name, p.id ] }, { prompt: true }, :class => 'form-control' %>
+    </div>
+  </div>
+
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            regions_path, :class => 'btn btn-default' %>
+ 
+<% end %>

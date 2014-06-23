@@ -46,8 +46,8 @@ uk:
     new:
       title: "Додати область"
     index:
-      area_name: "Область"
-      geo: "Довгота/широта"
+      name: "Область"
+      geo: "Довгота,широта"
   welcome:
     search:
       placeholder: "Введіть назву об'єкта"
@@ -74,3 +74,13 @@ uk:
       name: "Назва"
     show:
       title: "Вид житла"
+  cities:
+    edit:
+      title: "Місто"
+    form:
+      name: "Назва"
+    index:
+      title: "Міста"
+  regions:
+    index:
+      name: "Район"

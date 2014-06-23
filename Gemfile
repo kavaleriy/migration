@@ -56,6 +56,8 @@ gem 'openlayers-rails'
 gem 'flexslider'
 
 group :development do
+  gem 'pry-rails'
   gem 'better_errors'
 end
 
+gem 'remote_table'

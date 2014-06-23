@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :cities
+
+  resources :regions
+
   resources :housings
 
   get 'housing/index'
