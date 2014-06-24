@@ -4,7 +4,7 @@ class HousingsController < ApplicationController
   # GET /housings
   # GET /housings.json
   def index
-    @housings = Housing.all.where("qty_places > 0 and koatuu_code like '63%'")
+    @housings = Housing.all.where("qty_places > 0 and koatuu_code like '05%'")
   end
 
   # GET /housings/1
