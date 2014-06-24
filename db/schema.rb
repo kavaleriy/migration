@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624094442) do
+ActiveRecord::Schema.define(version: 20140624134158) do
 
   create_table "housings", force: true do |t|
     t.string   "koatuu_code"
     t.integer  "type_id"
     t.integer  "qty_places"
-    t.integer  "qty_work"
     t.integer  "has_school"
     t.integer  "has_kgarden"
     t.datetime "created_at"

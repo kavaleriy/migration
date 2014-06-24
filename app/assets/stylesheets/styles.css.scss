@@ -24,25 +24,7 @@ body {
     height: 62px;
     width: 262px;
 
-    margin-top: 12px;
-    padding: 0 0 0 40px;
-
-    .text, .number {
-      margin: 0;
-      padding: 0px;
-    }
-
-    .text {
-      margin-top: 10px;
-
-      font-size: 12pt;
-      line-height: 13px;
-    }
-
-    .number {
-      font-size: 21pt;
-      line-height: 40px;
-    }
+    margin: 12px 20px 0 0;
   }
   .note {
     color: #ffffff;
