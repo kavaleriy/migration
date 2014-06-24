@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'phones/index'
+
   resources :housings
 
   resources :types
