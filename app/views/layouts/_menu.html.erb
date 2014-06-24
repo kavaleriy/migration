@@ -8,12 +8,28 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<%= root_url %>"><%= t('layout.menu.search_house') %></a>
+      <a class="navbar-brand active" href="<%= root_url %>"><%= t('layout.menu.main') %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="search navbar-form navbar-left col-lg-5" role="search">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="active"><a href="#"><%= t('layout.menu.contact') %></a></li>
+        <li class=""><a href="<%= phones_index_path %>"><%= t('layout.menu.phones') %></a></li>
+        <li class=""><a href="#"><%= t('layout.menu.norm_doc') %></a></li>
+        <li class=""><a href="#"><%= t('layout.menu.news') %></a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.analitic') %><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Звітність для громадян</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="search navbar-form navbar-right col-lg-5" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="<%= t('welcome.search.placeholder') %>">
         <span class="form-group-btn">
@@ -21,31 +37,6 @@
         </span>
         </div>
       </form>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Блок аналітики<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Звітність для громадян</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <!--<li class="active"><a href="#"><%= t('layout.menu.search_house') %></a></li>-->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Довідкова інформація<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Інформація по урядовому контактному центру</a></li>
-            <li><a href="#">Телефонні довідники регіональних штабів</a></li>
-            <li><a href="#">Нормативні документи</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Посилання на інформаційні ресурси з необхідною інформацією</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Новини ресурсу</a></li>
-          </ul>
-        </li>
-      </ul>
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

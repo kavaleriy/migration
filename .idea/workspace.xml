@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a480a09d-0dc7-4213-a828-3ac93fbd2d33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/housings_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/housings_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/housings/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/housings/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/housing.rb" afterPath="$PROJECT_DIR$/app/models/housing.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/housings/index.html.erb" afterPath="$PROJECT_DIR$/app/views/housings/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/uk.yml" afterPath="$PROJECT_DIR$/config/locales/uk.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,86 +35,115 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/housings/_form.html.erb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/housings/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="1026">
-              <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/phones/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="144">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1332">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="234">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.6666667" vertical-offset="54" max-vertical-offset="738">
+              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding>
-                <element signature="n#t('welcome.menu.search')#0;n#!!top" expanded="true" />
-                <element signature="n#t('welcome.menu.search_map')#0;n#!!top" expanded="true" />
-                <marker date="1403592421712" expanded="true" signature="21:359" placeholder="..." />
-                <marker date="1403592421712" expanded="true" signature="69:352" placeholder="..." />
+                <element signature="n#t('.qtt')#0;n#!!top" expanded="true" />
+                <element signature="n#t('.school')#0;n#!!top" expanded="true" />
+                <element signature="n#t('.kgarten')#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="koatuu.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/koatuu.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/types/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1098">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state vertical-scroll-proportion="-8.666667" vertical-offset="18" max-vertical-offset="684">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/housings/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+            <state vertical-scroll-proportion="-10.666667" vertical-offset="108" max-vertical-offset="918">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="housings_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/housings/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="198">
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="housing.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/housing.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.0" vertical-offset="270" max-vertical-offset="1314">
+              <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+              <folding>
+                <element signature="e#150#771#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="housings_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/housings_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27324477" vertical-offset="0" max-vertical-offset="1530">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="housings.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/housings.js.coffee">
+      <file leaf-file-name="_menu.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="882">
+              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+              <folding>
+                <element signature="n#t('layout.menu.main')#0;n#!!top" expanded="true" />
+                <element signature="n#t('layout.menu.contact')#0;n#!!top" expanded="true" />
+                <element signature="n#t('layout.menu.phones')#0;n#!!top" expanded="true" />
+                <element signature="n#t('layout.menu.norm_doc')#0;n#!!top" expanded="true" />
+                <element signature="n#t('layout.menu.news')#0;n#!!top" expanded="true" />
+                <element signature="n#t('.analitic')#0;n#!!top" expanded="true" />
+                <element signature="n#t('welcome.search.placeholder')#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uk.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/uk.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1422">
+              <caret line="56" column="14" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -137,7 +173,6 @@
         <option value="$PROJECT_DIR$/app/models/type.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_top.html.erb" />
         <option value="$PROJECT_DIR$/app/views/welcome/map_os.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/ol.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
@@ -161,22 +196,23 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/lib/tasks/load_koatuu.rake" />
         <option value="$PROJECT_DIR$/db/migrate/20140622175509_create_housings.rb" />
-        <option value="$PROJECT_DIR$/app/models/housing.rb" />
         <option value="$PROJECT_DIR$/app/views/housings/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/koatuu.rb" />
-        <option value="$PROJECT_DIR$/config/locales/en.yml" />
-        <option value="$PROJECT_DIR$/config/locales/uk.yml" />
         <option value="$PROJECT_DIR$/app/helpers/housings_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/housings/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/housings.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/welcome/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/housings/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/housings_controller.rb" />
+        <option value="$PROJECT_DIR$/config/locales/en.yml" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
+        <option value="$PROJECT_DIR$/app/models/housing.rb" />
+        <option value="$PROJECT_DIR$/config/locales/uk.yml" />
+        <option value="$PROJECT_DIR$/app/views/housings/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/housings/index.html.erb" />
       </list>
     </option>
   </component>
@@ -617,7 +653,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="org.jetbrains.plugins.ruby.i18n.inspection.quickfixes.I18nCreatePropertyDialog" value="en.yml" />
+    <property name="org.jetbrains.plugins.ruby.i18n.inspection.quickfixes.I18nCreatePropertyDialog" value="uk.yml" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
     <property name="LayoutCode.rearrangeEntriesRHTML" value="false" />
   </component>
@@ -928,13 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.555555" vertical-offset="75" max-vertical-offset="1044">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
@@ -963,13 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/types/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3333335" vertical-offset="54" max-vertical-offset="684">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/types/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
@@ -981,13 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/housings/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="198">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1070,22 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6407767" vertical-offset="0" max-vertical-offset="618">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/uk.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="678" max-vertical-offset="1314">
-          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="882">
@@ -1106,14 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="288">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/housings/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="702">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1150,14 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/housing.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08737864" vertical-offset="0" max-vertical-offset="618">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="234">
@@ -1165,8 +1148,8 @@
           <folding>
             <element signature="n#t('welcome.menu.search')#0;n#!!top" expanded="true" />
             <element signature="n#t('welcome.menu.search_map')#0;n#!!top" expanded="true" />
-            <marker date="1403592421712" expanded="true" signature="21:359" placeholder="..." />
-            <marker date="1403592421712" expanded="true" signature="69:352" placeholder="..." />
+            <marker date="1403592421712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1403592421712" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1175,14 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29126215" vertical-offset="0" max-vertical-offset="618">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7368421" vertical-offset="0" max-vertical-offset="2088">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1203,19 +1178,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/housings/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/housings_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="1026">
-          <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/housings_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27324477" vertical-offset="0" max-vertical-offset="1530">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="882">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding>
+            <element signature="n#t('layout.menu.main')#0;n#!!top" expanded="true" />
+            <element signature="n#t('layout.menu.contact')#0;n#!!top" expanded="true" />
+            <element signature="n#t('layout.menu.phones')#0;n#!!top" expanded="true" />
+            <element signature="n#t('layout.menu.norm_doc')#0;n#!!top" expanded="true" />
+            <element signature="n#t('layout.menu.news')#0;n#!!top" expanded="true" />
+            <element signature="n#t('.analitic')#0;n#!!top" expanded="true" />
+            <element signature="n#t('welcome.search.placeholder')#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.0" vertical-offset="270" max-vertical-offset="1314">
+          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+          <folding>
+            <element signature="e#150#771#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/housing.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/housings/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="198">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/types/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667" vertical-offset="18" max-vertical-offset="684">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/housings/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667" vertical-offset="108" max-vertical-offset="918">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/uk.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1422">
+          <caret line="56" column="14" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/housings/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667" vertical-offset="54" max-vertical-offset="738">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="n#t('.qtt')#0;n#!!top" expanded="true" />
+            <element signature="n#t('.school')#0;n#!!top" expanded="true" />
+            <element signature="n#t('.kgarten')#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

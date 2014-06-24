@@ -8,7 +8,8 @@
       <th><%= t('.koatuu') %></th>
       <th><%= t('.type') %></th>
       <th><%= t('.qtt') %></th>
-      <th><%= t('.school') %>/<%= t('.kgarten') %></th>
+      <th><%= t('.school') %></th>
+      <th><%= t('.kgarten') %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -17,8 +18,9 @@
       <tr>
         <td><%= koatuu_title(housing.koatuu_code) %> </td>
         <td><%= housing.type.name %></td>
-        <td><%= housing.qty_places %> / <%= housing.qty_work %></td>
-        <td><%= housing.has_school %> / <%= housing.has_kgarden %></td>
+        <td><%= housing.qty_places %></td>
+        <td><%= "так" if housing.has_school == 1  %></td>
+        <td><%= "так" if housing.has_kgarden == 1 %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_housing_path(housing), :class => 'btn btn-default btn-xs' %>

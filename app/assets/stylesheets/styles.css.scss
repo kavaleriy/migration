@@ -3,7 +3,7 @@ body {
 
   background: asset_url("bg.jpg") no-repeat;
   background-attachment: fixed;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 .header {
@@ -62,7 +62,7 @@ body {
 }
 
 .menu {
-  background: rgba(225, 225, 255, .6);
+  background: rgba(225, 225, 255, .75);
 
   padding: 0px 0px 0 10px;
 
@@ -80,7 +80,7 @@ body {
 }
 
 .main {
-  background: rgba(255, 255, 255, .65);
+  background: rgba(255, 255, 255, .85);
   .content {
     height: 100%;
 

@@ -2,7 +2,7 @@
   <div class="form-group">
     <%= f.label t('housings.index.koatuu'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :koatuu_code, grouped_options_for_select(Koatuu.get_tree('63'), f.object.koatuu_code), { prompt: false },  :class => 'form-control' %>
+      <%= f.select :koatuu_code, grouped_options_for_select(Koatuu.get_tree('05'), f.object.koatuu_code), { prompt: false },  :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
@@ -18,21 +18,15 @@
     </div>
   </div>
   <div class="form-group">
-    <%= f.label t('housings.index.qttwork'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :qty_work, :class => 'form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
     <%= f.label t('housings.index.school'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :has_school, :class => 'form-control' %>
+      <%= f.check_box :has_school, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
     <%= f.label t('housings.index.kgarten'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :has_kgarden, :class => 'form-control' %>
+      <%= f.check_box :has_kgarden, :class => 'form-control' %>
     </div>
   </div>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140623220315) do
+ActiveRecord::Schema.define(version: 20140624094442) do
 
   create_table "housings", force: true do |t|
     t.string   "koatuu_code"
