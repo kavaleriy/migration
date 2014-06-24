@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a480a09d-0dc7-4213-a828-3ac93fbd2d33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/housings/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/housings/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/housing.rb" afterPath="$PROJECT_DIR$/app/models/housing.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/housings/index.html.erb" afterPath="$PROJECT_DIR$/app/views/housings/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/uk.yml" afterPath="$PROJECT_DIR$/config/locales/uk.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/housings/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6666667" vertical-offset="54" max-vertical-offset="738">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
                 <element signature="n#t('.qtt')#0;n#!!top" expanded="true" />
                 <element signature="n#t('.school')#0;n#!!top" expanded="true" />
@@ -52,8 +45,8 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/types/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.666667" vertical-offset="18" max-vertical-offset="684">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="684">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -97,16 +90,6 @@
               <folding>
                 <element signature="e#150#771#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="housings_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/housings_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1141,19 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="234">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="n#t('welcome.menu.search')#0;n#!!top" expanded="true" />
-            <element signature="n#t('welcome.menu.search_map')#0;n#!!top" expanded="true" />
-            <marker date="1403592421712" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1403592421712" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29126215" vertical-offset="0" max-vertical-offset="618">
@@ -1236,10 +1206,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/types/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/locales/uk.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667" vertical-offset="18" max-vertical-offset="684">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1422">
+          <caret line="56" column="14" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1252,10 +1222,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/uk.yml">
+    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1422">
-          <caret line="56" column="14" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.072" vertical-offset="0" max-vertical-offset="500">
+          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="94" />
+          <folding>
+            <element signature="n#t('welcome.menu.search')#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/types/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="684">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1263,7 +1243,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/housings/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6666667" vertical-offset="54" max-vertical-offset="738">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <element signature="n#t('.qtt')#0;n#!!top" expanded="true" />
             <element signature="n#t('.school')#0;n#!!top" expanded="true" />
