@@ -1,10 +1,12 @@
 class HousingsController < ApplicationController
+  before_filter :authenticate_user!
+  before_action :set_area
   before_action :set_housing, only: [:show, :edit, :update, :destroy]
 
   # GET /housings
   # GET /housings.json
   def index
-    @housings = Housing.all.where("qty_places > 0 and koatuu_code like '05%'")
+    @housings = Housing.all.where("qty_places > 0 and koatuu_code like '#{@area}%'")
   end
 
   # GET /housings/1
@@ -68,6 +70,10 @@ class HousingsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_area
+      @area = current_user.area
+    end
+
     def set_housing
       @housing = Housing.find(params[:id])
     end

@@ -32,10 +32,11 @@ class Koatuu < ActiveRecord::Base
 
   def self.get_tree(code)
     tree = []
-    areas(code).each do |area|
-      l1 = area.code.slice(0,2)
+
+    areas(code).each { |area|
+      l1 = area.code.slice(0, 2)
       # acity = cities("#{l1}10100000").first
-      tree_regions =  []
+      tree_regions = []
       # (tree_regions  << [ '-', [[ acity.name, acity.code ]] ]) if acity
       regions(l1).each do |region|
         # l2 = region.code.slice(0,5)
@@ -43,11 +44,11 @@ class Koatuu < ActiveRecord::Base
         # cities(l2).each do |city|
         #   tree_cities << [ city.name, city.code  ]
         # end
-        tree_regions << [ region.name, region.code ]
+        tree_regions << [region.name, region.code]
       end
 
-      tree << [ area.name, tree_regions]
-    end
+      tree << [area.name, tree_regions]
+    } if !code.nil?
 
     tree
   end

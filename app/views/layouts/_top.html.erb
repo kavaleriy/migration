@@ -7,3 +7,12 @@
 </div>
 <div class="clearfix"></div>
 <p class="note col-lg-9"><%= t('layout.header.note') %></p>
+
+<% if user_signed_in? %>
+    <ul class="hmenu pull-right">
+        <li>
+          <i class="fa fa-user-md"></i>
+          <%= link_to( t('.Logout'), destroy_user_session_path, :method => :delete, :class => 'btn') %>
+        </li>
+    </ul>
+<% end %>

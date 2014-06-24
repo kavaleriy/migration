@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :housings
+  devise_for :users
+
   get 'phones/index'
 
   resources :housings
@@ -15,7 +18,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root to: 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

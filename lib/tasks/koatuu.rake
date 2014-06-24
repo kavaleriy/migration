@@ -3,7 +3,7 @@
 namespace :koatuu do
 
   desc "Load KOATUU from file"
-  task :load => :environment do
+  task :seed => :environment do
 
     require 'roo'
 

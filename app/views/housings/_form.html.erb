@@ -2,7 +2,7 @@
   <div class="form-group">
     <%= f.label t('housings.index.koatuu'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :koatuu_code, grouped_options_for_select(Koatuu.get_tree('05'), f.object.koatuu_code), { prompt: false },  :class => 'form-control' %>
+      <%= f.select :koatuu_code, grouped_options_for_select(Koatuu.get_tree(@area), @housing.koatuu_code), { prompt: false },  :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
