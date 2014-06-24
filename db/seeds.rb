@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Type.delete_all
+
+[
+  'Квартири',
+  'Кімнати в квартирі',
+  'Гуртожиток',
+  'Готелі',
+  'Будинки садибні',
+  'Будинки літні',
+  'Бази відпочинку',
+  'Санаторії',
+  'Табори'
+].each do |name|
+  Type.create(:name => name)
+end
