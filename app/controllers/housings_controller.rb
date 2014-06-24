@@ -4,7 +4,7 @@ class HousingsController < ApplicationController
   # GET /housings
   # GET /housings.json
   def index
-    @housings = Housing.all
+    @housings = Housing.all.where("qty_places > 0")
   end
 
   # GET /housings/1
@@ -24,11 +24,16 @@ class HousingsController < ApplicationController
   # POST /housings
   # POST /housings.json
   def create
-    @housing = Housing.new(housing_params)
+    @housing = Housing.where(:koatuu_code => housing_params[:koatuu_code], :type_id => housing_params[:type_id]).first
+    if @housing
+      @housing.update(housing_params)
+    else
+      @housing = Housing.new(housing_params)
+    end
 
     respond_to do |format|
       if @housing.save
-        format.html { redirect_to @housing, notice: 'Housing was successfully created.' }
+        format.html { redirect_to housings_url , notice: 'Housing was successfully created.' }
         format.json { render :show, status: :created, location: @housing }
       else
         format.html { render :new }
@@ -42,7 +47,7 @@ class HousingsController < ApplicationController
   def update
     respond_to do |format|
       if @housing.update(housing_params)
-        format.html { redirect_to @housing, notice: 'Housing was successfully updated.' }
+        format.html { redirect_to housings_url, notice: 'Housing was successfully updated.' }
         format.json { render :show, status: :ok, location: @housing }
       else
         format.html { render :edit }
@@ -69,6 +74,6 @@ class HousingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def housing_params
-      params.require(:housing).permit(:area_id, :type_id, :qty_places, :qty_work, :has_school, :has_kgarden)
+      params.require(:housing).permit(:koatuu_code, :type_id, :qty_places, :qty_work, :has_school, :has_kgarden)
     end
 end

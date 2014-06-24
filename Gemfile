@@ -47,6 +47,7 @@ gem 'twitter-bootstrap-rails', :git => 'git@github.com:seyhunak/twitter-bootstra
 # https://github.com/justinfrench/formtastic
 gem 'formtastic'
 
+
 gem 'select2-rails'
 
 # https://github.com/tmikoss/openlayers-rails
@@ -60,4 +61,5 @@ group :development do
   gem 'better_errors'
 end
 
-gem 'remote_table'
+# https://github.com/Empact/roo
+gem 'roo'

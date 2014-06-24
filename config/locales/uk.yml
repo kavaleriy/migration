@@ -39,15 +39,6 @@ uk:
     menu:
       main: "Головна"
       search_house: "Пошук житла"
-  areas:
-    title: "Довідник областей"
-    show:
-      title: "Область"
-    new:
-      title: "Додати область"
-    index:
-      name: "Область"
-      geo: "Довгота,широта"
   welcome:
     search:
       placeholder: "Введіть назву об'єкта"
@@ -57,8 +48,8 @@ uk:
   housings:
     index:
       title: "Місця для проживання"
+      koatuu: "Місце розташування"
       type: "Вид житла"
-      area: "Місце розташування"
       qtt: "Кількість"
       qttplaces: "Кількість місць для проживання"
       qttwork: "Кількість робочих місць"
@@ -74,13 +65,3 @@ uk:
       name: "Назва"
     show:
       title: "Вид житла"
-  cities:
-    edit:
-      title: "Місто"
-    form:
-      name: "Назва"
-    index:
-      title: "Міста"
-  regions:
-    index:
-      name: "Район"

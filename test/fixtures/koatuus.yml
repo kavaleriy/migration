@@ -3,7 +3,13 @@
 one:
   code: MyString
   name: MyString
+  note: MyString
+  b3: MyString
+  b6: MyString
 
 two:
   code: MyString
   name: MyString
+  note: MyString
+  b3: MyString
+  b6: MyString

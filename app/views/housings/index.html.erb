@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= t('.area') %></th>
+      <th><%= t('.koatuu') %></th>
       <th><%= t('.type') %></th>
       <th><%= t('.qtt') %></th>
       <th><%= t('.school') %>/<%= t('.kgarten') %></th>
@@ -15,18 +15,13 @@
   <tbody>
     <% @housings.each do |housing| %>
       <tr>
-        <td><%= housing.area.name %></td>
+        <td><%= koatuu_title(housing.koatuu_code) %> </td>
         <td><%= housing.type.name %></td>
         <td><%= housing.qty_places %> / <%= housing.qty_work %></td>
         <td><%= housing.has_school %> / <%= housing.has_kgarden %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_housing_path(housing), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      housing_path(housing),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
         </td>
       </tr>
     <% end %>

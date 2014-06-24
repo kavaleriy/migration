@@ -5,7 +5,7 @@
 
 <dl class="dl-horizontal">
   <dt><strong><%= t('housings.index.area') %>:</strong></dt>
-  <dd><%= @housing.area.name %></dd>
+  <dd><%= koatuu_title(@housing.koatuu_code) %></dd>
   <dt><strong><%= t('housings.index.type') %>:</strong></dt>
   <dd><%= @housing.type.name %></dd>
   <dt><strong><%= t('housings.index.qttplaces') %>:</strong></dt>

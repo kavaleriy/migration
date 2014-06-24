@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require openlayers-rails
 //= require jquery.flexslider-min
+//= require select2
+//= require select2_locale_"uk"
 //= require_tree .
 
 

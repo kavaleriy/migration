@@ -1,8 +1,6 @@
 class Housing < ActiveRecord::Base
-  belongs_to :area
   belongs_to :type
 
-  default_scope -> { order('created_at DESC') }
-  validates :area_id, presence: true
+  default_scope -> { order('koatuu_code DESC') }
   validates :type_id, presence: true
 end

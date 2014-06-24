@@ -5,20 +5,23 @@ namespace :koatuu do
   desc "Load KOATUU from file"
   task :load => :environment do
 
-    require 'remote_table'
+    require 'roo'
 
-    koatuu = [
-      { code: "100000000", name: "АВТОНОМНА РЕСПУБЛІКА КРИМ/М.СІМФЕРОПОЛЬ"},
-      { code: "110000000", name: "МІСТА АВТОНОМНОЇ РЕСПУБЛІКИ КРИМ"}
-    ]
+    xls = Roo::Excelx.new("config/koatuu_01042014.xlsx")
+    xls.default_sheet = xls.sheets.first
 
-    koatuu.each do |item|
-      code = item[:code]
-      name = item[:name]
+    Koatuu.destroy_all
 
-      binding.pry
-      # Customer.collection.update( {'name' => name},
-      #                             {'$set' => {'name' => new_name, 'token' => new_token }})
+    2.upto(xls.last_row) do |line|
+      code = xls.cell(line,'A').to_s.gsub('.0', '').rjust(10, '0')
+      note = xls.cell(line,'B')
+      name = xls.cell(line,'C')
+
+      b3 = code[2]
+      b6 = code[5]
+
+      rec = Koatuu.create({ code: code, name: name, note: note, b3: b3, b6: b6 })
+      rec.save
     end
   end
 

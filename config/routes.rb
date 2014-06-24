@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
-  resources :cities
-
-  resources :regions
-
   resources :housings
-
-  get 'housing/index'
-
-  get 'housing/show'
-
-  get 'housing/new'
-
-  get 'housing/edit'
 
   resources :types
 
@@ -20,8 +8,6 @@ Rails.application.routes.draw do
   get 'welcome/map_ua'
 
   get 'welcome/index'
-
-  resources :areas
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

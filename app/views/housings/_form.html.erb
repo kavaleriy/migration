@@ -1,14 +1,14 @@
 <%= form_for @housing, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="form-group">
-    <%= f.label t('housings.index.area'), :class => 'control-label' %>
+    <%= f.label t('housings.index.koatuu'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :area_id, Area.all.collect {|p| [ p.name, p.id ] }, { prompt: true }, :class => 'form-control' %>
+      <%= f.select :koatuu_code, grouped_options_for_select(Koatuu.get_tree('05'), f.object.koatuu_code), { prompt: false },  :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
     <%= f.label t('housings.index.type'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :type_id, Type.all.collect {|p| [ p.name, p.id ] }, { prompt: true }, :class => 'form-control' %>
+      <%= f.select :type_id, Type.all.collect {|p| [ p.name, p.id ] }, { prompt: false }, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
@@ -42,3 +42,10 @@
             housings_path, :class => 'btn btn-default' %>
  
 <% end %>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#housing_koatuu_code").select2( {dropdownCssClass: "bigdrop"} );
+        $("#housing_type_id").select2();
+    });
+</script>
