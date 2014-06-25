@@ -1,7 +1,11 @@
 <%- model_class = Housing -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="page-header pull-left">
+  <h1 ><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+<div class="page-header pull-right">
+  <%= link_to t('.new', :default => t("helpers.links.new")), new_housing_path, :class => 'btn btn-primary' %>
+</div>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -31,6 +35,10 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_housing_path,
-            :class => 'btn btn-primary' %>
+<div class="flickr_pagination ">
+  <div class="page_info">
+    <%= page_entries_info @housings %>
+  </div>
+  <%= will_paginate @housings, :container => false %>
+</div>
+

@@ -18,6 +18,8 @@ class HomeController < ApplicationController
     @housings = (@housings || Housing).where(:has_kgarden => 1) unless has_kgarden.nil?
     # @housings = @housings.where(:has_work => 1) unless work.nil?
 
+    @housings = @housings.paginate(:page => params[:page]) if @housings
+
     respond_to do |format|
       format.js
     end

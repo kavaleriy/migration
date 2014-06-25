@@ -6,7 +6,7 @@ class HousingsController < ApplicationController
   # GET /housings
   # GET /housings.json
   def index
-    @housings = Housing.all.where("qty_places > 0 and koatuu_code like '#{@area}%'")
+    @housings = Housing.all.where("qty_places > 0 and koatuu_code like '#{@area}%'").paginate(:page => params[:page])
   end
 
   # GET /housings/1
