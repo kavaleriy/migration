@@ -18,7 +18,7 @@ class HousingsControllerTest < ActionController::TestCase
 
   test "should create housing" do
     assert_difference('Housing.count') do
-      post :create, housing: { area_id: @housing.area_id, has_kgarden: @housing.has_kgarden, has_school: @housing.has_school, qty_places: @housing.qty_places, qty_work: @housing.qty_work, type_id: @housing.type_id }
+      post :create, housing: { area_id: @housing.area_id, has_kgarden: @housing.has_kgarden, has_school: @housing.has_school, qty_places: @housing.qty_places, qty_work: @housing.qty_work, house_id: @housing.house_id }
     end
 
     assert_redirected_to housing_path(assigns(:housing))
@@ -35,7 +35,7 @@ class HousingsControllerTest < ActionController::TestCase
   end
 
   test "should update housing" do
-    patch :update, id: @housing, housing: { area_id: @housing.area_id, has_kgarden: @housing.has_kgarden, has_school: @housing.has_school, qty_places: @housing.qty_places, qty_work: @housing.qty_work, type_id: @housing.type_id }
+    patch :update, id: @housing, housing: { area_id: @housing.area_id, has_kgarden: @housing.has_kgarden, has_school: @housing.has_school, qty_places: @housing.qty_places, qty_work: @housing.qty_work, house_id: @housing.house_id }
     assert_redirected_to housing_path(assigns(:housing))
   end
 

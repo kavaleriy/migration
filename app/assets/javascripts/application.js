@@ -19,3 +19,9 @@
 //= require select2
 //= require select2_locale_"uk"
 //= require_tree .
+
+
+$(document).ready(function() {
+    $("#bootstrap_alert").delay(3000).fadeOut(500);
+})
+

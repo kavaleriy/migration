@@ -1,1 +1,9 @@
-$("#results").html("<%= escape_javascript(render partial: 'results', locals: { items: nil } ) %>");
+$("#results").hide()
+<% if @housings && @housings.count > 0 %>
+    $("#results").html("<%= escape_javascript(render partial: 'results') %>");
+<% else %>
+    $("#results").html("<%= escape_javascript(render partial: 'no_results') %>");
+<% end %>
+
+$("#results").fadeIn(100);
+

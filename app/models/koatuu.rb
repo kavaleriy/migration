@@ -73,6 +73,12 @@ class Koatuu < ActiveRecord::Base
     tree
   end
 
+  def self.extract_name name
+    index = name.index('/')
+    name = name.slice(0, index) if index
+    name.mb_chars.gsub(/ ОБЛАСТЬ$/, '').gsub(/ РАЙОН$/, '').capitalize
+  end
+
   # def self.get_area_tree(code, filter)
   #   tree = []
   #

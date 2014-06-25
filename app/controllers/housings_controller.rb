@@ -26,7 +26,7 @@ class HousingsController < ApplicationController
   # POST /housings
   # POST /housings.json
   def create
-    @housing = Housing.where(:koatuu_code => housing_params[:koatuu_code], :type_id => housing_params[:type_id]).first
+    @housing = Housing.where(:koatuu_code => housing_params[:koatuu_code], :house_id => housing_params[:house_id]).first
     if @housing
       @housing.update(housing_params)
     else
@@ -80,6 +80,6 @@ class HousingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def housing_params
-      params.require(:housing).permit(:koatuu_code, :type_id, :qty_places, :qty_work, :has_school, :has_kgarden)
+      params.require(:housing).permit(:koatuu_code, :house_id, :qty_places, :qty_work, :has_school, :has_kgarden)
     end
 end

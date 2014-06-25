@@ -1,15 +1,13 @@
 class Housing < ActiveRecord::Base
-  belongs_to :type
+  belongs_to :house
 
-  default_scope -> { order('koatuu_code DESC') }
+  default_scope -> { order('updated_at DESC') }
 
   validates :koatuu_code, presence: true
-  validates :type_id, presence: true
+  validates :house_id, presence: true
+  validates :qty_places, presence: true
 
 
-  def self.typename(type)
-    type.name if type
-  end
   def self.has_school?(val)
     val == 1
   end

@@ -28,15 +28,15 @@ namespace :koatuu do
         level = 3
       end
 
-      rec = Koatuu.create({ code: code, name: name, note: note, level: level })
-      rec.save
+      Koatuu.create({ code: code, name: name, note: note, level: level }).save
     end
   end
 
   def self.extract_name name
     index = name.index('/')
-    name.slice(0, index) if index
-    name.mb_chars.gsub(/ ОБЛАСТЬ$/, '').gsub(/ РАЙОН$/, '').capitalize
+    name = name.slice(0, index) if index
+    name.mb_chars.capitalize
+    # name.mb_chars.gsub(/ ОБЛАСТЬ$/, '').gsub(/ РАЙОН$/, '').capitalize
   end
 
 end

@@ -59,7 +59,7 @@ body {
 }
 
 .main {
-  background: rgba(255, 255, 255, .85);
+  background: rgba(255, 255, 255, .75);
 
   .content {
     height: 100%;
@@ -86,11 +86,6 @@ body {
       margin-top: 15px;
     }
 
-    .alert {
-      background: rgba(20, 155, 50, .6);
-      margin-top: 10px;
-    }
-
   }
 
   .sidebar {
@@ -112,5 +107,30 @@ footer {
 
 
 .page-header {
-  margin-top: 15px ;
+  margin-top: 10px ;
+}
+.select2-container .select2-choice .select2-arrow {
+  background: rgba(25, 25, 200, 0.2);
+  b {
+  }
+}
+
+.fa-check, .fa-check-square-o {
+  color: green;
+}
+
+label {
+  font-weight: normal;
+}
+
+.btn-group div {
+  padding: 10px 10px 0 10px;
+}
+
+.panel-default > .panel-heading {
+  color: #157AB2;
+}
+
+table tr {
+  height: 60px;
 }

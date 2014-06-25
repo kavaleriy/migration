@@ -17,7 +17,7 @@
   'Санаторії',
   'Табори'
 ].each do |name|
-  Type.create(:name => name) if Type.where( :name => name ).empty?
+  House.create(:name => name) if House.where( :name => name ).empty?
 end
 
 

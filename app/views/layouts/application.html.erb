@@ -49,9 +49,10 @@
       <div class="main row">
         <%= render :partial => 'layouts/menu' %>
 
-
-        <div class="content col-lg-9">
-          <%= bootstrap_flash %>
+        <div class="col-lg-9">
+          <div id="bootstrap_alert">
+            <%= bootstrap_flash %>
+          </div>
           <%= yield %>
         </div>
 
@@ -59,8 +60,6 @@
           <%= render :partial => 'layouts/news' %>
         </div>
       </div>
-
-
 
       <div class="row">
         <%= render :partial => 'layouts/links' %>
@@ -71,21 +70,6 @@
       </footer>
 
     </div> <!-- /container -->
-
-
-    <script type="text/javascript">
-        $(window).load(function() {
-            $('.flexslider').flexslider({
-                animation: "slide",
-                animationLoop: false,
-                itemWidth: 166,
-                itemMargin: 5,
-                minItems: 2,
-                maxItems: 10
-            });
-        });
-    </script>
-
 
   </body>
 </html>

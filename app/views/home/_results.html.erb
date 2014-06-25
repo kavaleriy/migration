@@ -1,9 +1,9 @@
-<table class="table table-striped">
+<table class="table table-striped table-hover">
 <thead>
 <tr>
   <th><%= t('.area') %></th>
   <th><%= t('.region') %></th>
-  <th><%= t('.type') %></th>
+  <th><%= t('.house') %></th>
   <th><%= t('.school') %></th>
   <th><%= t('.kgarten') %></th>
 </tr>
@@ -14,7 +14,7 @@
     <tr>
       <td><%= coatuu[:area] %> </td>
       <td><%= coatuu[:region] %> </td>
-      <td><%= Housing.typename(housing.type) %></td>
+      <td><%= housing.house.name %></td>
       <td><i class="<%= school_class(housing.has_school) %>"></i></td>
       <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
     </tr>

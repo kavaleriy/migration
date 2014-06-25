@@ -2,7 +2,7 @@
 
 one:
   koatuu_code: MyString
-  type_id: 1
+  house_id: 1
   qty_places: 1
   qty_work: 1
   has_school: 1
@@ -10,7 +10,7 @@ one:
 
 two:
   koatuu_code: MyString
-  type_id: 1
+  thouse_id: 1
   qty_places: 1
   qty_work: 1
   has_school: 1

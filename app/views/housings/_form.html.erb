@@ -6,9 +6,9 @@
     </div>
   </div>
   <div class="form-group">
-    <%= f.label t('housings.index.type'), :class => 'control-label' %>
+    <%= f.label t('housings.index.house'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :type_id, Type.all.collect {|p| [ p.name, p.id ] }, { prompt: false }, :class => 'form-control' %>
+      <%= f.select :house_id, House.all.collect {|p| [ p.name, p.id ] }, { prompt: false }, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
@@ -40,6 +40,6 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("#housing_koatuu_code").select2();
-        $("#housing_type_id").select2();
+        $("#housing_house_id").select2();
     });
 </script>

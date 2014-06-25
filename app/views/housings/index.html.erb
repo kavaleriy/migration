@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th><%= t('.koatuu') %></th>
-      <th><%= t('.type') %></th>
+      <th><%= t('.house') %></th>
       <th><%= t('.qtt') %></th>
       <th><%= t('.school') %></th>
       <th><%= t('.kgarten') %></th>
@@ -18,7 +18,7 @@
       <% koatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
       <tr>
         <td><%= koatuu[:region] %> </td>
-        <td><%= Housing.typename(housing.type) %></td>
+        <td><%= housing.house.name %></td>
         <td><%= housing.qty_places %></td>
         <td><i class="<%= school_class(housing.has_school) %>"></i></td>
         <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>

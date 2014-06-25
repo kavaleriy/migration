@@ -1,49 +1,51 @@
-<div class="menu row">
-  <ul class="home-view nav nav-tabs col-sm-12">
-    <li class="active col-sm-6"><a href="#"><i class="fa fa-home"></i> <%= t('home.menu.search') %></a></li>
-    <li class="col-sm-6"><a href="<%=  %>"><i class="fa fa-map-marker"></i> <%= t('home.menu.search_map') %></a></li>
-  </ul>
-</div>
+<!--<div class="menu row">-->
+  <!--<ul class="home-view nav nav-tabs col-sm-12">-->
+    <!--<li class="active col-sm-6"><a href="#"><i class="fa fa-home"></i> <%= t('home.menu.search') %></a></li>-->
+    <!--<li class="col-sm-6"><a href="<%=  %>"><i class="fa fa-map-marker"></i> <%= t('home.menu.search_map') %></a></li>-->
+  <!--</ul>-->
+<!--</div>-->
 
 <div class="search">
-  <%= form_tag(home_search_path, method: "get", remote: true, class: 'form-horizontal' ) do %>
-    <div class="row">
-        <div class"col-sm-11">
-            <div class="col-sm-5">
-              <%= text_field_tag 'home_search_area', nil, { 'data-placeholder' => t('home.search.area_placeholder'), :class => 'form-control input-lg' } %>
-            </div>
-            <div class="col-sm-5">
-              <%= text_field_tag 'home_search_region', nil, { 'data-placeholder' => t('home.search.region_placeholder'), :class => 'form-control input-lg' } %>
-            </div>
 
-            <div class="col-sm-3">
-              <div class="checkbox pull-right">
-                <label><input type="checkbox"><%= t('home.search.school') %></label>
-              </div>
+  <div class="panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><i class="fa fa-home"></i> <%= t('home.menu.search').upcase %></div>
+    <div class="panel-body">
+      <%= form_tag(home_search_path, method: "get", remote: true, class: '' ) do %>
+
+          <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+              <%= text_field_tag 'home_search_area', nil, { 'placeholder' => t('home.search.area_placeholder'), :class => 'form-control col-lg-10' } %>
             </div>
-            <div class="col-sm-3">
-              <div class="checkbox pull-right">
-                <label><input type="checkbox"><%= t('home.search.kgarten') %></label>
-              </div>
+            <div class="btn-group">
+              <%= text_field_tag 'home_search_region', nil, { 'placeholder' => t('home.search.region_placeholder'), :class => 'form-control' } %>
             </div>
-            <div class="col-sm-3">
-              <div class="checkbox pull-right">
-                <label><input type="checkbox"><%= t('home.search.job') %></label>
-              </div>
-            </div>
-        </div>
-        <!--<div class="clearfix"></div>-->
-        <div class="col-sm-1 pull-right">
-          <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
-        </div>
-      </div>
-  <% end %>
+          </div>
 
 
-  <div id="results"></div>
+          <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+              <label><%= check_box_tag('home_search_has_school') %> <%= t('home.search.school') %></label>
+            </div>
+            <div class="btn-group">
+              <label><%= check_box_tag('home_search_has_kgarden') %> <%= t('home.search.kgarten') %></label>
+            </div>
+            <div class="btn-group">
+              <!--<label><%= check_box_tag('home_search_has_work') %> <%= t('home.search.job') %></label>-->
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary" type="submit"><i class="fa fa-search"> <%= t('home.search.search')%></i></button>
+            </div>
+          </div>
+      <% end %>
+
+      <hr>
+      <!-- Table -->
+      <div id="results" style="height: 500px;"></div>
+    </div>
+    </div>
 
   </div>
-
 
 
 <div class="map">

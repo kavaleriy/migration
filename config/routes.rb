@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :houses
+
   get 'home/search'
 
   get 'api/get_areas'
@@ -13,8 +15,6 @@ Rails.application.routes.draw do
   get 'phones/index'
 
   resources :housings
-
-  resources :types
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625152732) do
+ActiveRecord::Schema.define(version: 20140625180006) do
+
+  create_table "houses", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "housings", force: true do |t|
     t.string   "koatuu_code"
-    t.integer  "type_id"
+    t.integer  "house_id"
     t.integer  "qty_places"
     t.integer  "has_school"
     t.integer  "has_kgarden"
@@ -23,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140625152732) do
     t.datetime "updated_at"
   end
 
-  add_index "housings", ["koatuu_code", "type_id"], name: "index_housings_on_koatuu_code_and_type_id", unique: true
+  add_index "housings", ["koatuu_code", "house_id"], name: "index_housings_on_koatuu_code_and_house_id", unique: true
 
   create_table "koatuus", force: true do |t|
     t.string   "code"
@@ -33,14 +39,6 @@ ActiveRecord::Schema.define(version: 20140625152732) do
     t.datetime "updated_at"
     t.integer  "level"
   end
-
-  create_table "types", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "types", ["name"], name: "index_types_on_name", unique: true
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
