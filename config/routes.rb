@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'home/search'
+
+  get 'api/get_areas'
+
+  get 'api/get_regions'
+
+  get 'api/get_cities'
+
   devise_for :housings
   devise_for :users
 

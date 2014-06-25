@@ -46,14 +46,21 @@ uk:
   home:
     search:
       placeholder: "Введіть назву об'єкта"
-      housing_placeholder: "Виберіть місце розташування"
+      area_placeholder: "Виберіть область"
+      region_placeholder: "Виберіть район / місто"
       type_placeholder: "Виберіть тип житла"
-      school: "Поблизу є щкола"
+      school: "Поблизу є школа"
       kgarten: "Поблизу є садочок"
       job: "Потрібні працівники"
     menu:
       search: "Пошук житла"
       search_map: "Пошук житла на карті"
+    results:
+      area: "Область"
+      region: "Район"
+      type: "Тип житла"
+      school: "Школа"
+      kgarten: "Садочок"
   housings:
     index:
       title: "Місця для проживання"
@@ -61,8 +68,8 @@ uk:
       type: "Житло"
       qtt: "Місць"
       qttplaces: "Кількість місць для проживання"
-      school: "ЗОШ"
-      kgarten: "ДНЗ"
+      school: "Школа"
+      kgarten: "Садочок"
     edit:
       title: "Редагувати місце для проживання"
     new:

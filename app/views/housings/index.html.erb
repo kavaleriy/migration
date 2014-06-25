@@ -15,12 +15,13 @@
   </thead>
   <tbody>
     <% @housings.each do |housing| %>
+      <% koatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
       <tr>
-        <td><%= koatuu_title(housing.koatuu_code) %> </td>
-        <td><%= housing.type.name if housing.type %></td>
+        <td><%= koatuu[:region] %> </td>
+        <td><%= Housing.typename(housing.type) %></td>
         <td><%= housing.qty_places %></td>
-        <td><i class="fa fa-<%= 'check-square-o' if housing.has_school == 1 %>"></i></td>
-        <td><i class="fa fa-<%= 'check-square-o' if housing.has_kgarden == 1 %>"></i></td>
+        <td><i class="<%= school_class(housing.has_school) %>"></i></td>
+        <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_housing_path(housing), :class => 'btn btn-default btn-xs' %>

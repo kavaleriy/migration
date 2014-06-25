@@ -1,0 +1,23 @@
+<table class="table table-striped">
+<thead>
+<tr>
+  <th><%= t('.area') %></th>
+  <th><%= t('.region') %></th>
+  <th><%= t('.type') %></th>
+  <th><%= t('.school') %></th>
+  <th><%= t('.kgarten') %></th>
+</tr>
+</thead>
+<tbody>
+<% @housings.each do |housing| %>
+    <% coatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
+    <tr>
+      <td><%= coatuu[:area] %> </td>
+      <td><%= coatuu[:region] %> </td>
+      <td><%= Housing.typename(housing.type) %></td>
+      <td><i class="<%= school_class(housing.has_school) %>"></i></td>
+      <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
+    </tr>
+<% end %>
+</tbody>
+</table>

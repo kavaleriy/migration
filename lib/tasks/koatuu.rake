@@ -14,15 +14,29 @@ namespace :koatuu do
 
     2.upto(xls.last_row) do |line|
       code = xls.cell(line,'A').to_s.gsub('.0', '').rjust(10, '0')
-      note = xls.cell(line,'B')
-      name = xls.cell(line,'C')
+      note = xls.cell(line,'B') || ''
+      name = extract_name (xls.cell(line,'C')) || ''
 
       b3 = code[2]
       b6 = code[5]
 
-      rec = Koatuu.create({ code: code, name: name, note: note, b3: b3, b6: b6 })
+      if b3 == '0' and b6 == '0'
+        level = 1
+      elsif b3.index(/[23]/) and b6 == '0' and code.match(/.0000000/).nil?
+        level = 2
+      elsif note.index(/[МТ]/)
+        level = 3
+      end
+
+      rec = Koatuu.create({ code: code, name: name, note: note, level: level })
       rec.save
     end
+  end
+
+  def self.extract_name name
+    index = name.index('/')
+    name.slice(0, index) if index
+    name.mb_chars.gsub(/ ОБЛАСТЬ$/, '').gsub(/ РАЙОН$/, '').capitalize
   end
 
 end
