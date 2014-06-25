@@ -43,9 +43,14 @@ uk:
       news: "Новини"
       phones: "Телефони"
       norm_doc: "Документи"
-  welcome:
+  home:
     search:
       placeholder: "Введіть назву об'єкта"
+      housing_placeholder: "Виберіть місце розташування"
+      type_placeholder: "Виберіть тип житла"
+      school: "Поблизу є щкола"
+      kgarten: "Поблизу є садочок"
+      job: "Потрібні працівники"
     menu:
       search: "Пошук житла"
       search_map: "Пошук житла на карті"

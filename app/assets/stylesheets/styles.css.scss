@@ -58,28 +58,29 @@ body {
   }
 }
 
-.menu {
-  background: rgba(225, 225, 255, .75);
-
-  padding: 0px 0px 0 10px;
-
-  .home-view {
-    margin: 20px  0 0 -10px;
-
-    li {
-      padding: 0;
-      margin: 0;
-    }
-    a {
-      font-size: 16pt;
-    }
-  }
-}
-
 .main {
   background: rgba(255, 255, 255, .85);
+
   .content {
     height: 100%;
+
+    .menu {
+      background: rgba(255, 255, 255, .05);
+
+      padding: 0px 0px 0 10px;
+
+      .home-view {
+        margin: 20px  0 0 -10px;
+
+        li {
+          padding: 0;
+          margin: 0;
+        }
+        a {
+          font-size: 16pt;
+        }
+      }
+    }
 
     .alert {
       background: rgba(20, 155, 50, .6);
@@ -106,3 +107,6 @@ footer {
 }
 
 
+.page-header {
+  margin-top: 15px ;
+}

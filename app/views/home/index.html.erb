@@ -1,12 +1,87 @@
-<div class="menu row">
-  <ul class="home-view nav nav-tabs col-lg-12">
-    <li class="active col-lg-6"><a href="<%= welcome_map_os_url %>"><i class="fa fa-home"></i> <%= t('welcome.menu.search') %></a></li>
-    <li class="col-lg-6"><a href="<%= welcome_map_ua_url %>"><i class="fa fa-map-marker"></i> <%= t('welcome.menu.search_map') %></a></li>
-  </ul>
+<!--<div class="menu row">-->
+  <!--<ul class="home-view nav nav-tabs col-lg-12">-->
+    <!--<li class="active col-lg-6"><a href="<%=  %>"><i class="fa fa-home"></i> <%= t('home.menu.search') %></a></li>-->
+    <!--<li class="col-lg-6"><a href="<%=  %>"><i class="fa fa-map-marker"></i> <%= t('home.menu.search_map') %></a></li>-->
+  <!--</ul>-->
+<!--</div>-->
+
+<div class="search">
+  <%= form_tag("/search", method: "get", class: 'form-vertical1' ) do %>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="<%= t('home.search.placeholder') %>">
+          <a class="input-group-addon btn btn-primary">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+
+        <div class="input-group input-group-lg  btn-group-justified">
+            <%= select_tag 'home_search_place', grouped_options_for_select(@koatuu).insert(0, '<option></option>'), { 'data-placeholder' => t('home.search.housing_placeholder'), :class => 'form-control input-group-addon'} %>
+            <%= select_tag 'home_search_type', options_for_select( @type ).insert(0, '<option></option>'), { 'data-placeholder' => t('home.search.type_placeholder'), :class => 'form-control input-group-addon' } %>
+        </div>
+
+        <div class="btn-group btn-group-justified" data-toggle="buttons">
+          <label class="btn btn-default">
+            <input type="checkbox"> <%= t('home.search.school') %>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox"> <%= t('home.search.kgarten') %>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox"> <%= t('home.search.job') %>
+          </label>
+        </div>
+
+  <% end %>
 </div>
 
-</div>
 
 <div class="map">
   <div id="map"></div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#home_search_place").select2( { } );
+        $("#home_search_type").select2();
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(function() {
+            // Define variables for OpenLayers
+            var center_lat  = '49.234734';      // Sacramento CA latitude
+            var center_lon  = '28.4696339';    // Sacramento CA longitude
+            var zoom        = 10;
+            var mapnik      = new OpenLayers.Layer.OSM();                // OpenStreetMap Layer
+            projection_wgs  = new OpenLayers.Projection("EPSG:4326");    // WGS 1984
+            projection_smp  = new OpenLayers.Projection("EPSG:900913");  // Spherical Mercator
+            position        = new OpenLayers.LonLat(center_lon, center_lat).transform(projection_wgs, projection_smp);
+
+            // Create the map
+            map = new OpenLayers.Map('map');    // Argument is the name of the containing div.
+            map.addLayer(mapnik);
+            map.setCenter(position, zoom);      // Set center of map
+
+
+            ol.map = map
+            ol.LayerOblast= new OpenLayers.Layer.Vector("Overlay")
+            ol.LayerRayon = new OpenLayers.Layer.Vector("Overlay")
+            ol.LayerRayon = new OpenLayers.Layer.Vector("Overlay")
+            ol.projectTo = map.getProjectionObject()
+
+
+            // Fix map size on dom ready
+            ol.stretch_canvas();
+
+            ol.CreateMarkerOblast(49.234734, 28.4696339, 'Житомирська', 120, 20);
+        });
+
+        // == Window.resize events ===================================================
+        $(window).resize(function() {
+            // Fix map size on resize
+            ol.stretch_canvas();
+        });
+    });
+</script>
