@@ -42,7 +42,7 @@ gem 'unicorn'
 gem 'haml'
 
 # https://github.com/seyhunak/twitter-bootstrap-rails/tree/bootstrap3
-gem 'twitter-bootstrap-rails', :git => 'git@github.com:seyhunak/twitter-bootstrap-rails.git',  :branch => 'bootstrap3'
+gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git',  :branch => 'bootstrap3'
 
 # https://github.com/justinfrench/formtastic
 gem 'formtastic'

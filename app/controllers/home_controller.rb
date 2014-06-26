@@ -1,10 +1,22 @@
 class HomeController < ApplicationController
+  before_action :set_housing
+
   def index
     @area = Koatuu.areas_to_json.collect { |area| [ area[:name], area[:id] ] }
     @house = House.all.collect { |i| [ i.name, i.id.to_s ] }
   end
 
   def search
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  private
+  def set_housing
+    params[:home_search_region] ||= ''
+    params[:home_search_area] ||= ''
+
     koatuu = params[:home_search_region].slice(0,5)
     koatuu = params[:home_search_area].slice(0,2) if koatuu.empty?
 
@@ -13,16 +25,12 @@ class HomeController < ApplicationController
     work = params[:home_search_has_work]
 
 
-    @housings = (@housings || Housing).where("koatuu_code like '#{koatuu}%'") unless koatuu.empty?
-    @housings = (@housings || Housing).where(:has_school => 1) unless scool.nil?
-    @housings = (@housings || Housing).where(:has_kgarden => 1) unless has_kgarden.nil?
+    @housings = Housing.all
+    @housings = @housings.where("koatuu_code like '#{koatuu}%'") unless koatuu.empty?
+    @housings = @housings.where(:has_school => 1) unless scool.nil?
+    @housings = @housings.where(:has_kgarden => 1) unless has_kgarden.nil?
     # @housings = @housings.where(:has_work => 1) unless work.nil?
 
     @housings = @housings.paginate(:page => params[:page]) if @housings
-
-    respond_to do |format|
-      format.js
-    end
   end
-
 end

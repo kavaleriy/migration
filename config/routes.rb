@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'static/phones'
+
+  get 'static/documents'
+
+  get 'static/rs'
+
+  get 'static/sz'
+
   resources :houses
 
   get 'home/search'

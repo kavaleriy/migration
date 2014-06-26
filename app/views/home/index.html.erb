@@ -41,7 +41,9 @@
 
       <hr>
       <!-- Table -->
-      <div id="results" style="height: 500px;"></div>
+      <div id="results" style="height: 500px;">
+        <%= render partial: 'results' %>
+      </div>
     </div>
     </div>
 
@@ -57,7 +59,8 @@
         $("#home_search_area").on("change", function(e) {
             $("#home_search_region").select2("val", "");
         }).select2({
-            closeOnSelect:false,
+
+            allowClear:true,
             ajax: {
                 url: "/api/get_areas",
                 dataType: 'json',
@@ -85,7 +88,7 @@
 <script id="script_home_search_region" type="text/javascript">
     $(document).ready(function() {
         $("#home_search_region").select2({
-            closeOnSelect:false,
+            allowClear:true,
             ajax: {
                 url: "/api/get_regions",
                 dataType: 'json',
