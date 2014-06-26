@@ -107,8 +107,10 @@ footer {
 
 
 .page-header {
-  margin-top: 10px ;
+  margin: 0;
+  padding: 0;
 }
+
 .select2-container .select2-choice .select2-arrow {
   background: rgba(25, 25, 200, 0.2);
   b {
@@ -134,3 +136,4 @@ label {
 table tr {
   height: 60px;
 }
+
