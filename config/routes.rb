@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static/zd'
+
+  get 'static/dms'
+
   get 'static/phones'
 
   get 'static/documents'

@@ -1,6 +1,6 @@
 #encoding: utf-8
 
-namespace :vacancy do
+namespace :vacancies do
 
   desc "Load data "
   task :seed => :environment do

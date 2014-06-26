@@ -54,7 +54,7 @@ User.delete_all
   email = "oda#{item[:area]}@gov.ua"
 
   pass = Random.new.rand(100000..999999)
-  Rails.logger.error "!!! pwd=#{pass} #{email}"
+  Rails.logger.info "!!! pwd=#{pass} #{email}"
   User.create!({:email => email,
                 :password => pass,
                 :password_confirmation => pass,

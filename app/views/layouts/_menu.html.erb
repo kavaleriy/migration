@@ -14,10 +14,18 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
-        <li class="active"><a><%= t('layout.menu.contact') %></a></li>
         <li class=""><a href="<%= static_phones_path %>"><%= t('layout.menu.phones') %></a></li>
-        <li class=""><a href="#"><%= t('layout.menu.norm_doc') %></a></li>
-        <li class=""><a href="#"><%= t('layout.menu.news') %></a></li>
+        <li class="">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i> <%= t('layout.menu.dovidka') %> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="<%= static_sz_path %>">Соціальний захист населення</a></li>
+            <li><a href="<%= static_dms_path %>">Державна міграційна служба</a></li>
+            <li><a href="<%= static_zd_path %>">Служби сім'ї, дітей та молоді</a></li>
+
+          </ul>
+
+        </li>
+        <li class=""><a target="_blank" href="http://minregion.gov.ua/news/"><%= t('layout.menu.news') %></a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-left">
