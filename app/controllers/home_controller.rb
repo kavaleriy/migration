@@ -22,14 +22,16 @@ class HomeController < ApplicationController
 
     scool = params[:home_search_has_school]
     has_kgarden = params[:home_search_has_kgarden]
-    work = params[:home_search_has_work]
+    # rubric = params[:home_search_rubric]
+    # rubric_koatuus = Workplace.where(:rubric => '').collect { |wp| wp.koatuu_code } if rubric
 
 
-    @housings = Housing.all
+
+    @housings = Housing.where('qty_places > 0')
     @housings = @housings.where("koatuu_code like '#{koatuu}%'") unless koatuu.empty?
     @housings = @housings.where(:has_school => 1) unless scool.nil?
     @housings = @housings.where(:has_kgarden => 1) unless has_kgarden.nil?
-    # @housings = @housings.where(:has_work => 1) unless work.nil?
+    # @housings = @housings.where(:koatuu_code => rubric_koatuus) if rubric
 
     @housings = @housings.paginate(:page => params[:page]) if @housings
   end

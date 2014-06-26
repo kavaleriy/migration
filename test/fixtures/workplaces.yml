@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  koatuu_code: MyString
+  rubric: MyString
+  places: 1
+
+two:
+  koatuu_code: MyString
+  rubric: MyString
+  places: 1

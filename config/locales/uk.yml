@@ -49,6 +49,7 @@ uk:
       area_placeholder: "Виберіть область"
       region_placeholder: "Виберіть район / місто"
       house_placeholder: "Виберіть тип житла"
+      work_placeholder: "Виберіть професію"
       school: "Поблизу є школа"
       kgarten: "Поблизу є садочок"
       job: "Потрібні працівники"
@@ -59,9 +60,11 @@ uk:
     results:
       area: "Область"
       region: "Район"
-      house: "Тип житла"
+      house: "Житло"
+      places: "Місць"
       school: "Школа"
       kgarten: "Садочок"
+      work: "Робота"
   housings:
     index:
       title: "Місця для проживання"

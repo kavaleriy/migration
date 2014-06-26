@@ -20,6 +20,9 @@
             <div class="btn-group">
               <%= text_field_tag 'home_search_region', nil, { 'placeholder' => t('home.search.region_placeholder'), :class => 'form-control' } %>
             </div>
+            <div class="btn-group">
+                <%= render partial: 'work' %>
+            </div>
           </div>
 
 
@@ -31,12 +34,15 @@
               <label><%= check_box_tag('home_search_has_kgarden') %> <%= t('home.search.kgarten') %></label>
             </div>
             <div class="btn-group">
-              <!--<label><%= check_box_tag('home_search_has_work') %> <%= t('home.search.job') %></label>-->
             </div>
             <div class="btn-group">
               <button class="btn btn-primary" type="submit"><i class="fa fa-search"> <%= t('home.search.search')%></i></button>
             </div>
           </div>
+
+
+
+
       <% end %>
 
       <hr>

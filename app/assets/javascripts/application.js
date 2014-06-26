@@ -24,4 +24,3 @@
 $(document).ready(function() {
     $("#bootstrap_alert").delay(3000).fadeOut(500);
 })
-

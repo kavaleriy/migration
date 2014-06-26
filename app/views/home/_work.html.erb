@@ -1,0 +1,35 @@
+<select id="home_search_rubric" name="home_search_rubric" class="form-control" placeholder="<%= t('home.search.work_placeholder') %>">
+  <option></option>
+  <option value="0">Всі</option>
+  <option value="2">Безпека. Охорона</option>
+  <option value="1">Будівництво та архітектура</option>
+  <option value="6">Бухгалтерія. Фінанси</option>
+  <option value="3">Видавництво. Реклама. Поліграфія</option>
+  <option value="4">Житлове комунальне господарство</option>
+  <option value="5">Журналістика</option>
+  <option value="8">Керівники та спеціалісти</option>
+  <option value="7">Комп'ютери. ІТ</option>
+  <option value="9">Легка промисловість</option>
+  <option value="10">Меблеве та столярне виробництво</option>
+  <option value="12">Медицина</option>
+  <option value="11">Металообробне та ін. виробництва</option>
+  <option value="13">Мистецтво</option>
+  <option value="24">Найпростіші професії</option>
+  <option value="14">Освіта і наука</option>
+  <option value="19">Сільське, лісове та рибне господарства</option>
+  <option value="18">Склад. Логістика</option>
+  <option value="16">Соціальна сфера</option>
+  <option value="17">Сфера послуг (побуту) та торгівлі</option>
+  <option value="21">Телекомунікації та зв'язок</option>
+  <option value="20">Транспорт та автосервіс</option>
+  <option value="22">Туризм. Спорт</option>
+  <option value="23">Харчова промисловість</option>
+</select>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#home_search_rubric").select2({
+            allowClear:true
+        });
+    });
+</script>

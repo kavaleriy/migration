@@ -52,8 +52,11 @@ User.delete_all
  {:area=>"73", :name=>"ЧЕРНІВЕЦЬКА ОБЛАСТЬ/М.ЧЕРНІВЦІ"},
  {:area=>"74", :name=>"ЧЕРНІГІВСЬКА ОБЛАСТЬ/М.ЧЕРНІГІВ"}].each do |item|
   email = "oda#{item[:area]}@gov.ua"
+
+  pass = Random.new.rand(100000..999999)
+  Rails.logger.error "!!! pwd=#{pass} #{email}"
   User.create!({:email => email,
-                :password => "1",
-                :password_confirmation => "1",
+                :password => pass,
+                :password_confirmation => pass,
                 :area => item[:area] }) if User.where( :email => email ).empty?
 end
