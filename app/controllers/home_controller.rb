@@ -28,6 +28,6 @@ class HomeController < ApplicationController
     @housings = @housings.where(:has_school => 1) unless scool.nil?
     @housings = @housings.where(:has_kgarden => 1) unless has_kgarden.nil?
 
-    @housings = @housings.paginate(:page => params[:page]) if @housings
+    @housings = @housings.order('koatuu_code').paginate(:page => params[:page]) if @housings
   end
 end

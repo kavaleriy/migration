@@ -55,8 +55,8 @@ uk:
       job: "Потрібні працівники"
       search: "Знайти"
     menu:
-      search: "ПОШУК ЖИТЛА"
-      search_map: "Пошук житла на карті"
+      search: "Пошук житла"
+      search_map: "Пошук на карті"
     results:
       area: "Область"
       region: "Район"

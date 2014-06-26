@@ -11,28 +11,21 @@
       <%= f.select :house_id, House.all.collect {|p| [ p.name, p.id ] }, { prompt: false }, :class => 'form-control' %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label t('housings.index.qttplaces'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :qty_places, :class => 'form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label t('housings.index.school'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.check_box :has_school, :class => 'form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label t('housings.index.kgarten'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.check_box :has_kgarden, :class => 'form-control' %>
-    </div>
-  </div>
 
-  
-  <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+    <div class="btn-group btn-group-justified">
+      <div class="btn-group">
+        <%= f.text_field :qty_places, :placeholder => t('housings.index.qttplaces'), :class => 'form-control col-lg-10' %>
+      </div>
+      <div class="btn-group">
+        <label class="col-lg-5"><%= f.check_box :has_school %> <%= t('housings.index.school') %></label>
+        <label class="col-lg-5"><%= f.check_box :has_kgarden %> <%= t('housings.index.kgarten') %></label>
+      </div>
+    </div>
+
+    <hr/>
+
+    <%= f.submit t('helpers.links.save', :default => t("helpers.links.cancel")), :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
             housings_path, :class => 'btn btn-default' %>
  
 <% end %>

@@ -134,6 +134,14 @@ label {
 }
 
 table tr {
+  height: 50px;
+}
+
+.spinner {
+  margin-top: 50px;
+  background: asset_url("ajax_loader_blue_64.gif") no-repeat 50%;
+  width: 100%;
   height: 60px;
+  border: none;
 }
 

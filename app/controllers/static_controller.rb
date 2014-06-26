@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
-  def phones
+  def centers
   end
 
   def documents

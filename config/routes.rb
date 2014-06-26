@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  get 'home/map'
+
+  get 'report/amount_places'
+
+  get 'report/amount_by_type'
+
+  get 'report/amount_of_job'
+
   get 'static/zd'
 
   get 'static/dms'
 
-  get 'static/phones'
+  get 'static/centers'
 
   get 'static/documents'
 
@@ -24,7 +32,7 @@ Rails.application.routes.draw do
   devise_for :housings
   devise_for :users
 
-  get 'phones/index'
+  get 'centers/index'
 
   resources :housings
 

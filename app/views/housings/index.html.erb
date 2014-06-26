@@ -1,9 +1,15 @@
 <%- model_class = Housing -%>
-<div class="page-header pull-left">
-  <h1 ><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
-<div class="page-header pull-right">
-  <%= link_to t('.new', :default => t("helpers.links.new")), new_housing_path, :class => 'btn btn-primary' %>
+
+<div class="panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading col-lg-10">
+    <i class="fa fa-folder-o"></i> ВВЕДЕННЯ ДАНИХ | <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
+  </div>
+  <%= link_to t('.new', :default => t("helpers.links.new")), new_housing_path, :class => 'btn btn-primary pull-right' %>
+  <div class="panel-body">
+
+<div class="page-header ">
+
 </div>
 
 <table class="table table-striped">
@@ -42,3 +48,5 @@
   <%= will_paginate @housings, :container => false %>
 </div>
 
+  </div>
+</div>

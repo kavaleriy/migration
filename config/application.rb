@@ -20,7 +20,7 @@ module Migration
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :uk
 
-    WillPaginate.per_page = 7
+    WillPaginate.per_page = 10
 
   end
 end

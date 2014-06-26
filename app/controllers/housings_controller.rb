@@ -71,7 +71,7 @@ class HousingsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_area
-      @area = current_user.area
+      @area = current_user.area || '-1'
     end
 
     def set_housing

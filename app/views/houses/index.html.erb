@@ -1,7 +1,10 @@
-<%- model_class = house -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
+<%- model_class = House -%>
+<div class="panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><i class="fa fa-info-circle"></i> ВВЕДЕННЯ ДАНИХ | <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></div>
+  <div class="panel-body">
+
+
 <table class="table table-striped">
   <thead>
   <tr>
@@ -26,6 +29,10 @@
   <% end %>
   </tbody>
 </table>
+
+  </div>
+</div>
+
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_house_path,

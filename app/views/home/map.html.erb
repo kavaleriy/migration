@@ -1,0 +1,129 @@
+<div class="panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <i class="fa fa-map-marker"></i> <%= t('home.menu.search_map').mb_chars.upcase %>
+    <a class="pull-right" href="<%= root_path %>"><i class="fa fa-home"></i> <%= t('home.menu.search') %></a>
+  </div>
+
+
+  <div class="map panel-body">
+
+    <div id="mapdiv" class="row" style=" height:600px;">
+      <div class="spinner pull-center"></div>
+    </div>
+  </div>
+</div>
+
+    <!--<%= javascript_include_tag 'http://openlayers.org/api/OpenLayers.js' %>-->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+                $('#mapdiv').html('');
+
+                window.geo = {}
+                window.map ={}
+                window.epsg4326 = {}
+                window.projectTo = {};
+                window.GeoInfo = {}
+
+
+                // jQuery.parseJSON(arrayGEO());
+
+
+
+                StartInitMap("mapdiv");
+                /* Инициализация объекта карты */
+                SetGeoPositionStandart();
+                /* Установка стандартов координат */
+
+
+                window.LayerOblast = new OpenLayers.Layer.Vector("Overlay");
+                /* Слой маркеров для областей */
+                window.LayerRayon = new OpenLayers.Layer.Vector("Overlay");
+                /* Слой маркеров для районов */
+                window.LayerCity = new OpenLayers.Layer.Vector("Overlay");
+                /* Слой маркеров для городов */
+
+                SetMapCenterZoom(3530470.0647431, 6243369.337484, 6);
+                /* Карта Украины по центру в масштабе */
+
+                CreateMarkerForArea();
+                /* Создание маркеров области */
+                map.addLayer(LayerOblast);
+                /* Слои области на карту */
+
+
+                /* Контроллер для показа маркеров областей */
+                var controls = {
+                    selector: new OpenLayers.Control.SelectFeature(LayerOblast, {onSelect: createPopup, onUnselect: destroyPopup})
+                };
+                map.addControl(controls['selector']);
+                controls['selector'].activate();
+
+                map.events.register("zoomend", map, function (e) {
+                    EventAfterZoom(e.object.zoom);
+                });
+
+
+                /* Отслеживание зумирования карты */
+
+                /* Отслеживание после перемещения карты */
+                map.events.register("moveend", map, function (e) {
+                    Wcenter = e.object.center;
+                    lat = Wcenter.lat;
+                    lon = Wcenter.lon;
+                    console.log(lon + ',' + lat + ',' + e.object.zoom);
+                    LimitTop = 6863120.762734;
+                    LimitBottom = 5504681.8962389;
+                    LimitLeft = 2440783.7896614;
+                    LimitRight = 4601811.453039;
+                    if (lon < LimitLeft || lon > LimitRight || lat > LimitTop || lat < LimitBottom) {
+                        SetMapCenterZoom(3530470.0647431, 6243369.337484, 6);
+                    }
+                });
+        })
+    </script>
+
+
+
+
+
+
+<!--<!--<script type="text/javascript">-->
+<!--//    $(document).ready(function() {-->
+<!--//        $(function() {-->
+<!--//            // Define variables for OpenLayers-->
+<!--//            var center_lat  = '49.234734';      // Sacramento CA latitude-->
+<!--//            var center_lon  = '28.4696339';    // Sacramento CA longitude-->
+<!--//            var zoom        = 10;-->
+<!--//            var mapnik      = new OpenLayers.Layer.OSM();                // OpenStreetMap Layer-->
+<!--//            projection_wgs  = new OpenLayers.Projection("EPSG:4326");    // WGS 1984-->
+<!--//            projection_smp  = new OpenLayers.Projection("EPSG:900913");  // Spherical Mercator-->
+<!--//            position        = new OpenLayers.LonLat(center_lon, center_lat).transform(projection_wgs, projection_smp);-->
+<!--//-->
+<!--//            // Create the map-->
+<!--//            map = new OpenLayers.Map('map');    // Argument is the name of the containing div.-->
+<!--//            map.addLayer(mapnik);-->
+<!--//            map.setCenter(position, zoom);      // Set center of map-->
+<!--//-->
+<!--//-->
+<!--//            ol.map = map-->
+<!--//            ol.LayerOblast= new OpenLayers.Layer.Vector("Overlay")-->
+<!--//            ol.LayerRayon = new OpenLayers.Layer.Vector("Overlay")-->
+<!--//            ol.LayerRayon = new OpenLayers.Layer.Vector("Overlay")-->
+<!--//            ol.projectTo = map.getProjectionObject()-->
+<!--//-->
+<!--//-->
+<!--//            // Fix map size on dom ready-->
+<!--//            ol.stretch_canvas();-->
+<!--//-->
+<!--//            ol.CreateMarkerOblast(49.234734, 28.4696339, 'Житомирська', 120, 20);-->
+<!--//        });-->
+<!--//-->
+<!--//        // == Window.resize events ===================================================-->
+<!--//        $(window).resize(function() {-->
+<!--//            // Fix map size on resize-->
+<!--//            ol.stretch_canvas();-->
+<!--//        });-->
+<!--//    });-->
+<!--<!--</script>-->
