@@ -14,21 +14,26 @@ namespace :vacancy do
       trud_code = item[:code]
       koatuu_code = find_koatuu(trud_code)
       if koatuu_code
+        cnt = item[:count]
         rubric = item[:rubric]
-        cnt = item[:cnt]
-        Workplace.create({ koatuu_code: koatuu_code, rubric: rubric, places: cnt, trud_code: trud_code }).save
+        wp = Workplace.find_or_create_by(:koatuu_code => koatuu_code, :rubric => rubric)
+        wp.update({ :places => cnt, :trud_code => trud_code })
+        wp.save
       end
     }
   end
 
   def self.parse_data vac
     res = get_collection(vac)
-    vac.each { |v| res << get_collection(v['districts']) }
-    res.flatten
+    res.collect { |v|
+      get_collection(v['rubrics']).collect { |r|
+        { code: v['code'], rubric: r['code'], count: r['count'] }
+      }
+    }.flatten
   end
 
   def get_collection obj
-    obj.collect {|v| { code: v['code'], rubric: '', cnt: v['count'] } }
+    obj.reject {|v| v['count'] == '' }
   end
 
   def find_koatuu trud_code

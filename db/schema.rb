@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626130918) do
+ActiveRecord::Schema.define(version: 20140626145113) do
 
   create_table "houses", force: true do |t|
     t.string   "name"
@@ -67,5 +67,7 @@ ActiveRecord::Schema.define(version: 20140626130918) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "workplaces", ["koatuu_code", "rubric"], name: "index_workplaces_on_koatuu_code_and_rubric", unique: true
 
 end

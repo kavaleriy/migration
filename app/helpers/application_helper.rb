@@ -10,4 +10,11 @@ module ApplicationHelper
     'fa fa-check-square-o' if Housing.has_kgarten?(val)
   end
 
+  def work_class(koatuu_code)
+    rubric = params[:home_search_rubric] || '0'
+
+    wp = Workplace.where(:koatuu_code => Koatuu.area(koatuu_code).code, :rubric => rubric)
+    'fa fa-check' if wp.any?
+  end
+
 end
