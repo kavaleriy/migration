@@ -41,3 +41,4 @@ RAILS_ENV=test rake db:seed
 RAILS_ENV=test rake koatuu:seed
 RAILS_ENV=test rake vacancies:seed
 
+
