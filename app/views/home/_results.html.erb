@@ -17,10 +17,10 @@
     <tr>
       <td><%= coatuu[:area] %> </td>
       <td><%= coatuu[:region] %> </td>
-      <td><%= housing.house.name %> (<%= housing.qty_places %>)</td>
+      <td><%= housing.house.name %> <span class="badge pull-right"><%= housing.qty_places %></span></td>
       <!--<td><%= housing.qty_places %></td>-->
-      <td><i class="<%= school_class(housing.has_school) %>"></i></td>
-      <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
+      <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i></td>
+      <td><i style="padding-left: 25px;" class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
       <td>
       <% if work_url %>
         <a target="_blank" href="<%= work_url %>">деталі</i></a>
