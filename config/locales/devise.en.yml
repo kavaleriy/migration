@@ -55,6 +55,3 @@ uk:
         subject: 'Інструкції зі скидання паролю'
       unlock_instructions:
         subject: 'Інструкції з розблокування'
-  layouts:
-    top:
-      Logout: "Вихід"

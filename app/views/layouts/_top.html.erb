@@ -8,13 +8,4 @@
 <div class="clearfix"></div>
 <p class="note col-lg-9"><%= t('layout.header.note') %></p>
 
-    <ul class="hmenu pull-right">
-      <% if user_signed_in? %>
-      <li>
-        <a class="btn btn-" data-method="delete" href="<%= destroy_user_session_path %>" rel="nofollow"><i class="fa fa-user-md"></i> <%= t('.Logout') %></a>
-      </li>
-      <% end %>
-      <li>
-        <a class="btn btn-primary btn-xs" href="mailto:support@minregion.gov.ua?subject=Питання по http://migrants.gov.ua"><%= t('.question') %></a>
-      </li>
-    </ul>
+<a class="ask pull-right btn btn-primary btn-xs" href="mailto:support@minregion.gov.ua?subject=Питання по http://migrants.gov.ua"><%= t('.question') %></a>
