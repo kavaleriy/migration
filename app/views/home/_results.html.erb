@@ -4,7 +4,7 @@
   <th><%= t('.area') %></th>
   <th><%= t('.region') %></th>
   <th><%= t('.house') %></th>
-  <!--<th><%= t('.places') %></th>-->
+  <th><%= t('.places') %></th>
   <th><%= t('.school') %></th>
   <th><%= t('.kgarten') %></th>
   <th><%= t('.work') %></th>
@@ -17,8 +17,8 @@
     <tr>
       <td><%= coatuu[:area] %> </td>
       <td><%= coatuu[:region] %> </td>
-      <td><%= housing.house.name %> <span class="badge pull-right"><%= housing.qty_places %></span></td>
-      <!--<td><%= housing.qty_places %></td>-->
+      <td><%= housing.house.name %></td>
+      <td><span class=""><%= housing.qty_places %></span></td>
       <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i></td>
       <td><i style="padding-left: 25px;" class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
       <td>

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a480a09d-0dc7-4213-a828-3ac93fbd2d33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/map.html.erb" afterPath="$PROJECT_DIR$/app/views/home/map.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ol.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ol.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_results.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_results.html.erb" />
     </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,14 +28,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_results.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_results.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_results.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.518518" vertical-offset="85" max-vertical-offset="846">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.55130166" vertical-offset="0" max-vertical-offset="846">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding>
-                <element signature="n#style#0;n#i#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#t('.places')#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ol.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ol.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ol.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44189852" vertical-offset="486" max-vertical-offset="74322">
+            <state vertical-scroll-proportion="-4.821429" vertical-offset="486" max-vertical-offset="74322">
               <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
               <folding />
             </state>
@@ -195,7 +194,6 @@
         <option value="$PROJECT_DIR$/app/views/housings/index.html.erb" />
         <option value="$USER_HOME$/.rvm/gems/ruby-2.1.1/gems/openlayers-rails-0.0.4/app/assets/javascripts/openlayers-rails.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/home/_results.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/devise.en.yml" />
         <option value="$PROJECT_DIR$/config/locales/uk.yml" />
         <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
@@ -204,6 +202,7 @@
         <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/app/views/home/map.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ol.js" />
+        <option value="$PROJECT_DIR$/app/views/home/_results.html.erb" />
       </list>
     </option>
   </component>
@@ -1307,17 +1306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_results.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.518518" vertical-offset="85" max-vertical-offset="846">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
@@ -1391,9 +1379,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ol.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44189852" vertical-offset="486" max-vertical-offset="74322">
+        <state vertical-scroll-proportion="-4.821429" vertical-offset="486" max-vertical-offset="74322">
           <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_results.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55130166" vertical-offset="0" max-vertical-offset="846">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <element signature="n#t('.places')#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
