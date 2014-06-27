@@ -40,15 +40,15 @@ function CreateMarkerForArea() {
 
         var feature = new OpenLayers.Feature.Vector(
             new OpenLayers.Geometry.Point(alon, alat),
-            {description: name + ' обл.: ' + house + ' до проживання / ' + work + ' робочих' + '<span class="more-maps-info" onclick="SetMapCenterZoom(' + alon + ', ' + alat + ',' + azoom + ' )"> детальніше... </span>'},
+            {description: name + ' обл.: ' + house + ' <i class="fa fa-home"></i><span class="more-maps-info" onclick="SetMapCenterZoom(' + alon + ', ' + alat + ',' + azoom + ' )"> детальніше... </span>'},
             {
                 externalGraphic: '/assets/cloud-popup-relative.png',
                 fillOpacity: 0.5,
                 graphicHeight: 30,
-                graphicWidth: 60,
+                graphicWidth: 40,
                 graphicXOffset: -5,
                 graphicYOffset: -8,
-                label: house + '/' + work,
+//                label: house + ' /' + work,
                 labelAlign: 'lt',
                 fontColor: "red"
             }

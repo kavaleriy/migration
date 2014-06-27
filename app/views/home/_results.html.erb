@@ -16,7 +16,7 @@
     <% work_url = work_class(housing.koatuu_code) %>
     <tr>
       <td><%= coatuu[:area] %> </td>
-      <td><%= coatuu[:region] %> </td>
+      <td><%= coatuu[:region] || coatuu[:city] %> </td>
       <td><%= housing.house.name %></td>
       <td><span class=""><%= housing.qty_places %></span></td>
       <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i></td>

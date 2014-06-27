@@ -3,7 +3,7 @@
 <div class="panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading col-lg-10">
-    <i class="fa fa-folder-o"></i> ВВЕДЕННЯ ДАНИХ | <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
+    <i class="fa fa-edit"></i> ВВЕДЕННЯ ДАНИХ | <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
   </div>
   <%= link_to t('.new', :default => t("helpers.links.new")), new_housing_path, :class => 'btn btn-primary pull-right' %>
   <div class="panel-body">
@@ -27,7 +27,7 @@
     <% @housings.each do |housing| %>
       <% koatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
       <tr>
-        <td><%= koatuu[:region] %> </td>
+        <td><%= koatuu[:region] || koatuu[:city] %> </td>
         <td><%= housing.house.name %></td>
         <td><%= housing.qty_places %></td>
         <td><i class="<%= school_class(housing.has_school) %>"></i></td>

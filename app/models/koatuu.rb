@@ -13,14 +13,21 @@ class Koatuu < ActiveRecord::Base
     cities(code).first if code.length == 10
   end
 
+  def self.acity(code)
+    acities(code).first if code.length == 10
+  end
+
   def self.areas(area = '')
     self.where(:level => 1).where("code like '#{area}%'").order('name')
   end
   def self.regions(region = '')
     self.where(:level => 2).where("code like '#{region}%'").order('name')
   end
+  def self.acities(area = '')
+    self.where(:level => 13).where("code like '#{area}%'").order('name')
+  end
   def self.cities(code = '')
-    self.where(:level => 3).where("code like '#{code}%'").order('name')
+    self.where(:level => [3, 13]).where("code like '#{code}%'").order('name')
   end
 
   def self.to_tree(code)
@@ -28,7 +35,10 @@ class Koatuu < ActiveRecord::Base
 
     areas(code).each { |area|
       l1 = area.code.slice(0, 2)
+
       tree_regions = []
+      acity = acities(l1).first
+      tree_regions << [ acity.name, acity.code ] unless acity.nil?
       regions(l1).each do |region|
         tree_regions << [ region.name, region.code]
       end
@@ -63,20 +73,24 @@ class Koatuu < ActiveRecord::Base
 
   def self.regions_to_json(area, filter = '')
     filter = filter.mb_chars.upcase
-    tree = []
+    arr = []
 
     regions(area.slice(0,2)).where("name like '%#{filter}%'").each do |region|
-      name = region.name
-      tree << { name: name, id: region.code }
+      arr << { name: region.name, id: region.code }
     end if area.length >= 2
 
-    tree
+    arr
   end
 
-  def self.extract_name name
-    index = name.index('/')
-    name = name.slice(0, index) if index
-    name.mb_chars.gsub(/ ОБЛАСТЬ$/, '').gsub(/ РАЙОН$/, '').capitalize
+  def self.acities_to_json(area, filter = '')
+    filter = filter.mb_chars.upcase
+    arr = []
+
+    acities(area.slice(0,2)).where("name like '%#{filter}%'").each do |city|
+      arr << { name: city.name, id: city.code }
+    end if area.length >= 2
+
+    arr
   end
 
   # def self.get_area_tree(code, filter)

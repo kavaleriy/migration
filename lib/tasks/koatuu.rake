@@ -24,6 +24,8 @@ namespace :koatuu do
         level = 1
       elsif b3.index(/[23]/) and b6 == '0' and code.match(/.0000000/).nil?
         level = 2
+      elsif code.index('10100000')
+        level = 13 # head of area
       elsif note.index(/[МТ]/)
         level = 3
       end
