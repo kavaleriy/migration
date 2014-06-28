@@ -78,6 +78,7 @@ body {
   }
 
   .sidebar {
+    height: 700px;
     background: rgba(0, 0, 0, .03);
   }
 }
@@ -125,8 +126,8 @@ label {
   color: #157AB2;
 }
 
-table tr {
-  height: 50px;
+.panel-body {
+  padding: 10px 0px;
 }
 
 .spinner {
@@ -158,4 +159,34 @@ table tr {
 
 .table {
   margin-bottom: 2px;
+
+  tr {
+    height: 40px;
+  }
+
+}
+
+.anons {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #565553;
+
+  span {
+    font-weight: semibold;
+    color: orange;
+  }
+
+  a {
+    color: darkslateblue!important;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.flickr_pagination {
+  .pagination {
+    margin: 10px 0 0 0;
+  }
 }

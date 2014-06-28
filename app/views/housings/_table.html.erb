@@ -1,6 +1,3 @@
-<div class="flickr_pagination ">
-  <%= paginate @housings, :container => false %>
-</div>
 <table class="table table-striped">
   <thead>
   <tr>
@@ -31,7 +28,8 @@
 </table>
 
 <div class="flickr_pagination ">
+  <%= paginate @housings, :container => false %>
   <div class="page_info">
-    <%= page_entries_info @housings %>
+    <!--<%= page_entries_info @housings %>-->
   </div>
 </div>
