@@ -36,14 +36,14 @@ class Koatuu < ActiveRecord::Base
   end
 
   def self.coatuu_to_json(code)
-    l1 = code.slice(0, 2).rjust(10, '0')
-    l2 = code.slice(0, 5).rjust(10, '0')
+    l1 = code.slice(0, 2).ljust(10, '0')
+    l2 = code.slice(0, 5).ljust(10, '0')
     l3 = code.rjust(10, '0')
 
     area = get_by_code(l1)
     region = get_by_code(l2)
     city = get_by_code(l3)
-
+    
     coatuu = {}
     coatuu[:area] = area.name if area
     coatuu[:region] = region.name if region
