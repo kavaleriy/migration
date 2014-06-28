@@ -6,12 +6,6 @@ class HomeController < ApplicationController
     @house = House.all.collect { |i| [ i.name, i.id.to_s ] }
   end
 
-  def search
-    respond_to do |format|
-      format.js
-    end
-  end
-
   private
   def set_housing
     params[:home_search_region] ||= ''

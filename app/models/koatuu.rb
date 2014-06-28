@@ -1,20 +1,6 @@
 class Koatuu < ActiveRecord::Base
-  def self.area(code)
-    l1 = code.slice(0,2)
-    areas(l1).first if l1.length == 2
-  end
-
-  def self.region(code)
-    l2 = code.slice(0,5)
-    regions(l2).first if l2.length == 5
-  end
-
-  def self.city(code)
-    cities(code).first if code.length == 10
-  end
-
-  def self.acity(code)
-    acities(code).first if code.length == 10
+  def self.get_by_code(code)
+    where(:code => code).first
   end
 
   def self.areas(area = '')
@@ -50,9 +36,13 @@ class Koatuu < ActiveRecord::Base
   end
 
   def self.coatuu_to_json(code)
-    area = area(code)
-    region = region(code)
-    city = city(code)
+    l1 = code.slice(0, 2).rjust(10, '0')
+    l2 = code.slice(0, 5).rjust(10, '0')
+    l3 = code.rjust(10, '0')
+
+    area = get_by_code(l1)
+    region = get_by_code(l2)
+    city = get_by_code(l3)
 
     coatuu = {}
     coatuu[:area] = area.name if area

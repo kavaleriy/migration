@@ -28,7 +28,7 @@ class HousingsController < ApplicationController
   def create
     @housing = Housing.where(:koatuu_code => housing_params[:koatuu_code], :house_id => housing_params[:house_id]).first
     if @housing
-      @housing.update(housing_params)
+      @housing.dupdate(housing_params)
     else
       @housing = Housing.new(housing_params)
     end

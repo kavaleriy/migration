@@ -6,47 +6,12 @@
     <i class="fa fa-edit"></i> ВВЕДЕННЯ ДАНИХ | <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
   </div>
   <%= link_to t('.new', :default => t("helpers.links.new")), new_housing_path, :class => 'btn btn-primary pull-right' %>
-  <div class="panel-body">
 
-<div class="page-header ">
+  <div class="panel-body col-lg-12">
 
-</div>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= t('.koatuu') %></th>
-      <th><%= t('.house') %></th>
-      <th><%= t('.qtt') %></th>
-      <th><%= t('.school') %></th>
-      <th><%= t('.kgarten') %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @housings.each do |housing| %>
-      <% koatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
-      <tr>
-        <td><%= koatuu[:region] || koatuu[:city] %> </td>
-        <td><%= housing.house.name %></td>
-        <td><%= housing.qty_places %></td>
-        <td><i class="<%= school_class(housing.has_school) %>"></i></td>
-        <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_housing_path(housing), :class => 'btn btn-default btn-xs' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<div class="flickr_pagination ">
-  <div class="page_info">
-    <%= page_entries_info @housings %>
-  </div>
-  <%= will_paginate @housings, :container => false %>
-</div>
+      <div id="table">
+        <%= render partial: 'table' %>
+      </div>
 
   </div>
 </div>

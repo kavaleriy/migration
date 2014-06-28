@@ -43,7 +43,7 @@ function CreateMarkerForArea() {
             {description: name + ' обл.: ' + house + ' <i class="fa fa-home"></i><span class="more-maps-info" onclick="SetMapCenterZoom(' + alon + ', ' + alat + ',' + azoom + ' )"> детальніше... </span>'},
             {
                 externalGraphic: '/assets/cloud-popup-relative.png',
-                fillOpacity: 0.5,
+                fillOpacity: 0.7,
                 graphicHeight: 30,
                 graphicWidth: 40,
                 graphicXOffset: -5,
@@ -102,7 +102,6 @@ function EventAfterZoom(zoom) {
 function arrayGEO() {
     geo =
     [
-        
             {
                 "area": {
                 "namearea": "Вінницька",

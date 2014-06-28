@@ -1,0 +1,37 @@
+<div class="flickr_pagination ">
+  <%= paginate @housings, :container => false %>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= t('housings.index.koatuu') %></th>
+    <th><%= t('housings.index.house') %></th>
+    <th><%= t('housings.index.qtt') %></th>
+    <th><%= t('housings.index.school') %></th>
+    <th><%= t('housings.index.kgarten') %></th>
+    <th><%=t '.actions', :default => t("helpers.actions") %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @housings.each do |housing| %>
+      <% koatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
+      <tr>
+        <td><%= koatuu[:region] || koatuu[:city] %> </td>
+        <td><%= housing.house.name %></td>
+        <td><%= housing.qty_places %></td>
+        <td><i class="<%= school_class(housing.has_school) %>"></i></td>
+        <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_housing_path(housing), :class => 'btn btn-default btn-xs' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div class="flickr_pagination ">
+  <div class="page_info">
+    <%= page_entries_info @housings %>
+  </div>
+</div>

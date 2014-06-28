@@ -30,15 +30,9 @@ Please feel free to use a different markup language if you do not plan to run
 
 Install:
 
-RAILS_ENV=test bundle
+RAILS_ENV=production rake db:migrate & rake db:seed & rake vacancies:seed & rake koatuu:seed &
 
-RAILS_ENV=test bundle exec rake db:migrate & RAILS_ENV=test rake assets:precompile
+RAILS_ENV=production bundle & rake assets:precompile & unicorn -p 80 -D
 
-RAILS_ENV=test unicorn -p 80 -D
-
-
-RAILS_ENV=test rake db:seed
-RAILS_ENV=test rake koatuu:seed
-RAILS_ENV=test rake vacancies:seed
-
+RAILS_ENV=production
 

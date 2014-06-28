@@ -5,7 +5,7 @@
       <a class="pull-right" href="<%= home_map_path %>"><i class="fa fa-map-marker"></i> <%= t('home.menu.search_map') %></a>
     </div>
     <div class="panel-body">
-      <%= form_tag(home_search_path, method: "get", remote: true, class: '' ) do %>
+      <%= form_tag(root_path, method: "get", remote: true, class: '' ) do %>
 
           <div class="btn-group btn-group-justified">
             <div class="btn-group">
@@ -19,7 +19,6 @@
             </div>
           </div>
 
-
           <div class="btn-group btn-group-justified">
             <div class="btn-group">
               <label><%= check_box_tag('home_search_has_school') %> <%= t('home.search.school') %></label>
@@ -30,20 +29,17 @@
             <div class="btn-group">
             </div>
             <div class="btn-group">
-              <button class="btn btn-primary" type="submit"><i class="fa fa-search"> <%= t('home.search.search')%></i></button>
+              <button class="btn btn-primary" ><i class="fa fa-search"> <%= t('home.search.search')%></i></button>
             </div>
           </div>
 
       <% end %>
-      <!-- Table -->
-      <hr/>
 
-      <div id="results" style="height: 500px;">
+      <div id="results">
         <%= render partial: 'results' %>
       </div>
     </div>
 </div>
-
 
 <script id="script_home_search_area" type="text/javascript">
     $(document).ready(function() {

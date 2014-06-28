@@ -1,6 +1,6 @@
 
 body {
-  font-family: Raleway;
+  font-family: Open Sans;
 
   background: asset_url("bg.jpg") no-repeat;
   background-attachment: fixed;
@@ -8,11 +8,9 @@ body {
 }
 
 .header {
-  background: rgba(55, 55, 55, 0.1);
+  margin: 20px 0px 0px -20px;
 
   .logo {
-    padding: 0px;
-
     .img {
       background: asset_url("logo.png") no-repeat;
       height: 92px;
@@ -25,7 +23,7 @@ body {
     height: 62px;
     width: 262px;
 
-    margin: 12px 20px 0 0;
+    margin: 20px 0 0px 0 0;
   }
   .note {
     color: #ffffff;
@@ -33,7 +31,7 @@ body {
   }
 
   .ask {
-    margin-right: 35px;
+//    margin-top: -5px;
   }
 
 }
@@ -50,6 +48,7 @@ body {
 
 .main {
   background: rgba(255, 255, 255, .75);
+  min-height: 500px;
 
   .content {
     height: 100%;
@@ -155,4 +154,8 @@ table tr {
 .alert-success {
   background-color: rgb(80, 190, 80);
 
+}
+
+.table {
+  margin-bottom: 2px;
 }

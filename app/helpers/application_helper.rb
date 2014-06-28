@@ -12,7 +12,7 @@ module ApplicationHelper
 
   def work_class(koatuu_code)
     rubric = params[:home_search_rubric]
-    wp = Workplace.where(:koatuu_code => Koatuu.area(koatuu_code).code, :rubric => rubric)
+    wp = Workplace.where(:koatuu_code => koatuu_code, :rubric => rubric)
     if wp.any?
       reg_id = wp.first.trud_code
       "http://www.trud.gov.ua/control/uk/index#rubId=#{rubric}&posId=&regId=#{reg_id}&typeSearch=1&startPos=1&page=0"
