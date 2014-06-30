@@ -43,22 +43,26 @@
   </head>
   <body>
     <div class="container">
-
       <div class="header row">
         <%= render :partial => 'layouts/top' %>
       </div>
 
-      <div class="main row">
-        <%= render :partial => 'layouts/menu' %>
+      <div class="menu row">
+          <%= render :partial => 'layouts/menu' %>
+          <%= yield :sub_menu %>
+      </div>
 
-        <div class="col-lg-9">
+      <div class="main row">
+        <div class="col-sm-9">
           <div class="bootstrap_alert">
             <%= bootstrap_flash %>
           </div>
+
           <%= yield %>
+
         </div>
 
-        <div class="sidebar col-lg-3">
+        <div class="sidebar col-sm-3">
           <%= render :partial => 'layouts/news' %>
         </div>
       </div>
@@ -70,8 +74,7 @@
       <footer class="row">
         <p><a style="color:white;" href="<%= housings_path %>">&copy;</a> 2014 <%= t('layout.footer.copy') %></p>
       </footer>
-
-    </div> <!-- /container -->
+    </div>
 
   </body>
 </html>

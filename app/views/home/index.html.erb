@@ -1,52 +1,64 @@
-<div class="panel-default">
-<!-- Default panel contents -->
-    <div class="panel-heading">
-      <i class="fa fa-home"></i> <%= t('home.menu.search').mb_chars.upcase %>
-      <a class="pull-right" href="<%= home_map_path %>"><i class="fa fa-map-marker"></i> <%= t('home.menu.search_map') %></a>
-    </div>
-    <div class="panel-body">
-      <%= form_tag(root_path, method: "get", remote: true, class: '' ) do %>
-
-          <div class="btn-group btn-group-justified">
-            <div class="btn-group">
-              <%= text_field_tag 'home_search_area', nil, { 'placeholder' => t('home.search.area_placeholder'), :class => 'form-control col-lg-10' } %>
-            </div>
-            <div class="btn-group">
-              <%= text_field_tag 'home_search_region', nil, { 'placeholder' => t('home.search.region_placeholder'), :class => 'form-control' } %>
-            </div>
-            <div class="btn-group">
-                <%= render partial: 'work' %>
-            </div>
-          </div>
-
-          <div class="btn-group btn-group-justified">
-            <div class="btn-group">
-              <label><%= check_box_tag('home_search_has_school') %> <%= t('home.search.school') %></label>
-            </div>
-            <div class="btn-group">
-              <label><%= check_box_tag('home_search_has_kgarden') %> <%= t('home.search.kgarten') %></label>
-            </div>
-            <div class="btn-group">
-            </div>
-            <div class="btn-group">
-              <button class="btn btn-primary" ><i class="fa fa-search"> <%= t('home.search.search')%></i></button>
-            </div>
-          </div>
-
-      <% end %>
-
-      <div id="results">
-        <%= render partial: 'results' %>
+<% content_for :sub_menu do %>
+    <div class="search-heading">
+      <div class="col-md-4 active">
+        <i class="fa fa-home"></i> <%= t('home.menu.search') %>
+      </div>
+      <div class="col-md-4">
+        <a class="" href="<%= home_map_path %>"><i class="fa fa-map-marker"></i> <%= t('home.menu.search_map') %></a>
       </div>
     </div>
+<% end %>
+
+<div class="search-container row">
+  <%= form_tag(root_path, method: "get", remote: true, class: 'search' ) do %>
+
+      <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+          <%= text_field_tag 'home_search_area', nil, { 'placeholder' => t('home.search.area_placeholder'), :class => 'form-control col-lg-10' } %>
+        </div>
+        <div class="btn-group">
+          <%= text_field_tag 'home_search_region', nil, { 'placeholder' => t('home.search.region_placeholder'), :class => 'form-control' } %>
+        </div>
+        <div class="btn-group">
+            <%= render partial: 'work' %>
+        </div>
+      </div>
+
+      <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+          <label><%= check_box_tag('home_search_has_school') %> <%= t('home.search.school') %></label>
+        </div>
+        <div class="btn-group">
+          <label><%= check_box_tag('home_search_has_kgarden') %> <%= t('home.search.kgarten') %></label>
+        </div>
+        <div class="btn-group">
+        </div>
+        <div class="btn-group">
+          <!--<button class="btn btn-primary" ><i class="fa fa-search"> <%= t('home.search.search')%></i></button>-->
+        </div>
+      </div>
+
+  <% end %>
+
+  <div id="results" class="">
+    <%= render partial: 'results' %>
+  </div>
 </div>
 
 <script id="script_home_search_area" type="text/javascript">
-    $(document).ready(function() {
-        $("#home_search_area").on("change", function(e) {
-            $("#home_search_region").select2("val", "");
-        }).select2({
+    $('input, select', 'form.search').on("change", function(e) {
+        $('#results').addClass('spinner')
 
+        if ($("#home_search_area").select2("val") == '')
+            $("#home_search_region").select2("val", "")
+
+        $('form.search').submit()
+    });
+</script>
+
+<script id="script_home_search_area" type="text/javascript">
+    $(document).ready(function() {
+        $("#home_search_area").select2({
             allowClear:true,
             ajax: {
                 url: "/api/get_areas",
@@ -100,5 +112,3 @@
         });
     });
 </script>
-
-

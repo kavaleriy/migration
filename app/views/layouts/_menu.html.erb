@@ -1,74 +1,51 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand active" href="<%= root_url %>"><%= t('layout.menu.main') %></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-left">
-        <li class=""><a href="<%= static_centers_path %>"><i class="fa fa-flag-o"></i> <%= t('layout.menu.centers') %></a></li>
-        <li class="">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i> <%= t('layout.menu.dovidka') %> <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="<%= static_sz_path %>">Соціальний захист населення</a></li>
-            <li><a href="<%= static_dms_path %>">Державна міграційна служба</a></li>
-            <li><a href="<%= static_zd_path %>">Служби сім'ї, дітей та молоді</a></li>
-          </ul>
-        </li>
-        <li class="">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layout.menu.laws') %> <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/2811-12">Державна допомога сім'ям з дітьми »</a></li>
-            <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1058-15">Загальнообов'язкове державне пенсійне страхування »</a></li>
-            <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1751-2001-%D0%BF">Призначення і виплати державної допомоги сім'ям з дітьми »</a></li>
-            <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/848-95-%D0%BF">Надання субсидій для відшкодування витрат на оплату ЖКХ »</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-left">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('.analitic') %><b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">Звітність для громадян</a></li>
-
-            <% if current_user %>
-                <li class="divider"></li>
-                <li><a href="#">Загальна кількість місць для проживання</a></li>
-                <li><a href="#">Загальна кількість місць в розрізі типу житла</a></li>
-                <li><a href="#">Загальна кількість вакансій в розрізі регіонів та назв вакансій</a></li>
-            <% end %>
-
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
+<ol class="breadcrumb">
+  <li><a class="active" href="<%= root_url %>"><%= t('layout.menu.main') %></a></li>
+  <li><a href="<%= static_centers_path %>"><i class="fa fa-flag-o"></i> <%= t('layout.menu.centers') %></a></li>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i> <%= t('layout.menu.dovidka') %> <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="<%= static_sz_path %>">Соціальний захист населення</a></li>
+      <li><a href="<%= static_dms_path %>">Державна міграційна служба</a></li>
+      <li><a href="<%= static_zd_path %>">Служби сім'ї, дітей та молоді</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layout.menu.laws') %> <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/2811-12">Державна допомога сім'ям з дітьми »</a></li>
+      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1058-15">Загальнообов'язкове державне пенсійне страхування »</a></li>
+      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1751-2001-%D0%BF">Призначення і виплати державної допомоги сім'ям з дітьми »</a></li>
+      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/848-95-%D0%BF">Надання субсидій для відшкодування витрат на оплату ЖКХ »</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layout.menu.analitic') %><b class="caret"></b></a>
+      <ul class="dropdown-menu">
         <li>
-          <a class="btn" data-method="delete" href="<%= destroy_user_session_path %>" rel="nofollow"><i class="fa fa-user-md"></i> <%= t('layouts.Logout') %></a>
+          <a href="#">Звітність для громадян</a>
         </li>
+
+        <% if current_user %>
+        <li class="divider"></li>
+        <li><a href="#">Загальна кількість місць для проживання</a></li>
+        <li><a href="#">Загальна кількість місць в розрізі типу житла</a></li>
+        <li><a href="#">Загальна кількість вакансій в розрізі регіонів та назв вакансій</a></li>
         <% end %>
-      </ul>
 
-      <!--<form class="search navbar-form navbar-right col-lg-5" role="search">-->
-        <!--<div class="form-group">-->
-            <!--<input type="text" class="form-control" placeholder="<%= t('home.search.placeholder') %>">-->
-            <!--<span class="form-group-btn">-->
-              <!--<button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>-->
-            <!--</span>-->
-        <!--</div>-->
-      <!--</form>-->
+        </ul>
+  </li>
+  <% if user_signed_in? %>
+      <li>
+        <a data-method="delete" href="<%= destroy_user_session_path %>" rel="nofollow"><i class="fa fa-user-md"></i> <%= t('layouts.Logout') %></a>
+      </li>
+  <% end %>
+</ol>
 
-    </div>
-  </div>
-</nav>
+<!--<form class="search navbar-form navbar-right col-lg-5" role="search">-->
+<!--<div class="form-group">-->
+    <!--<input type="text" class="form-control" placeholder="<%= t('home.search.placeholder') %>">-->
+    <!--<span class="form-group-btn">-->
+      <!--<button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>-->
+    <!--</span>-->
+<!--</div>-->
+<!--</form>-->

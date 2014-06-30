@@ -6,7 +6,7 @@ class HousingsController < ApplicationController
   # GET /housings
   # GET /housings.json
   def index
-    @housings = Housing.all.where("qty_places > 0 and koatuu_code like '#{@area}%'").paginate(:page => params[:page])
+    @housings = Housing.all.where("qty_places > 0 and koatuu_code like ?", "#{@area}%")
   end
 
   # GET /housings/1
@@ -28,7 +28,7 @@ class HousingsController < ApplicationController
   def create
     @housing = Housing.where(:koatuu_code => housing_params[:koatuu_code], :house_id => housing_params[:house_id]).first
     if @housing
-      @housing.dupdate(housing_params)
+      @housing.update(housing_params)
     else
       @housing = Housing.new(housing_params)
     end
@@ -49,8 +49,10 @@ class HousingsController < ApplicationController
   def update
     respond_to do |format|
       if @housing.update(housing_params)
-        format.html { redirect_to housings_url, notice: 'Housing was successfully updated.' }
-        format.json { render :show, status: :ok, location: @housing }
+        format.html {
+          redirect_to housings_url, notice: 'Housing was successfully updated.' }
+        format.json {
+          render json: {}, status: :ok }
       else
         format.html { render :edit }
         format.json { render json: @housing.errors, status: :unprocessable_entity }

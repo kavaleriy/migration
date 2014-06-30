@@ -1,19 +1,20 @@
-<div class="panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">
-    <i class="fa fa-map-marker"></i> <%= t('home.menu.search_map').mb_chars.upcase %>
-    <a class="pull-right" href="<%= root_path %>"><i class="fa fa-home"></i> <%= t('home.menu.search') %></a>
-  </div>
+<% content_for :sub_menu do %>
+    <div class="search-heading">
+      <div class="col-md-4 active">
+        <i class="fa fa-map-marker"></i> <%= t('home.menu.search_map') %>
+      </div>
+      <div class="col-md-4">
+        <a class="" href="<%= root_path %>"><i class="fa fa-home"></i> <%= t('home.menu.search') %></a>
+      </div>
+    </div>
+<% end %>
 
-
-  <div class="map panel-body">
+<div class="search-container row">
 
     <div id="mapdiv" class="row" style=" height:600px;">
-      <div class="spinner pull-center"></div>
+        <div class="spinner"></div>
     </div>
-  </div>
 </div>
-
     <!--<%= javascript_include_tag 'http://openlayers.org/api/OpenLayers.js' %>-->
 
     <script type="text/javascript">

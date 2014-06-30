@@ -1,4 +1,4 @@
-<table class="table table-striped">
+<table class="table">
   <thead>
   <tr>
     <th><%= t('housings.index.koatuu') %></th>
@@ -15,7 +15,21 @@
       <tr>
         <td><%= koatuu[:region] || koatuu[:city] %> </td>
         <td><%= housing.house.name %></td>
-        <td><%= housing.qty_places %></td>
+        <td>
+          <%= form_for housing, remote: true, format: :json, :html => { :class => 'edit_housing_qttplaces' } do |f| %>
+            <div class="input-group" style="width: 150px">
+
+              <%= f.text_field :qty_places, :placeholder => t('housings.index.qtt_placeholder'), :class => 'form-control' %>
+
+              <span class="input-group-btn">
+                    <button class="save btn btn-secondary" ><i class="fa fa-check"></i></button>
+              </span>
+            </div>
+            <label id="error" style="display: none; color: red;">Введіть число.</label>
+          <% end %>
+
+
+        </td>
         <td><i class="<%= school_class(housing.has_school) %>"></i></td>
         <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
         <td>
@@ -27,9 +41,13 @@
   </tbody>
 </table>
 
-<div class="flickr_pagination ">
-  <%= paginate @housings, :container => false %>
-  <div class="page_info">
-    <!--<%= page_entries_info @housings %>-->
-  </div>
-</div>
+<script id="script_home_search_region" type="text/javascript">
+    $(document).ready(function() {
+        $(".edit_housing_qttplaces").on("ajax:success", function(e, data, status, xhr) {
+            $('#error', this).fadeOut(100)
+            $('.form-control', this).fadeOut("fast").fadeIn("fast");
+        }).on("ajax:error", function(e, xhr, status, error) {
+            $('#error', this).fadeIn(500)
+        })
+    })
+</script>

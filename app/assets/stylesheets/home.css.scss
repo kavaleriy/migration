@@ -2,8 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.panel-default {
-  background: rgba(250, 250, 250, .0);
+.search-heading {
+
+  &> div {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  &> .active {
+    background: rgba(250, 250, 250, .9);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.search-heading {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.search-container {
+}
+
+#results {
+  margin-top: 15px;
 }
 
 .map {

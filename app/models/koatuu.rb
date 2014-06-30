@@ -3,17 +3,17 @@ class Koatuu < ActiveRecord::Base
     where(:code => code).first
   end
 
-  def self.areas(area = '')
-    self.where(:level => 1).where("code like '#{area}%'").order('name')
+  def self.areas(code = '')
+    self.where(:level => 1).where("code like ?", "#{code}%").order('name')
   end
-  def self.regions(region = '')
-    self.where(:level => 2).where("code like '#{region}%'").order('name')
+  def self.regions(code = '')
+    self.where(:level => 2).where("code like ?", "#{code}%").order('name')
   end
-  def self.acities(area = '')
-    self.where(:level => 13).where("code like '#{area}%'").order('name')
+  def self.acities(code = '')
+    self.where(:level => 13).where("code like ?", "#{code}%").order('name')
   end
   def self.cities(code = '')
-    self.where(:level => [3, 13]).where("code like '#{code}%'").order('name')
+    self.where(:level => [3, 13]).where("code like ?", "#{code}%").order('name')
   end
 
   def self.to_tree(code)
@@ -43,7 +43,7 @@ class Koatuu < ActiveRecord::Base
     area = get_by_code(l1)
     region = get_by_code(l2)
     city = get_by_code(l3)
-    
+
     coatuu = {}
     coatuu[:area] = area.name if area
     coatuu[:region] = region.name if region
@@ -53,19 +53,19 @@ class Koatuu < ActiveRecord::Base
   end
 
   def self.areas_to_json(filter = '')
-    filter = filter.mb_chars.upcase
+    filter = filter.mb_chars
     arr = []
-    areas.where("name like '%#{filter}%'").each { |area|
+    areas.where("name like ?", "%#{filter}%").each { |area|
       arr << { name: area.name, id: area.code }
     }
     arr
   end
 
   def self.regions_to_json(area, filter = '')
-    filter = filter.mb_chars.upcase
+    filter = filter.mb_chars
     arr = []
 
-    regions(area.slice(0,2)).where("name like '%#{filter}%'").each do |region|
+    regions(area.slice(0,2)).where("name like ?", "%#{filter}%").each do |region|
       arr << { name: region.name, id: region.code }
     end if area.length >= 2
 
@@ -73,10 +73,10 @@ class Koatuu < ActiveRecord::Base
   end
 
   def self.acities_to_json(area, filter = '')
-    filter = filter.mb_chars.upcase
+    filter = filter.mb_chars
     arr = []
 
-    acities(area.slice(0,2)).where("name like '%#{filter}%'").each do |city|
+    acities(area.slice(0,2)).where("name like ?", "%#{filter}%").each do |city|
       arr << { name: city.name, id: city.code }
     end if area.length >= 2
 

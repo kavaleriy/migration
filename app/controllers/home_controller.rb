@@ -18,7 +18,7 @@ class HomeController < ApplicationController
     has_kgarden = params[:home_search_has_kgarden]
 
     @housings = Housing.where('qty_places > 0')
-    @housings = @housings.where("koatuu_code like '#{koatuu}%'") unless koatuu.empty?
+    @housings = @housings.where("koatuu_code like ?", "#{koatuu}%") unless koatuu.empty?
     @housings = @housings.where(:has_school => 1) unless scool.nil?
     @housings = @housings.where(:has_kgarden => 1) unless has_kgarden.nil?
 
