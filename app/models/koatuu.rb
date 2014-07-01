@@ -3,6 +3,13 @@ class Koatuu < ActiveRecord::Base
     where(:code => code).first
   end
 
+  def self.area(area)
+    if area.length == 2
+      res = self.areas(area)
+      res.first unless res.empty?
+    end
+  end
+
   def self.areas(code = '')
     self.where(:level => 1).where("code like ?", "#{code}%").order('name')
   end

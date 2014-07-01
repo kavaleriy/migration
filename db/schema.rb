@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140628141703) do
+ActiveRecord::Schema.define(version: 20140701123759) do
+
+  create_table "geos", force: true do |t|
+    t.string  "koatuu_code"
+    t.integer "lon"
+    t.integer "lat"
+    t.integer "zoom"
+  end
 
   create_table "houses", force: true do |t|
     t.string   "name"
@@ -40,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140628141703) do
     t.integer  "level"
   end
 
-  add_index "koatuus", ["code"], name: "index_koatuu_on_code"
+  add_index "koatuus", ["name"], name: "index_koatuu_on_code"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

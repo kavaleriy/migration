@@ -6,6 +6,9 @@ class HomeController < ApplicationController
     @house = House.all.collect { |i| [ i.name, i.id.to_s ] }
   end
 
+  def map
+  end
+
   private
   def set_housing
     params[:home_search_region] ||= ''

@@ -14,4 +14,24 @@ class Housing < ActiveRecord::Base
   def self.has_kgarten?(val)
     val == 1
   end
+
+
+  def self.grouped_area
+    res = {}
+    Koatuu.areas().each {|area|
+      area = area.code.slice(0,2)
+      res["#{area}"] = Housing.where("qty_places > 0 and koatuu_code like '#{area}%'").sum('qty_places')
+    }
+    res
+  end
+
+  def self.grouped_region area
+    res = {}
+    Koatuu.regions(area).each {|region|
+      region = region.code.slice(0,5)
+      res["#{region}"] = Housing.where("qty_places > 0 and koatuu_code like '#{area}%'").sum('qty_places')
+    }
+    res
+  end
+
 end

@@ -15,7 +15,24 @@ class ApiController < ApplicationController
     end
   end
 
-  def get_cities
+  def get_koatuu_geo
+    area = params[:area]
+
+    if area.nil?
+      qtt = Housing.grouped_area
+    else
+      qtt = Housing.grouped_region(area)
+    end
+
+    qtt.collect { |row|
+      code = row.koatuu_code
+      { 
+      }
+    }
+
+    respond_to do |format|
+      format.json { render json: qtt, status: :ok }
+    end
   end
 
 end

@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   get 'api/get_regions'
 
-  get 'api/get_cities'
+  get 'api/get_koatuu_geo'
 
   devise_for :housings
   devise_for :users

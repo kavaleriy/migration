@@ -34,11 +34,40 @@ namespace :koatuu do
     end
   end
 
-  def self.extract_name name
-    index = name.index('/')
-    name = name.slice(0, index) if index
-    name.mb_chars.capitalize
-    # name.mb_chars.gsub(/ ОБЛАСТЬ$/, '').gsub(/ РАЙОН$/, '').capitalize
+  private
+    def self.extract_name name
+      index = name.index('/')
+      name = name.slice(0, index) if index
+      name.mb_chars.capitalize
+      # name.mb_chars.gsub(/ ОБЛАСТЬ$/, '').gsub(/ РАЙОН$/, '').capitalize
+    end
+
+
+  desc "Import geo-data from json"
+  task :load_geo => :environment do
+    geo = JSON.parse(File.open("db/spr/geo.json", "r").read)
+
+    Geo.destroy_all
+
+    geo.each { |area|
+      extract_geo area
+      regions = area['rayon']
+
+      regions.each { |region|
+        extract_geo region
+      }
+    }
   end
+
+    private
+      def extract_geo data
+
+        koatuu_code = data['code']
+        lon = data['geo']['lon']
+        lat = data['geo']['lat']
+        zoom = data['geo']['zoom']
+
+        Geo.create({ koatuu_code: koatuu_code, lon: lon, lat: lat, zoom: zoom }).save
+      end
 
 end
