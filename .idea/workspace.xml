@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a480a09d-0dc7-4213-a828-3ac93fbd2d33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/logo.png" afterPath="$PROJECT_DIR$/app/assets/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/report/amount_places.html.erb" afterPath="$PROJECT_DIR$/app/views/report/amount_places.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static/centers.html.erb" afterPath="$PROJECT_DIR$/app/views/static/centers.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ol.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ol.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/report_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/report_controller.rb" />
     </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,16 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_top.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_top.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="306">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.rdoc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,27 +72,37 @@
       <file leaf-file-name="map.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/map.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.259259" vertical-offset="974" max-vertical-offset="2376">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+            <state vertical-scroll-proportion="-18.0" vertical-offset="630" max-vertical-offset="2376">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ol.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.592592" vertical-offset="416" max-vertical-offset="1008">
+              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ol.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ol.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="35060" max-vertical-offset="74322">
-              <caret line="1973" column="17" selection-start-line="1973" selection-start-column="17" selection-end-line="1973" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.2970297" vertical-offset="576" max-vertical-offset="74322">
+              <caret line="42" column="229" selection-start-line="42" selection-start-column="229" selection-end-line="42" selection-end-column="229" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="centers.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="centers.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static/centers.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30405405" vertical-offset="0" max-vertical-offset="3546">
+            <state vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="3546">
               <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -186,7 +180,6 @@
         <option value="$PROJECT_DIR$/app/views/housings/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/housing.rb" />
         <option value="$PROJECT_DIR$/app/views/housings/_table.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
         <option value="$PROJECT_DIR$/config/locales/uk.yml" />
         <option value="$PROJECT_DIR$/app/controllers/housings_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/_work.html.erb" />
@@ -199,8 +192,9 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/report_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/report/amount_places.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ol.js" />
         <option value="$PROJECT_DIR$/app/views/static/centers.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ol.js" />
       </list>
     </option>
   </component>
@@ -1069,14 +1063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="936">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/uk.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="598" max-vertical-offset="1710">
@@ -1165,14 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/map.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.259259" vertical-offset="974" max-vertical-offset="2376">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="1548">
@@ -1229,21 +1207,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ol.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="35060" max-vertical-offset="74322">
-          <caret line="1973" column="17" selection-start-line="1973" selection-start-column="17" selection-end-line="1973" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static/centers.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30405405" vertical-offset="0" max-vertical-offset="3546">
+        <state vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="3546">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.592592" vertical-offset="416" max-vertical-offset="1008">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/map.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.0" vertical-offset="630" max-vertical-offset="2376">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ol.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2970297" vertical-offset="576" max-vertical-offset="74322">
+          <caret line="42" column="229" selection-start-line="42" selection-start-column="229" selection-end-line="42" selection-end-column="229" />
+          <folding />
         </state>
       </provider>
     </entry>
