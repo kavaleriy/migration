@@ -16,23 +16,28 @@ class ApiController < ApplicationController
   end
 
   def get_koatuu_geo
+
     area = params[:area]
 
-    if area.nil?
-      qtt = Housing.grouped_area
+    if area
+      qtt = Koatuu.regions(area).collect { |region|
+        code = region.code.slice(0, 5)
+        { code: code, name: region.name, qtt: Housing.group_qtt(code)}
+      }
     else
-      qtt = Housing.grouped_region(area)
+      qtt = Koatuu.areas.collect { |area|
+        code = area.code.slice(0, 2)
+        { code: code, name: area.name, qtt: Housing.group_qtt(code)}
+      }
     end
 
-    qtt.collect { |row|
-      code = row.koatuu_code
-      { 
-      }
+    qtt = qtt.reject {|v| v[:qtt] == 0 }
+    qtt.map { |row|
+      geo = Geo.where(:koatuu_code => row[:code]).first
+      row[:geo] = { lon: geo.lon, lat: geo.lat, zoom: geo.zoom } if geo
     }
 
-    respond_to do |format|
-      format.json { render json: qtt, status: :ok }
-    end
+    render json: qtt, status: :ok
   end
 
 end

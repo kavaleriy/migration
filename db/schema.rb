@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140701123759) do
     t.integer  "level"
   end
 
-  add_index "koatuus", ["name"], name: "index_koatuu_on_code"
+  add_index "koatuus", ["code"], name: "index_koatuu_on_code"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

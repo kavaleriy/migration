@@ -18,6 +18,16 @@
 <!--<%= javascript_include_tag 'http://openlayers.org/api/OpenLayers.js' %>-->
 
 <script type="text/javascript">
+
+    function get_regions(code, alon, alat, azoom) {
+        $.getJSON("<%= api_get_koatuu_geo_path %>", { area: code }, function( data ) {
+            /* Создание маркеров области */
+            CreateMarkerForRegion();
+            /* Слои области на карту */
+            map.addLayer(LayerOblast);
+        });
+    }
+
     $(document).ready(function () {
         $('#mapdiv').html('');
 
@@ -32,13 +42,7 @@
         SetGeoPositionStandart();
         /* Установка стандартов координат */
 
-
         window.LayerOblast = new OpenLayers.Layer.Vector("Overlay");
-        /* Слой маркеров для областей */
-//                window.LayerRayon = new OpenLayers.Layer.Vector("Overlay");
-        /* Слой маркеров для районов */
-//                window.LayerCity = new OpenLayers.Layer.Vector("Overlay");
-        /* Слой маркеров для городов */
 
         SetMapCenterZoom(3530470.0647431, 6243369.337484, 6);
         /* Карта Украины по центру в масштабе */
@@ -72,13 +76,12 @@
             }
         });
 
-        $.get("<%= api_get_koatuu_geo_path %>", function( data ) {
-            window.arrayGEO = data
+        $.getJSON("<%= api_get_koatuu_geo_path %>", function( data ) {
             /* Создание маркеров области */
             CreateMarkerForArea();
             /* Слои области на карту */
             map.addLayer(LayerOblast);
-        }, 'json');
+        });
 
     })
 

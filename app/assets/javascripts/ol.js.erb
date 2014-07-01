@@ -26,17 +26,17 @@ function SetMapCenterZoom(x, y, z) {
  */
 function CreateMarkerForArea() {
     var features = []
+    jQuery.each(geo_data, function (i, val) {
 
-    jQuery.each(GeoInfo, function (i, val) {
-        val = val.area
-        houses_qtt = val.house;
-        if (houses_qtt != null) {
-            sgeo = val.geo.split(',');
-            alon = sgeo[0];
-            alat = sgeo[1];
-            azoom = sgeo[2];
+        var houses_qtt = val.qtt;
+        if (houses_qtt > 0) {
 
-            name = val.namearea;
+            var code = val.code
+            var alon = val.geo.lon + '';
+            var alat = val.geo.lat + '';
+            var azoom = val.geo.zoom + '';;
+
+            var name = val.name + '';
 
             type = 20
             if (houses_qtt > 100)
@@ -46,9 +46,10 @@ function CreateMarkerForArea() {
             if (houses_qtt > 5000)
                 type = 50
 
+
             features.push(new OpenLayers.Feature.Vector(
                 new OpenLayers.Geometry.Point(alon, alat),
-                {description: name + ' обл., місць для проживання - ' + houses_qtt + ' <i class="fa fa-home"></i><span class="more-maps-info" onclick="SetMapCenterZoom(' + alon + ', ' + alat + ',' + azoom + ' )"><br> детальніше...</span>'},
+                {description: name + ', місць для проживання - ' + houses_qtt + ' <i class="fa fa-home"></i><span class="more-maps-info" onclick="get_regions(' + ["\'"+code+"\'", alon, alat, azoom].join(",") + ')"><br> детальніше...</span>'},
                 {
                     externalGraphic: '/assets/circle.png',
                     fillOpacity: 0.5,
@@ -68,6 +69,7 @@ function CreateMarkerForArea() {
     // create the layer styleMap with a simple symbolizer template
     LayerOblast.addFeatures(features);
 }
+
 
 
 /**
@@ -96,13 +98,13 @@ function destroyPopup(feature) {
  * Обработка при изменении масштаба
  */
 function EventAfterZoom(zoom) {
-    if (zoom < 6 || zoom > 7) {
+    if (zoom < 5 || zoom > 11) {
         LayerOblast.setVisibility(false);
 
     } else {
         LayerOblast.setVisibility(true);
     }
-    if (zoom < 6) {
+    if (zoom < 5) {
         SetMapCenterZoom(3530470.0647431, 6243369.337484, 6);
     }
 
