@@ -35,12 +35,12 @@ function CreateMarkerForArea() {
         alat = sgeo[1];
         azoom = sgeo[2];
         name = val.namearea;
-        house = "1" // splace.house;
+        house = val.house;
         work = "1" // splace.work;
 
         var feature = new OpenLayers.Feature.Vector(
             new OpenLayers.Geometry.Point(alon, alat),
-            {description: name + ' обл.: ' + house + ' <i class="fa fa-home"></i><span class="more-maps-info" onclick="SetMapCenterZoom(' + alon + ', ' + alat + ',' + azoom + ' )"> детальніше... </span>'},
+            {description: name + ' обл., місць для проживання - ' + (house || '0')+ ' <i class="fa fa-home"></i><span class="more-maps-info" onclick="SetMapCenterZoom(' + alon + ', ' + alat + ',' + azoom + ' )"> детальніше... </span>'},
             {
                 externalGraphic: '/assets/cloud-popup-relative.png',
                 fillOpacity: 0.7,
@@ -48,7 +48,7 @@ function CreateMarkerForArea() {
                 graphicWidth: 40,
                 graphicXOffset: -5,
                 graphicYOffset: -8,
-//                label: house + ' /' + work,
+//                label: 'Місць: ' + house,
                 labelAlign: 'lt',
                 fontColor: "red"
             }
@@ -1970,6 +1970,7 @@ function arrayGEO() {
                 "codearea": "46",
                 "geo": "2678655.8216517,6405415.8374262,8",
                 "img": "obl_lviv_biblos",
+                "house": "119",
                 "regions": {
                     "region": {
                         "nameregion": "Бродівський",
