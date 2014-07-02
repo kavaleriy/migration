@@ -39,5 +39,5 @@ RAILS_ENV=test bundle
 RAILS_ENV=test rake assets:precompile
 RAILS_ENV=test unicorn -p 80 -D
 
-RAILS_ENV=production
+RAILS_ENV=production rake assets:precompile
 
