@@ -13,7 +13,7 @@
 <tbody>
 <% @housings.each do |housing| %>
     <% coatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
-    <% work_url = work_class(housing.koatuu_code) %>
+    <!--<% work_url = work_class(housing.koatuu_code) %>-->
     <tr>
       <td><%= coatuu[:area] %> </td>
       <td><%= coatuu[:region] || coatuu[:city] %> </td>
