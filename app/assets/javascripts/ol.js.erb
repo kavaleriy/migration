@@ -25,6 +25,72 @@ function SetMapCenterZoom(x,y,z){
  * Данные вычитываются из глобальной GeoInfo
  */
 function CreateMarkers(layer, geo_data) {
+    while( map.popups.length ) {
+        map.removePopup(map.popups[0]);
+    }
+
+    var features = []
+    jQuery.each(geo_data, function (i, val) {
+
+        var houses_qtt = val.qtt;
+        if (houses_qtt > 0) {
+
+
+            var code = val.code;
+            var area = val.area || '';
+            var region = val.region || '';
+
+            var alon = val.geo.lon;
+            var alat = val.geo.lat;
+            var azoom = val.geo.zoom;
+
+            var name = val.name;
+
+            type = 15
+            if (houses_qtt > 10)
+                type = 20
+            if (houses_qtt > 50)
+                type = 25
+            if (houses_qtt > 100)
+                type = 30
+            if (houses_qtt > 500)
+                type = 35
+            if (houses_qtt > 1000)
+                type = 40
+            if (houses_qtt > 2000)
+                type = 45
+            if (houses_qtt > 3000)
+                type = 50
+
+            params = "'" + code +"', '"+ alon +"', '"+ alat +"', '"+ azoom + "'"
+
+            features.push(new OpenLayers.Feature.Vector(
+                    new OpenLayers.Geometry.Point(alon, alat),
+                    {
+                        description: '<h5>' + name + '</h5><small>для проживання: ' + houses_qtt + '</small><hr><p><a href="#"><i class="fa fa-map-marker" onclick="get_regions('+params+')"></i></a> <a href="/?home_search_area='+ area + '&home_search_region='+ region +'" class="fa fa-home"></a><span class="more-maps-info"</p>'},
+                    {
+                        externalGraphic: '/assets/circle.png',
+                        fillOpacity: 0.7,
+                        graphicHeight: type,
+                        graphicWidth: type,
+                        graphicXOffset: -24,
+                        graphicYOffset: -22,
+                        label: '',
+                        labelAlign: '',
+                        fontColor: "blue"
+                    }
+            ));
+        }
+    })
+
+
+    // create the layer styleMap with a simple symbolizer template
+    layer.addFeatures(features);
+
+    map.addLayer(layer);
+}
+
+function CreateMarkersRegion(layer, geo_data) {
     var features = []
     jQuery.each(geo_data, function (i, val) {
 
@@ -49,7 +115,7 @@ function CreateMarkers(layer, geo_data) {
             params = "'" + code +"', '"+ alon +"', '"+ alat +"', '"+ azoom + "'"
             console.log(params)
 
-                    features.push(new OpenLayers.Feature.Vector(
+            features.push(new OpenLayers.Feature.Vector(
                     new OpenLayers.Geometry.Point(alon, alat),
                     {description: name + ', місць для проживання - ' + houses_qtt + ' <i class="fa fa-home"></i><span class="more-maps-info" onclick="get_regions('+params+')"><br> детальніше...</span>'},
                     {
@@ -74,7 +140,6 @@ function CreateMarkers(layer, geo_data) {
     map.addLayer(layer);
 }
 
-
 /**
  * Выпадающие окошки для областей
  */
@@ -86,7 +151,8 @@ function createPopup(feature) {
             null,
             true,
             function() {
-                controls['selector'].unselectAll();
+                controls['selectorArea'].unselectAll();
+                controls['selectorRegion'].unselectAll();
             }
     );
     //feature.popup.closeOnMove = true;

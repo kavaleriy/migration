@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   get 'home/search'
 
+  get 'api/get_koatuu'
   get 'api/get_areas'
 
   get 'api/get_regions'

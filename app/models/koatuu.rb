@@ -49,12 +49,11 @@ class Koatuu < ActiveRecord::Base
 
     area = get_by_code(l1)
     region = get_by_code(l2)
-    city = get_by_code(l3)
+    name = get_by_code(l3)
 
-    coatuu = {}
+    coatuu = { id: code, name: name.name } if name
     coatuu[:area] = area.name if area
     coatuu[:region] = region.name if region
-    coatuu[:city] = city.name if city
 
     coatuu
   end

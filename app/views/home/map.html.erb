@@ -15,11 +15,11 @@
     <div class="spinner"></div>
   </div>
 </div>
-<!--<%= javascript_include_tag 'http://openlayers.org/api/OpenLayers.js' %>-->
 
 <script type="text/javascript">
 
     function get_regions(code, alon, alat, azoom) {
+        console.log(code)
         $.getJSON("<%= api_get_koatuu_geo_path %>", { area: code }, function( data ) {
             /* Создание маркеров области */
             CreateMarkers(LayerRayon, data);
@@ -39,23 +39,21 @@
         StartInitMap("mapdiv");
         SetGeoPositionStandart();
 
-        window.LayerOblast=new OpenLayers.Layer.Vector("Overlay");      //
-        window.LayerRayon=new OpenLayers.Layer.Vector("Overlay");       //
+        window.LayerOblast=new OpenLayers.Layer.Vector("Overlay");
+        window.LayerRayon=new OpenLayers.Layer.Vector("Overlay");
 
         SetMapCenterZoom(3530470.0647431, 6243369.337484, 6);
 
         /* Контроллер для показа маркеров областей */
         window.controls = {
-            selector: new OpenLayers.Control.SelectFeature(LayerOblast, {onSelect: createPopup, onUnselect: destroyPopup})
+            selectorArea: new OpenLayers.Control.SelectFeature(LayerOblast, {onSelect: createPopup, onUnselect: destroyPopup}),
+            selectorRegion: new OpenLayers.Control.SelectFeature(LayerRayon, {onSelect: createPopup, onUnselect: destroyPopup})
         };
-        map.addControl(controls['selector']);
-        controls['selector'].activate();
+        map.addControl(controls['selectorArea']);
+        map.addControl(controls['selectorRegion']);
+        controls['selectorArea'].activate();
+        controls['selectorRegion'].activate();
 
-        window.controlsr={
-            selector: new OpenLayers.Control.SelectFeature(LayerRayon, {onSelect: createPopup, onUnselect: destroyPopup})
-        };
-        map.addControl(controlsr['selector']);
-        controlsr['selector'].activate();
 
 
         map.events.register("zoomend", map, function(e) { EventAfterZoom(e.object.zoom); });

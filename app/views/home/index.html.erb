@@ -14,10 +14,10 @@
 
       <div class="btn-group btn-group-justified">
         <div class="btn-group">
-          <%= text_field_tag 'home_search_area', nil, { 'placeholder' => t('home.search.area_placeholder'), :class => 'form-control col-lg-10' } %>
+          <%= text_field_tag 'home_search_area', params[:home_search_area], { 'placeholder' => t('home.search.area_placeholder'), :class => 'form-control col-lg-10' } %>
         </div>
         <div class="btn-group">
-          <%= text_field_tag 'home_search_region', nil, { 'placeholder' => t('home.search.region_placeholder'), :class => 'form-control' } %>
+          <%= text_field_tag 'home_search_region', params[:home_search_region], { 'placeholder' => t('home.search.region_placeholder'), :class => 'form-control' } %>
         </div>
         <div class="btn-group">
             <%= render partial: 'work' %>
@@ -74,6 +74,18 @@
                     return {results: data, text: "name" };
                 }
             },
+            initSelection: function(element, callback) {
+                var id=$(element).val();
+                if (id!=="") {
+                    $.ajax("/api/get_koatuu", {
+                        data: {
+                            q: id
+                        },
+                        dataType: "json"
+                    }).done(function(data) {
+                        callback(data[0]); });
+                }
+            },
             formatSelection: function(item) {
                 return item.name
             },
@@ -101,6 +113,18 @@
                 results: function (data, page) { // parse the results into the format expected by Select2.
                     // since we are using custom formatting functions we do not need to alter remote JSON data
                     return {results: data, text: "name" };
+                }
+            },
+            initSelection: function(element, callback) {
+                var id=$(element).val();
+                if (id!=="") {
+                    $.ajax("/api/get_koatuu", {
+                        data: {
+                            q: id
+                        },
+                        dataType: "json"
+                    }).done(function(data) {
+                        callback(data[0]); });
                 }
             },
             formatSelection: function(item) {

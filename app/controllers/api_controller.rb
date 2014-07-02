@@ -1,17 +1,25 @@
 class ApiController < ApplicationController
-  def get_areas
-    @areas = Koatuu.areas_to_json(params[:q])
+  def get_koatuu
+    koatuu = Koatuu.coatuu_to_json(params[:q].ljust(10, '0'))
 
     respond_to do |format|
-      format.json { render json: @areas, status: :ok }
+      format.json { render json: [{ id: koatuu[:id], name: koatuu[:name] }], status: :ok }
+    end
+  end
+
+  def get_areas
+    areas = Koatuu.areas_to_json(params[:q])
+
+    respond_to do |format|
+      format.json { render json: areas, status: :ok }
     end
   end
 
   def get_regions
-    @regions = Koatuu.acities_to_json(params[:area], params[:q]) + Koatuu.regions_to_json(params[:area], params[:q])
+    regions = Koatuu.acities_to_json(params[:area], params[:q]) + Koatuu.regions_to_json(params[:area], params[:q])
 
     respond_to do |format|
-      format.json { render json: @regions, status: :ok }
+      format.json { render json: regions, status: :ok }
     end
   end
 
@@ -22,12 +30,12 @@ class ApiController < ApplicationController
     if area
       qtt = Koatuu.regions(area).collect { |region|
         code = region.code.slice(0, 5)
-        { code: code, name: region.name, qtt: Housing.group_qtt(code)}
+        { code: code, area: area, region: region.code, name: region.name, qtt: Housing.group_qtt(code)}
       }
     else
       qtt = Koatuu.areas.collect { |area|
         code = area.code.slice(0, 2)
-        { code: code, name: area.name, qtt: Housing.group_qtt(code)}
+        { code: code, area: area.code, name: area.name, qtt: Housing.group_qtt(code)}
       }
     end
 
