@@ -33,14 +33,14 @@ function CreateMarkers(layer, geo_data) {
     jQuery.each(geo_data, function (i, val) {
 
         var houses_qtt = val.qtt;
-        if (houses_qtt > 0) {
+        if (houses_qtt > 0 && val.geo) {
 
 
             var code = val.code;
             var area = val.area || '';
             var region = val.region || '';
 
-            var alon = val.geo.lon;
+            var alon = val.geo.lon ;
             var alat = val.geo.lat;
             var azoom = val.geo.zoom;
 

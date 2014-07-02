@@ -28,7 +28,7 @@ class ApiController < ApplicationController
     area = params[:area]
 
     if area
-      qtt = Koatuu.regions(area).collect { |region|
+      qtt = (Koatuu.acities(area) + Koatuu.regions(area)).collect { |region|
         code = region.code.slice(0, 5)
         { code: code, area: area, region: region.code, name: region.name, qtt: Housing.group_qtt(code)}
       }
