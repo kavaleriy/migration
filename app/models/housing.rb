@@ -1,6 +1,8 @@
 class Housing < ActiveRecord::Base
   belongs_to :house
 
+  after_save :log_housing
+
   default_scope -> { order('koatuu_code, house_id') }
 
   validates :koatuu_code, presence: true
@@ -17,6 +19,19 @@ class Housing < ActiveRecord::Base
 
   def self.group_qtt code
     Housing.where("koatuu_code like ?", "#{code}%").sum('qty_places')
+  end
+
+  private
+  def log_housing
+    ondate = Date.current
+    log = HousingLog.where(koatuu_code: koatuu_code, house_name: house.name, ondate: ondate).first
+    if log
+      log.update( {qtt: qty_places } )
+    else
+      log = HousingLog.create( {koatuu_code: koatuu_code, house_name: house.name, qtt: qty_places, ondate: Date.current} )
+    end
+
+    log.save
   end
 
 end
