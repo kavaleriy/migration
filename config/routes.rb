@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  resources :trud_govs
+
   get 'home/map'
 
   get 'report/amount_places'
@@ -29,9 +33,6 @@ Rails.application.routes.draw do
   get 'api/get_regions'
 
   get 'api/get_koatuu_geo'
-
-  devise_for :housings
-  devise_for :users
 
   get 'centers/index'
 

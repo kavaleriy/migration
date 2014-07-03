@@ -21,6 +21,10 @@ class Housing < ActiveRecord::Base
     Housing.where("koatuu_code like ?", "#{code}%").sum('qty_places')
   end
 
+  def self.group_by_house area_code, house_id
+    Housing.where(:house_id => house_id).where("koatuu_code like ?", "#{area_code}%").sum('qty_places')
+  end
+
   private
   def log_housing
     ondate = Date.current

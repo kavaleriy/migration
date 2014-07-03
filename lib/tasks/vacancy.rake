@@ -2,6 +2,27 @@
 
 namespace :vacancies do
 
+  desc "Load koatuus to trud codes"
+  task :koatuus=> :environment do
+    TrudGov.destroy_all
+
+    Koatuu.areas.each { |area|
+      area_code = area.code.slice(0,2)
+      create_trud area_code
+
+      (Koatuu.acities(area_code) + Koatuu.regions(area_code)).each {|region|
+        create_trud region.code.slice(0,5)
+      }
+    }
+  end
+
+  private
+    def create_trud(code)
+      TrudGov.create({ :koatuu_code => code }) if TrudGov.where( :koatuu_code => code ).empty?
+    end
+
+
+
   desc "Load data "
   task :seed => :environment do
 
@@ -66,7 +87,8 @@ namespace :vacancies do
           '7904429921' => '6800000000', #  Хмельницька область
           '7904431921' => '7100000000', #  Черкаська область
           '7904431945' => '7300000000', #  Чернівецька область
-          '7904431958' => '7400000000'  # Чернігівська область
+          '7904431958' => '7400000000'  #  Чернігівська область
+
       }[trud_code]
     end
 

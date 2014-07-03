@@ -3,11 +3,26 @@ class Koatuu < ActiveRecord::Base
     where(:code => code).first
   end
 
-  def self.area(area)
-    if area.length == 2
-      res = self.areas(area)
-      res.first unless res.empty?
+  def self.l1(area)
+    if area.length < 2
+      return { :code => area, :name => nil }
+    else
+      area = area.slice(0, 2)
     end
+
+    res = self.areas(area)
+    res.first if res.count == 1
+  end
+
+  def self.l2(region)
+    if region.length < 5
+      return { :code => region, :name => nil }
+    else
+      region = region.slice(0, 5)
+    end
+
+    res = (self.acities(region) + self.regions(region.ljust(10, '0')))
+    res.first if res.count == 1
   end
 
   def self.areas(code = '')

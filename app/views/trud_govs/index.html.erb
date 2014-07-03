@@ -1,0 +1,22 @@
+<%- model_class = TrudGov -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<%= render partial: 'application/search_area' %>
+
+<script type="text/javascript">
+    $("#home_search_area")
+            .on("change", function(e) {
+                $.get("<%= trud_govs_path %>", {
+                    q: e.val,
+                }).done(function(data) {
+                    $('#table').html(data)
+                });
+            });
+</script>
+
+<div id="table">
+<%= render partial: 'table' %>
+</div>
+

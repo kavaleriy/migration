@@ -27,8 +27,6 @@
             </div>
             <label id="error" style="display: none; color: red;">Введіть число.</label>
           <% end %>
-
-
         </td>
         <td><i class="<%= school_class(housing.has_school) %>"></i></td>
         <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
@@ -41,7 +39,7 @@
   </tbody>
 </table>
 
-<script id="script_home_search_region" type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function() {
         $(".edit_housing_qttplaces").on("ajax:success", function(e, data, status, xhr) {
             $('#error', this).fadeOut(100)

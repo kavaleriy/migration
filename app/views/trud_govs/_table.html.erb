@@ -1,0 +1,48 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Код коатуу</th>
+    <th></th>
+    <th>TRUD.GOV.UA код</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @trud_govs.each do |trud_gov| %>
+      <tr>
+        <td><%= trud_gov.koatuu_code %></td>
+        <td><%= Koatuu.l2(trud_gov.koatuu_code)[:name] || Koatuu.l1(trud_gov.koatuu_code)[:name]%></td>
+        <td>
+        <%= form_for trud_gov, remote: true, format: :json, :html => { :class => 'edit_trud_gov_trud_code' } do |f| %>
+            <div class="input-group" style="width: 250px">
+
+              <%= f.text_field :trud_code, :placeholder => '', :class => 'form-control' %>
+
+              <span class="input-group-btn">
+                    <button class="save btn btn-secondary" ><i class="fa fa-check"></i></button>
+              </span>
+            </div>
+            <label id="error" style="display: none; color: red;"></label>
+        <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<% if @trud_govs.respond_to?('total_pages') %>
+    <div class="flickr_pagination ">
+        <%= paginate @trud_govs, :container => false %>
+</div>
+<% end %>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".edit_trud_gov_trud_code").on("ajax:success", function(e, data, status, xhr) {
+            $('#error', this).fadeOut(100)
+            $('.form-control', this).fadeOut("fast").fadeIn("fast");
+        }).on("ajax:error", function(e, xhr, status, error) {
+            $('#error', this).text('Помилка збереження даних: ' + error).fadeIn(500)
+        })
+    })
+</script>

@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702131818) do
+ActiveRecord::Schema.define(version: 20140703170033) do
 
   create_table "geos", force: true do |t|
     t.string  "koatuu_code"
-    t.decimal "lon",         precision: 15, scale: 10
-    t.decimal "lat",         precision: 15, scale: 10
+    t.integer "lon"
+    t.integer "lat"
     t.integer "zoom"
   end
 
@@ -54,7 +54,16 @@ ActiveRecord::Schema.define(version: 20140702131818) do
     t.integer  "level"
   end
 
-  add_index "koatuus", ["name"], name: "index_koatuu_on_code"
+  add_index "koatuus", ["code"], name: "index_koatuu_on_code"
+
+  create_table "trud_govs", force: true do |t|
+    t.string   "trud_code"
+    t.string   "koatuu_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "trud_govs", ["koatuu_code"], name: "index_trud_gov_on_koatuu_code", unique: true
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

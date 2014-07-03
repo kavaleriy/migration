@@ -1,2 +1,21 @@
-<h1>Report#amount_by_type</h1>
-<p>Find me in app/views/report/amount_by_type.html.erb</p>
+<h4>Звіт за <%= @dt %></h4>
+<h4>Загальна кількість місць в розрізі типу житла</h4>
+
+<table class="table">
+  <% @rep.each do |area| %>
+      <tr>
+        <td><h5><%= area[:name] %></h5></td>
+        <td></td>
+      </tr>
+      <% area[:houses].each do |house| %>
+          <tr>
+            <td><%= house[:name] %></td>
+            <td><%= house[:qtt] %></td>
+          </tr>
+      <% end %>
+      <tr>
+        <td align="right">Всього місць:</td>
+        <td><b><%= area[:qtt] %></b></td>
+      </tr>
+  <% end %>
+</table>

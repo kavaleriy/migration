@@ -15,6 +15,19 @@ class ReportController < ApplicationController
   end
 
   def amount_by_type
+    @dt = Date.current
+
+    @rep = Koatuu.areas.collect { |area|
+      area_code = area.code.slice(0, 2)
+      houses = House.all.collect { |house|
+        { name: house.name, qtt: Housing.group_by_house(area_code, house.id)}
+      }.reject{ |item| item[:qtt] == 0 }
+
+      qtt = Housing.group_qtt(area_code)
+      { code: area_code, name: area.name, qtt: qtt, houses: houses}
+    }.reject{ |item| item[:qtt] == 0 }
+
+
   end
 
   def amount_of_job

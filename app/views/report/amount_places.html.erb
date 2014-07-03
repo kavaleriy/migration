@@ -1,16 +1,16 @@
-<h3>Звіт</h3>
-<h4>Загальна кількість місць для проживання станом на <%= @dt %></h4>
+<h4>Звіт за <%= @dt %></h4>
+<h4>Загальна кількість місць для проживання</h4>
 
 
 <table class="table">
   <% @rep.each do |area| %>
   <tr>
-    <td colspan="3"><h5>Код області (коатуу): <%= area[:code] %>, <%= area[:name] %></h5></td>
+    <td colspan="3"><h5><%= area[:name] %></h5></td>
   </tr>
   <tr>
     <td>Код району</td>
     <td>Назва району</td>
-    <td><b>Місць</b></td>
+    <td>Місць</td>
   </tr>
   <% area[:regions].each do |region| %>
   <tr>

@@ -14,10 +14,10 @@
 
       <div class="btn-group btn-group-justified">
         <div class="btn-group">
-          <%= text_field_tag 'home_search_area', params[:home_search_area], { 'placeholder' => t('home.search.area_placeholder'), :class => 'form-control col-lg-10' } %>
+          <%= render partial: 'search_area' %>
         </div>
         <div class="btn-group">
-          <%= text_field_tag 'home_search_region', params[:home_search_region], { 'placeholder' => t('home.search.region_placeholder'), :class => 'form-control' } %>
+          <%= render partial: 'search_region' %>
         </div>
         <div class="btn-group">
             <%= render partial: 'work' %>
@@ -56,83 +56,3 @@
     });
 </script>
 
-<script id="script_home_search_area" type="text/javascript">
-    $(document).ready(function() {
-        $("#home_search_area").select2({
-            allowClear:true,
-            ajax: {
-                url: "/api/get_areas",
-                dataType: 'json',
-                data: function (term, page) {
-                    return {
-                        q: term, // search term
-                        page_limit: 10,
-                    };
-                },
-                results: function (data, page) { // parse the results into the format expected by Select2.
-                    // since we are using custom formatting functions we do not need to alter remote JSON data
-                    return {results: data, text: "name" };
-                }
-            },
-            initSelection: function(element, callback) {
-                var id=$(element).val();
-                if (id!=="") {
-                    $.ajax("/api/get_koatuu", {
-                        data: {
-                            q: id
-                        },
-                        dataType: "json"
-                    }).done(function(data) {
-                        callback(data[0]); });
-                }
-            },
-            formatSelection: function(item) {
-                return item.name
-            },
-            formatResult: function(item) {
-                return item.name
-            }
-        });
-    });
-</script>
-
-<script id="script_home_search_region" type="text/javascript">
-    $(document).ready(function() {
-        $("#home_search_region").select2({
-            allowClear:true,
-            ajax: {
-                url: "/api/get_regions",
-                dataType: 'json',
-                data: function (term, page) {
-                    return {
-                        area: $("#home_search_area").select2("val"), // search term
-                        q: term, // search term
-                        page_limit: 10,
-                    };
-                },
-                results: function (data, page) { // parse the results into the format expected by Select2.
-                    // since we are using custom formatting functions we do not need to alter remote JSON data
-                    return {results: data, text: "name" };
-                }
-            },
-            initSelection: function(element, callback) {
-                var id=$(element).val();
-                if (id!=="") {
-                    $.ajax("/api/get_koatuu", {
-                        data: {
-                            q: id
-                        },
-                        dataType: "json"
-                    }).done(function(data) {
-                        callback(data[0]); });
-                }
-            },
-            formatSelection: function(item) {
-                return item.name
-            },
-            formatResult: function(item) {
-                return item.name
-            }
-        });
-    });
-</script>

@@ -87,3 +87,6 @@ uk:
     top:
       question: "Задати питання"
     Logout: "Вихід"
+  trud_govs:
+    index:
+      title: "Відповідність коатуу з trud.gov.ua"
