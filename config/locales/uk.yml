@@ -60,10 +60,9 @@ uk:
       area: "Область"
       region: "Район"
       house: "Житло"
-      places: "Місць"
+      places: "Місць / Вакансій"
       school: "Школа"
       kgarten: "Садочок"
-      work: "Робота"
   housings:
     index:
       title: "Місця для проживання"

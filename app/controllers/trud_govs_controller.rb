@@ -7,11 +7,13 @@ class TrudGovsController < ApplicationController
   def index
     koatuu_code = params[:q]
     if koatuu_code.nil? or koatuu_code.empty?
-      @trud_govs = TrudGov.all.paginate(:page => params[:page])
+      @trud_govs = TrudGov.all.joins('JOIN koatuus ON koatuus.code = trud_govs.koatuu_code').all.paginate(:page => params[:page])
       params[:q] = nil
     else
-      @trud_govs = TrudGov.filter_by_koatuu(koatuu_code.slice(0,2))
+      @trud_govs = TrudGov.filter_by_koatuu(koatuu_code.slice(0,2)).joins('JOIN koatuus ON koatuus.code = trud_govs.koatuu_code')
     end
+
+    @trud_govs.order('name')
 
     render partial: 'table.html' unless koatuu_code.nil?
   end

@@ -3,39 +3,28 @@ class Koatuu < ActiveRecord::Base
     where(:code => code).first
   end
 
-  def self.l1(area)
-    if area.length < 2
-      return { :code => area, :name => nil }
-    else
-      area = area.slice(0, 2)
-    end
-
-    res = self.areas(area)
-    res.first if res.count == 1
+  def self.level(level, code = '')
+    self.where(:level => level).where("code like ?", "#{code}%")
   end
 
-  def self.l2(region)
-    if region.length < 5
-      return { :code => region, :name => nil }
-    else
-      region = region.slice(0, 5)
-    end
-
-    res = (self.acities(region) + self.regions(region.ljust(10, '0')))
-    res.first if res.count == 1
+  def self.l1(code = '')
+    self.level(1, code).order('name')
+  end
+  def self.l2(code = '')
+    self.level([13, 3, 2], code).order('name')
   end
 
   def self.areas(code = '')
-    self.where(:level => 1).where("code like ?", "#{code}%").order('name')
+    self.level(1, code).order('name')
   end
   def self.regions(code = '')
-    self.where(:level => 2).where("code like ?", "#{code}%").order('name')
+    self.level(2, code).order('name')
   end
   def self.acities(code = '')
-    self.where(:level => 13).where("code like ?", "#{code}%").order('name')
+    self.level(13, code).order('name')
   end
   def self.cities(code = '')
-    self.where(:level => [3, 13]).where("code like ?", "#{code}%").order('name')
+    self.level([3, 31], code).order('name')
   end
 
   def self.to_tree(code)
@@ -47,7 +36,7 @@ class Koatuu < ActiveRecord::Base
       tree_regions = []
       acity = acities(l1).first
       tree_regions << [ acity.name, acity.code ] unless acity.nil?
-      regions(l1).each do |region|
+      l2(l1).each do |region|
         tree_regions << [ region.name, region.code]
       end
 
@@ -86,7 +75,7 @@ class Koatuu < ActiveRecord::Base
     filter = filter.mb_chars
     arr = []
 
-    regions(area.slice(0,2)).where("name like ?", "%#{filter}%").each do |region|
+    l2(area.slice(0,2)).where("name like ?", "%#{filter}%").each do |region|
       arr << { name: region.name, id: region.code }
     end if area.length >= 2
 

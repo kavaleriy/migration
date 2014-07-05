@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703170033) do
+ActiveRecord::Schema.define(version: 20140705162635) do
 
   create_table "geos", force: true do |t|
     t.string  "koatuu_code"
@@ -88,7 +88,6 @@ ActiveRecord::Schema.define(version: 20140703170033) do
     t.string   "koatuu_code"
     t.string   "rubric"
     t.integer  "places"
-    t.string   "trud_code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -3,14 +3,12 @@
 namespace :koatuu do
 
   desc "Load KOATUU from file"
-  task :seed => :environment do
+  task :load => :environment do
 
     require 'roo'
 
     xls = Roo::Excelx.new("config/koatuu_01042014.xlsx")
     xls.default_sheet = xls.sheets.first
-
-    Koatuu.destroy_all
 
     2.upto(xls.last_row) do |line|
       code = xls.cell(line,'A').to_s.gsub('.0', '').rjust(10, '0')
@@ -26,23 +24,37 @@ namespace :koatuu do
         level = 2
       elsif code.index('10100000')
         level = 13 # head of area
-      elsif note.index(/[МТ]/)
+      elsif note.index(/[М]/)
         level = 3
+      elsif note.index(/[Т]/)
+        level = 31
       end
 
-      Koatuu.create({ code: code, name: name, note: note, level: level }).save
+      koatuu = Koatuu.find_or_create_by(:code => code).
+          update({ name: name, note: note, level: level })
     end
+
+    # postfix
+    Koatuu.delete_all("code like '01%'")
+    Koatuu.delete_all(:code => '8500000000') # simferopol
+    Koatuu.where(:code => '8000000000').first.update( { :level => 2} ) # kyiv
   end
 
-  private
+
+    private
     def self.extract_name name
       index = name.index('/')
       name = name.slice(0, index) if index
-      name.mb_chars.capitalize
+      if /^М\./ =~ name
+        name = 'м.' + $'.mb_chars.capitalize
+      else
+        name.mb_chars.capitalize
+      end
       # name.mb_chars.gsub(/ ОБЛАСТЬ$/, '').gsub(/ РАЙОН$/, '').capitalize
     end
 
 
+  # =====================================================================================================
   desc "Import geo-data from json"
   task :load_geo => :environment do
     geo = JSON.parse(File.open("db/spr/geo.json", "r").read)
@@ -69,5 +81,14 @@ namespace :koatuu do
 
         Geo.create({ koatuu_code: koatuu_code, lon: lon, lat: lat, zoom: zoom }).save
       end
+
+  # =====================================================================================================
+  desc "Load koatuus to trud codes"
+  task :export_trud => :environment do
+    Koatuu.l2.each {|region|
+      TrudGov.find_or_create_by(:koatuu_code => region.code).save
+    }
+  end
+
 
 end

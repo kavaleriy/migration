@@ -7,26 +7,23 @@
   <th><%= t('.places') %></th>
   <th><%= t('.school') %></th>
   <th><%= t('.kgarten') %></th>
-  <th><%= t('.work') %></th>
 </tr>
 </thead>
 <tbody>
 <% @housings.each do |housing| %>
     <% coatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
-    <% work_url = work_class(housing.koatuu_code) %>
+    <% if coatuu %>
     <tr>
       <td><%= coatuu[:area] %> </td>
-      <td><%= coatuu[:region] || coatuu[:city] %> </td>
+      <td><%= coatuu[:name] || coatuu[:region] %> </td>
       <td><%= housing.house.name %></td>
-      <td><span class=""><%= housing.qty_places %></span></td>
+      <td><span class=""><%= housing.qty_places %> / <%= work_class(housing.koatuu_code) %></td>
       <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i></td>
       <td><i style="padding-left: 25px;" class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
       <td>
-      <% if work_url %>
-        <a target="_blank" href="<%= work_url %>">деталі</i></a>
-      <% end %>
        </td>
     </tr>
+    <% end %>
 <% end %>
 </tbody>
 </table>

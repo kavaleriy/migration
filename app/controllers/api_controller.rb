@@ -16,7 +16,7 @@ class ApiController < ApplicationController
   end
 
   def get_regions
-    regions = Koatuu.acities_to_json(params[:area], params[:q]) + Koatuu.regions_to_json(params[:area], params[:q])
+    regions = Koatuu.regions_to_json(params[:area], params[:q])
 
     respond_to do |format|
       format.json { render json: regions, status: :ok }

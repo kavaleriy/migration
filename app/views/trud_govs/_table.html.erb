@@ -8,9 +8,11 @@
   </thead>
   <tbody>
   <% @trud_govs.each do |trud_gov| %>
+      <% koatuu = Koatuu.get_by_code(trud_gov.koatuu_code) %>
+      <% if koatuu %>
       <tr>
         <td><%= trud_gov.koatuu_code %></td>
-        <td><%= Koatuu.l2(trud_gov.koatuu_code)[:name] || Koatuu.l1(trud_gov.koatuu_code)[:name]%></td>
+        <td><%= koatuu[:name] %></td>
         <td>
         <%= form_for trud_gov, remote: true, format: :json, :html => { :class => 'edit_trud_gov_trud_code' } do |f| %>
             <div class="input-group" style="width: 250px">
@@ -25,6 +27,7 @@
         <% end %>
         </td>
       </tr>
+      <% end %>
   <% end %>
   </tbody>
 </table>
