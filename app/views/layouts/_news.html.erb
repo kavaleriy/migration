@@ -1,15 +1,19 @@
 <h4 class="head">НОВИНИ</h4>
-<div class="anons">
-    УВАГА. До <span>03 липня</span> ресурс знаходиться в стані тестової експлуатації та наповнення інформацією. В разі виникнення питань або пропозицій - прохання звертатись листом на адресу <a href="mailto:support@minregion.gov.ua?subject=Питання по http://migrants.gov.ua">support@minregion.gov.ua</a>
-</div>
 
-<div class="anons">
-    <span>26 червня</span> - <a href="http://minregion.gov.ua/news/ukrayina-gotuetsya-do-vprovadzhennya-reformi-elektronnogo-vryaduvannya-906864/">Україна готується до впровадження реформи електронного урядування</a>
-</div>
-<div class="anons">
-  <p>
-    <span>25 червня</span> - <a href="http://minregion.gov.ua/news/proekt-zmin-do-konstituciyi-schodo-decentralizaciyi-vladi-verhovna-rada-mozhe-priynyati-vzhe-nastupnogo-tizhnya---prezident-ukra-748153/">Проект змін до Конституції щодо децентралізації влади Верховна Рада може прийняти вже наступного тижня, - Президент України</a>
-</div>
-<div class="anons">
-    <span>25 червня</span> - <a href="http://minregion.gov.ua/news/mi-maemo-stovidsotkovu-pidtrimku-reformi-miscevogo-samovryaduvannya-prezidentom-premerom-ta-uryadom--volodimir-groysman-167734/">Ми маємо стовідсоткову підтримку реформи місцевого самоврядування Президентом, Прем’єром та Урядом, – Володимир Гройсман</a>
+<div class="news">
+<% @news.each do |news| %>
+    <% date = news[:date] %>
+    <% href = news[:href] %>
+    <% text = news[:text] %>
+
+    <div class="anons">
+        <% if date %>
+            <span><%= date %></span> -
+        <% end %>
+        <a target="_blank" href="<%= href%>">
+            <%= text%>
+        </a>
+    </div>
+
+<% end %>
 </div>

@@ -37,7 +37,7 @@ namespace :koatuu do
     # postfix
     Koatuu.delete_all("code like '01%'")
     Koatuu.delete_all(:code => '8500000000') # simferopol
-    Koatuu.where(:code => '8000000000').first.update( { :level => 2} ) # kyiv
+    Koatuu.where(:code => '8000000000').first.update( { :level => 1} ) # kyiv
   end
 
 

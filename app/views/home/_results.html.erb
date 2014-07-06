@@ -17,7 +17,7 @@
       <td><%= coatuu[:area] %> </td>
       <td><%= coatuu[:name] || coatuu[:region] %> </td>
       <td><%= housing.house.name %></td>
-      <td><span class=""><%= housing.qty_places %> / <%= work_class(housing.koatuu_code) %></td>
+      <td><a href="<%= static_centers_path %>#tel_0510100000" class=""><%= housing.qty_places %> / <%= work_class(housing.koatuu_code) %></a></td>
       <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i></td>
       <td><i style="padding-left: 25px;" class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
       <td>

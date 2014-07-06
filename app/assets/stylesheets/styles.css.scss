@@ -50,14 +50,20 @@ h6 {
 }
 .main {
   background: rgba(255, 255, 255, .8);
-  overflow: auto;
   padding: 20px;
 }
 
 .sidebar {
+
   .head {
     margin-bottom: 15px;
   }
+
+  .news {
+    height: 600px;
+    overflow: auto;
+  }
+
 
   .anons {
     margin-top: 10px;
@@ -132,6 +138,10 @@ label {
 
   tr {
     height: 40px;
+    td {
+      padding-top: 15px!important;
+      padding-bottom: 15px!important;
+    }
   }
 
 }

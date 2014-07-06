@@ -30,7 +30,7 @@ Please feel free to use a different markup language if you do not plan to run
 
 Install:
 git pull
-RAILS_ENV=production rake db:migrate
+RAILS_ENV=test rake db:migrate
 RAILS_ENV=test rake db:seed
 RAILS_ENV=test rake vacancies:seed
 RAILS_ENV=test rake koatuu:seed
@@ -39,5 +39,8 @@ RAILS_ENV=test bundle
 RAILS_ENV=test rake assets:precompile
 RAILS_ENV=test unicorn -p 80 -D
 
-RAILS_ENV=production rake assets:precompile
-
+RAILS_ENV=test rake db:migrate
+RAILS_ENV=test rake koatuu:load
+RAILS_ENV=test rake koatuu:export_trud
+RAILS_ENV=test rake vacancies:crawl
+RAILS_ENV=test unicorn -p 80 -c config/unicorn.rb -D
