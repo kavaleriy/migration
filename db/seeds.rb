@@ -62,6 +62,10 @@ end
                 :area => item[:area] }) if User.where( :email => email ).empty?
 end
 
+User.create({:email => 'news@gov.ua',
+              :password => '7-YjDbYb+',
+              :password_confirmation => '7-YjDbYb+',
+              :roles => [:editor] }) if User.where( :email => 'news@gov.ua' ).empty?
 
 
 
@@ -165,5 +169,5 @@ news = [
         :text => "Ми маємо стовідсоткову підтримку реформи місцевого самоврядування Президентом, Прем’єром та Урядом, – Володимир Гройсман"
     }
 ].reverse.each { |item|
-  NewsItem.find_or_create_by(issued: item[:date], url: item[:href], content: item[:text])
+  NewsItem.find_or_create_by(url: item[:href], content: item[:text]).update(issued: item[:date])
 }
