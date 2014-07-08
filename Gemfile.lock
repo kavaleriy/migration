@@ -44,6 +44,7 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     builder (3.2.2)
+    cancan (1.6.10)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -118,6 +119,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    role_model (0.8.1)
     roo (1.13.2)
       nokogiri
       rubyzip
@@ -175,6 +177,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  cancan
   coffee-rails (~> 4.0.0)
   devise
   flexslider
@@ -185,6 +188,7 @@ DEPENDENCIES
   openlayers-rails
   pry-rails
   rails (= 4.1.1)
+  role_model
   roo
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

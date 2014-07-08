@@ -1,0 +1,44 @@
+<%- model_class = NewsItem -%>
+<h3 class="">НОВИНИ</h3>
+<div class="pull-right">
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_news_item_path,
+            :class => 'btn btn-primary' %>
+</div>
+
+<hr>
+
+<div class="news col-md-12">
+  <% @news_items.each do |news_item| %>
+      <% issued = news_item.issued %>
+
+      <div class="anons col-sm-9">
+
+        <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                    edit_news_item_path(news_item), :class => 'btn btn-default btn-xs' %>
+        <% if can? :delete, news_item %>
+        <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                    news_item_path(news_item),
+                    :method => :delete,
+                    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                    :class => 'btn btn-xs btn-danger' %>
+        <% end %>
+        <% if issued %>
+            <span><%= l issued, format: '%d %B' %></span> -
+        <% end %>
+        <a target="_blank" href="<%= news_item.url %>">
+          <%= news_item.content.html_safe %>
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <%= form_for news_item, remote: true, format: :json, :html => { :class => '' } do |f| %>
+            <%= f.check_box :published, 'onclick' => "this.form.submit()" %> Опублікована</label>
+        <% end %>
+
+      </div>
+
+  <% end %>
+
+</div>
+
+

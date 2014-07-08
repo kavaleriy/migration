@@ -37,13 +37,7 @@ h6 {
     color: #ffffff;
     line-height: 21px;
   }
-
-  .ask {
-//    margin-top: -5px;
-  }
-
 }
-
 
 .menu {
   background: rgba(255, 255, 255, .2);
@@ -60,28 +54,9 @@ h6 {
   }
 
   .news {
-    height: 600px;
-    overflow: auto;
-  }
-
-
-  .anons {
-    margin-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px dotted #565553;
-
-    span {
-      font-weight: semibold;
-      color: orange;
-    }
-
     a {
-      color: darkslateblue !important;
-    }
-
-    &:last-child {
-      border-bottom: none;
-    }
+          color: darkslateblue !important;
+     }
   }
 }
 

@@ -5,6 +5,10 @@
 
 <%= render partial: 'application/search_area' %>
 
+<div id="table" class="row">
+  <%= render partial: 'table' %>
+</div>
+
 <script type="text/javascript">
     $("#home_search_area")
             .on("change", function(e) {
@@ -15,8 +19,4 @@
                 });
             });
 </script>
-
-<div id="table">
-<%= render partial: 'table' %>
-</div>
 

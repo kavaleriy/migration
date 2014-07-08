@@ -1,19 +1,21 @@
+<%- model_class = NewsItem -%>
+
 <h4 class="head">НОВИНИ</h4>
 
 <div class="news">
-<% @news.each do |news| %>
-    <% date = news[:date] %>
-    <% href = news[:href] %>
-    <% text = news[:text] %>
+<% @news_items.each do |news_item| %>
+    <% issued = news_item.issued %>
 
     <div class="anons">
-        <% if date %>
-            <span><%= date %></span> -
+        <% if issued %>
+          <span><%= l issued, format: '%d %B' %></span> -
         <% end %>
-        <a target="_blank" href="<%= href%>">
-            <%= text%>
+        <a target="_blank" href="<%= news_item.url %>">
+          <%= news_item.content.html_safe %>
         </a>
     </div>
 
 <% end %>
+
+
 </div>

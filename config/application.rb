@@ -22,5 +22,8 @@ module Migration
 
     WillPaginate.per_page = 10
 
+    # http://stackoverflow.com/questions/19452853/actioncontrollerinvalidauthenticitytoken-when-disable-js-ajax-request
+    config.action_view.embed_authenticity_token_in_remote_forms = true
+
   end
 end

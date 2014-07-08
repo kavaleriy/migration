@@ -67,6 +67,9 @@ gem 'roo'
 # Authentication
 # http://www.phase2technology.com/blog/authentication-permissions-and-roles-in-rails-with-devise-cancan-and-role-model/
 gem 'devise'
+# https://github.com/ryanb/cancan
+gem 'cancan'
+gem 'role_model'
 
 # https://github.com/mislav/will_paginate
 gem 'will_paginate'

@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::Base
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => "Помилка авторизації: #{exception.message}"
+  end
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -6,104 +10,7 @@ class ApplicationController < ActionController::Base
   before_action :set_news
 
   def set_news
-    news = [
-      { 
-          :href => "http://www.mns.gov.ua/news/34232.html",
-          :text => "ІНФОРМАЦІЯ ПРО ПЕРЕМІЩЕННЯ ГРОМАДЯН З РАЙОНІВ ПРОВЕДЕННЯ АТО"
-      },
-      {
-          :date => "07 липня",
-          :href => "http://www.kmu.gov.ua/control/uk/publish/article?art_id=247433448",
-          :text => "Володимир Гройсман поставив чіткі завдання з організації мирного коридору Міжвідомчому координаційному штабу"
-      },
-      {
-          :date => "06 липня",
-          :href => "http://www.mns.gov.ua/news/34448.html",
-          :text => "Рятувальники доставили мешканцям слов`янська гуманітарну допомогу"
-      },
-      {
-          :date => "05 липня",
-          :href => "http://www.mns.gov.ua/news/34443.html",
-          :text => "З роботою Міжвідомчого координаційного штабу з питань соціального забезпечення громадян України, які переміщуються з районів проведення антитерористичної операції ознайомився голова Донецької ОДА Сергій Тарута"
-      },
-      {
-          :date => "04 липня",
-          :href => "http://www.mns.gov.ua/news/34439.html",
-          :text => "Міжвідомчий координаційний штаб з’ясовував проблемні питання, пов’язані з наданням допомоги громадянам, які тимчасово переміщуються з зони АТО"
-      },
-      {
-          :date => "04 липня",
-          :href => "http://www.mns.gov.ua/news/34437.html",
-          :text => "Одеса: рятувальники спільно з волонтерами зустріли дітей та інвалідів з Донецької області (ВІДЕО)"
-      },
-      {
-          :date => "04 липня",
-          :href => "http://www.mns.gov.ua/news/34436.html",
-
-          :text => "Миколаївська область: психологи ДСНС проводять тренінги з дітьми, які прибули до Миколаївщини з Донецької та Луганської областей"
-      },
-      {
-          :date => "04 липня",
-          :href => "http://www.mns.gov.ua/news/34430.html",
-          :text => "Рівне: під час прямого ефіру на місцевому телеканалі, учасники обласного штабу розповіли про соціальне забезпечення громадян України, які переміщуються з районів проведення АТО"
-      },
-      {
-          :date => "04 липня",
-          :href => "http://www.mns.gov.ua/news/34422.html",
-          :text => "Київська область: рятувальники здали понад 30 л крові для українських військових"
-      },
-      {
-          :date => "04 липня",
-          :href => "http://www.mns.gov.ua/news/34421.html",
-          :text => "Чернівецька область: психологи надають допомогу людям, які переселилися зі східних регіонів країни"
-      },
-        {
-            :date => "04 липня",
-            :href => "http://www.mns.gov.ua/news/34418.html",
-            :text => "Рівненська область: рятувальники та соцпрацівники зустрілися з дітьми та сім’ями переселенців"
-        },
-        {
-            :date => "04 липня",
-            :href => "http://www.mns.gov.ua/news/34416.html",
-            :text => "Волинська область: рятувальники допомогли зустріти та розмістити громадян, які виїхали зі Сходу"
-        },
-        {
-            :date => "04 липня",
-            :href => "http://www.mns.gov.ua/news/34415.html",
-            :text => "Хмельницький: рятувальники допомогли тимчасовим переселенцям"
-        },
-        {
-            :date => "04 липня",
-            :href => "http://www.mns.gov.ua/news/34414.html",
-            :text => "Львів: представники ООН, Міністра соціальної політики України та рятувальники відвідали маленьких луганчан (ВІДЕО)"
-        },
-        {
-            :date => "04 липня",
-            :href => "http://www.mns.gov.ua/news/34410.html",
-            :text => "Київ: рятувальники провели для дітей з Донецька екскурсію по столиці"
-        },
-        {
-            :date => "03 липня",
-            :href => "http://www.mns.gov.ua/news/34405.html",
-            :text => "Київська область: рятувальники допомагають родинам переселенців адаптуватися до мирного життя (ВІДЕО)"
-        },
-        {
-            :text => "УВАГА. До 03 липня ресурс знаходиться в стані тестової експлуатації та наповнення інформацією. В разі виникнення питань або пропозицій - прохання звертатись листом на адресу support@minregion.gov.ua"
-        },
-        {
-            :date => "25 червня",
-            :href => "http://minregion.gov.ua/news/proekt-zmin-do-konstituciyi-schodo-decentralizaciyi-vladi-verhovna-rada-mozhe-priynyati-vzhe-nastupnogo-tizhnya---prezident-ukra-748153/",
-            :text => "Проект змін до Конституції щодо децентралізації влади Верховна Рада може прийняти вже наступного тижня, - Президент України"
-        },
-        {
-            :date => "25 червня",
-            :href => "http://minregion.gov.ua/news/mi-maemo-stovidsotkovu-pidtrimku-reformi-miscevogo-samovryaduvannya-prezidentom-premerom-ta-uryadom--volodimir-groysman-167734/",
-            :text => "Ми маємо стовідсоткову підтримку реформи місцевого самоврядування Президентом, Прем’єром та Урядом, – Володимир Гройсман"
-        }
-    ]
-
-    page = params[:page] || '1'
-    @news = news.slice((page.to_i - 1) * 10, 99) if news
+    @news_items = NewsItem.where(:published => true).paginate(:page => params[:page], :per_page => 6)
   end
 
 end
