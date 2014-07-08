@@ -12,7 +12,7 @@
     border: 1px solid #dddddd; }
 .digg_pagination .current {
     font-style: normal;
-    font-weight: bold;
+    /*font-weight: bold;*/
     background: #2e6ab1;
     color: white;
     border: 1px solid #2e6ab1; }
@@ -57,7 +57,7 @@
     color: #aaaaaa; }
 .apple_pagination .current {
     font-style: normal;
-    font-weight: bold;
+    /*font-weight: bold;*/
     background-color: #bebebe;
     display: inline-block;
     width: 1.4em;
@@ -83,7 +83,7 @@
     color: #aaaaaa; }
 .flickr_pagination .current {
     font-style: normal;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: #ff0084; }
 .flickr_pagination a {
     border: 1px solid #dddddd;

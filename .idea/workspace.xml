@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a480a09d-0dc7-4213-a828-3ac93fbd2d33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static/centers.html.erb" afterPath="$PROJECT_DIR$/app/views/static/centers.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/news_item.rb" afterPath="$PROJECT_DIR$/app/models/news_item.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/news_items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/news_items_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/unicorn.rb" afterPath="$PROJECT_DIR$/config/unicorn.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/will_paginate.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/will_paginate.css" />
     </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,31 +35,129 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="centers.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/static/centers.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.19295558" vertical-offset="0" max-vertical-offset="4212">
+              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#4;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#4;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#8;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#8;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#8;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#9;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#9;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#10;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#10;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#10;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#11;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#11;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#11;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#12;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#12;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#12;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#td#2;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#14;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#14;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#14;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#14;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#td#2;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#16;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#16;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#16;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#16;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#17;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#17;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#17;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#18;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#18;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#18;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#18;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#19;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#19;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#19;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#19;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#21;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#21;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#21;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#21;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#2;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#2;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#2;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#td#2;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2483" max-vertical-offset="3150">
-              <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.rdoc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.rdoc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="936">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <caret line="12" column="100" selection-start-line="12" selection-start-column="100" selection-end-line="12" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -64,8 +166,28 @@
       <file leaf-file-name="unicorn.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news_items_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/news_items_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1476">
+              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news_item.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/news_item.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -81,16 +203,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1602">
-              <caret line="16" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_news.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_news.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,11 +213,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file leaf-file-name="styles.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19295558" vertical-offset="0" max-vertical-offset="1548">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.703704" vertical-offset="2753" max-vertical-offset="3492">
+              <caret line="172" column="19" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.185185" vertical-offset="643" max-vertical-offset="1296">
+              <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -115,17 +237,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/will_paginate.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1282" max-vertical-offset="1962">
-              <caret line="103" column="23" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.37037" vertical-offset="719" max-vertical-offset="3474">
-              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -144,7 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/application/_search_area.html.erb" />
         <option value="$PROJECT_DIR$/app/views/housings/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/trud_govs/index.js.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -163,13 +274,11 @@
         <option value="$PROJECT_DIR$/lib/tasks/vacancy.rake" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/koatuu.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/static.css.scss" />
         <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/lib/tasks/koatuu.rake" />
         <option value="$PROJECT_DIR$/app/views/home/_results.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/static/centers.html.erb" />
         <option value="$PROJECT_DIR$/app/views/trud_govs/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/trud_govs/_table.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/uk.locale.yml" />
@@ -178,7 +287,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20140708081934_users_add_field_roles_mask.rb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/houses_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/news_items_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/ability.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/news_items.css.scss" />
@@ -186,15 +294,19 @@
         <option value="$PROJECT_DIR$/app/views/news_items/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/news_items/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/trud_govs_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/news_item.rb" />
         <option value="$PROJECT_DIR$/app/views/news_items/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_news.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/config/unicorn.rb" />
         <option value="$PROJECT_DIR$/config/environments/test.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/config/unicorn.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/news_items_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/news_item.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/will_paginate.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/static/centers.html.erb" />
       </list>
     </option>
   </component>
@@ -267,93 +379,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="locales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,6 +402,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,6 +428,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -726,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.330781" vertical-offset="0" max-vertical-offset="1296">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/static.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11026034" vertical-offset="0" max-vertical-offset="653">
@@ -744,14 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05513017" vertical-offset="0" max-vertical-offset="900">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static/centers.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="4284">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -995,58 +1032,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/news_item.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07941177" vertical-offset="0" max-vertical-offset="680">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/news_items_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1476">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/news_items/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72434914" vertical-offset="247" max-vertical-offset="900">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/will_paginate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1282" max-vertical-offset="1962">
-          <caret line="103" column="23" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_news.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="468">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.37037" vertical-offset="719" max-vertical-offset="3474">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1063,14 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="936">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1096,6 +1077,186 @@
         <state vertical-scroll-proportion="0.19295558" vertical-offset="0" max-vertical-offset="1548">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_news.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="468">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <caret line="12" column="100" selection-start-line="12" selection-start-column="100" selection-end-line="12" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/news_items_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1476">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/news_item.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.185185" vertical-offset="643" max-vertical-offset="1296">
+          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/will_paginate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1282" max-vertical-offset="1962">
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.703704" vertical-offset="2753" max-vertical-offset="3492">
+          <caret line="172" column="19" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static/centers.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19295558" vertical-offset="0" max-vertical-offset="4212">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#4;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#4;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#5;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#6;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#7;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#8;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#8;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#8;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#9;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#9;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#10;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#10;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#10;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#11;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#11;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#11;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#12;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#12;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#12;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#td#2;n#tr#13;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#14;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#14;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#14;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#14;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#td#2;n#tr#15;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#16;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#16;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#16;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#16;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#17;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#17;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#17;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#18;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#18;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#18;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#18;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#19;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#19;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#19;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#19;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#20;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#21;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#21;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#21;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#21;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#22;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#23;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#24;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#2;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#2;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#td#2;n#tr#25;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

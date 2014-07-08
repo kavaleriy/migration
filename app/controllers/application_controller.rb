@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   before_action :set_news
 
   def set_news
-    @news_items = NewsItem.where(:published => true).paginate(:page => params[:page], :per_page => 6)
+    @news_items = NewsItem.where(:published => true).paginate(:page => params[:page], :per_page => 5)
   end
 
 end

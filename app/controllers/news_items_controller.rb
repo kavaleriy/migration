@@ -45,7 +45,7 @@ class NewsItemsController < ApplicationController
     respond_to do |format|
       if @news_item.update(news_item_params)
         format.html { redirect_to news_items_path, notice: 'News item was successfully updated.' }
-        format.json { head :no_content, status: :ok }
+        format.json { head :no_content }
       else
         format.html { render :edit }
         format.json { render json: @news_item.errors, status: :unprocessable_entity }
