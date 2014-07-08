@@ -4,25 +4,25 @@
   <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i> <%= t('layout.menu.dovidka') %> <b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="<%= static_sz_path %>">Соціальний захист населення</a></li>
-      <li><a href="<%= static_dms_path %>">Державна міграційна служба</a></li>
-      <li><a href="<%= static_zd_path %>">Служби сім'ї, дітей та молоді</a></li>
+      <li><a href="<%= static_sz_path %>"><%= t(".sz")%></a></li>
+      <li><a href="<%= static_dms_path %>"><%= t(".ms")%></a></li>
+      <li><a href="<%= static_zd_path %>"><%= t(".sdm")%></a></li>
     </ul>
   </li>
   <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layout.menu.laws') %> <b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/2811-12">Державна допомога сім'ям з дітьми »</a></li>
-      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1058-15">Загальнообов'язкове державне пенсійне страхування »</a></li>
-      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1751-2001-%D0%BF">Призначення і виплати державної допомоги сім'ям з дітьми »</a></li>
-      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/848-95-%D0%BF">Надання субсидій для відшкодування витрат на оплату ЖКХ »</a></li>
+      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/2811-12"><%= t(".z1")%> »</a></li>
+      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1058-15"><%= t(".z2")%> »</a></li>
+      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1751-2001-%D0%BF"><%= t(".z3")%> »</a></li>
+      <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/848-95-%D0%BF"><%= t(".z4")%> »</a></li>
     </ul>
   </li>
   <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layout.menu.analitic') %><b class="caret"></b></a>
       <ul class="dropdown-menu">
-        <li><a href="<%= report_amount_places_path %>">Загальна кількість місць для проживання</a></li>
-        <li><a href="<%= report_amount_by_type_path %>">Загальна кількість місць в розрізі типу житла</a></li>
+        <li><a href="<%= report_amount_places_path %>"><%= t(".by_places")%></a></li>
+        <li><a href="<%= report_amount_by_type_path %>"><%= t(".by_houses")%></a></li>
         <!--<li><a href="#">Загальна кількість вакансій в розрізі регіонів та назв вакансій</a></li>-->
 
         </ul>

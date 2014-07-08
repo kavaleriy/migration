@@ -1,5 +1,5 @@
 <%- model_class = Housing -%>
-<i class="fa fa-edit"></i> ВВЕДЕННЯ ДАНИХ | <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
+<i class="fa fa-edit"></i> <%=t '.enter_data' %> | <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
 
 <%= link_to t('.new', :default => t("helpers.links.new")), new_housing_path, :class => 'btn btn-primary pull-right' %>
 

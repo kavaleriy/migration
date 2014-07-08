@@ -1,0 +1,105 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ru:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+  layout:
+    header:
+      note: "На сайте размещена информация для граждан, которые переселяются с временно оккупированных территорий АР Крым и районов ведения антитеррористических действий в другие регионы Укыраины"
+    sidebar:
+      news: "НОВОСТИ"
+    footer:
+      copy: "Министерство регионального развития,строительства и жилищно-комунального хозяйства Украины"
+    menu:
+      main: "ГЛАВНАЯ"
+      centers: "КОНТАКТНЫЙ ЦЕНТР"
+      dovidka: "ИНФОРМАЦИЯ"
+      laws: "ЗАКОНОДАТЕЛЬСТВО"
+      analitic: "АНАЛИТИКА"
+  home:
+    search:
+      area_placeholder: "Укажите область"
+      region_placeholder: "Укажите район / город"
+      work_placeholder: "Укажите профессию"
+      school: "Рядом школа"
+      kgarten: "Рядом садик"
+      search: "Найти"
+    menu:
+      search: "Поиск жилья"
+      search_map: "Поиск жилья на карте"
+    results:
+      area: "Область"
+      region: "Район"
+      house: "Жильё"
+      places: "Мест / Вакансий"
+      school: "Школа"
+      kgarten: "Садик"
+      empty: "По Вашему запросу ничего не найдено."
+  home_map:
+    for_living: "для проживания"
+  housings:
+    index:
+      title: "Места для проживання"
+      koatuu: "Расположение"
+      house: "Жильё"
+      qtt: "Мест"
+      qtt_placeholder: "Укажите количество мест для проживания"
+      school: "Школа"
+      kgarten: "Садик"
+      enter_data: "ВВОД ДАННЫХ"
+    edit:
+      title: "Редактировать место для проживания"
+    new:
+      title: "Добавить место для проживания"
+  houses:
+    index:
+      title: "Справочник видов жилья"
+      name: "Название"
+    show:
+      title: "Вид жилья"
+  layouts:
+    top:
+      question: "Задать вопрос"
+    Logout: "Выход"
+    menu:
+      sz: "Социальная защита населення"
+      ms: "Государственная миграционная служба"
+      sdm: "Служба семьи, детей и молодежи"
+      z1: "Государственная помощь семьям с детьми"
+      z2: "Обязательное государственное пенсионное страхование"
+      z3: "Назначение и выплата государственной помощи"
+      z4: "Выдача субсидий на возмещение затрат на оплату ЖКХ"
+      by_places: "Общее количество мест для проживания"
+      by_houses: "Общее количество мест в розрезе видов жилья"
+  trud_govs:
+    index:
+      title: "Соответствие коатуу с trud.gov.ua"
+  static:
+    centers:
+      head: "Для координации действий с оперативным штабом о выезде из опасной зоны, необходимо обратиться по телефону «101» как со стационарного, так и с мобильного телефона"
+      sdm: "Оперативная группа Межведомственного координационного штаба в ДСНС Украини +38(044) 247-30-02, +38(044) 247-32-92"
+      region: "Регион"
+      phone: "Контактный телефон"

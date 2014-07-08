@@ -1,0 +1,15 @@
+ru:
+  helpers:
+    actions: "Действия"
+    links:
+      back: "Назад"
+      cancel: "Отмена"
+      confirm: "Подтверждение"
+      destroy: "Удалить"
+      new: "Новый"
+      save: "Сохранить"
+    titles:
+      edit: "Редактировать"
+      save: "Сохранить"
+      new: "Новый"
+      delete: "Удалить"

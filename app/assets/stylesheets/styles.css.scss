@@ -27,6 +27,13 @@ h6 {
     }
   }
 
+  .lang {
+    margin: 12px 20px;
+    a {
+      text-decoration: none;
+    }
+  }
+
   .hot_phone {
     background: asset_url("pl_tel.png") no-repeat;
     height: 62px;

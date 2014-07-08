@@ -20,3 +20,84 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+  layout:
+    header:
+      note: ""
+    footer:
+      copy: ""
+    menu:
+      main: "MAIN"
+      centers: "CONTACT CENTERS"
+      dovidka: "INFORMATION"
+      laws: "LAWS"
+      analitic: "ANALYTIC"
+    sidebar:
+      news: "NEWS"
+  home:
+    search:
+      area_placeholder: "Select area"
+      region_placeholder: "Select district / city"
+      house_placeholder: "Select apartment type"
+      work_placeholder: "Select profession"
+      school: "School"
+      kgarten: "Kinder garden"
+    menu:
+      search: "Search for apartment"
+      search_map: "Search on map"
+    results:
+      area:
+      region: "District"
+      house: "Apartment"
+      places: "Places / Vacations"
+      school: "School"
+      kgarten: "Kinder garden"
+      empty: "no results"
+  housings:
+    index:
+      title: "Місця для проживання"
+      koatuu: "Місце розташування"
+      house: "Житло"
+      qtt: "Місць"
+      qtt_placeholder: "Вкажіть кількість місць для проживання"
+      school: "Школа"
+      kgarten: "Садочок"
+      enter_data: "ВВЕДЕННЯ ДАНИХ"
+    edit:
+      title: "Редагувати місце для проживання"
+    new:
+      title: "Додати місце для проживання"
+  houses:
+    index:
+      title: "Довідник видів житла"
+      name: "Назва"
+    show:
+      title: "Вид житла"
+  layouts:
+    top:
+      question: "Задати питання"
+    Logout: "Вихід"
+    menu:
+      sz: "Соціальний захист населення"
+      ms: "Державна міграційна служба"
+      sdm: "SSSS"
+      z1: "Державна допомога сім'ям з дітьми"
+      z2: "Загальнообов'язкове державне пенсійне страхування"
+      z3: "Призначення і виплати державної допомоги сім'ям з дітьми"
+      z4: "Надання субсидій для відшкодування витрат на оплату ЖКХ"
+      by_places: "Загальна кількість місць для проживання"
+      by_houses: "Загальна кількість місць в розрізі типу житла"
+  trud_govs:
+    index:
+      title: "Відповідність коатуу з trud.gov.ua"
+  static:
+    centers:
+      head: "Для координації дій з оперативним штабом щодо виїзду із небезпечної зони, необхідно звернутись за телефоном «101» як зі стаціонарного так і з мобільного телефону"
+      sdm: "Оперативна група Міжвідомчого координаційного штабу в ДСНС України +38(044) 247-30-02, +38(044) 247-32-92"
+      region: "Регіон"
+      phone: "Контактний телефон"

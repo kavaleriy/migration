@@ -1,0 +1,16 @@
+ru:
+  will_paginate:
+    previous_label: "&#8592; Назад"
+    next_label: "Вперёд  &#8594;"
+    page_gap: "&hellip;"
+    page_entries_info:
+      single_page:
+        zero:  "Нет информации для отбражения"
+        one:   "Найдена одна запись"
+        other: "Показаны все (%{count}) записи"
+      single_page_html:
+        zero:  "Нет информации для отбражения"
+        one:   "Найдена одна запись"
+        other: "Показаны <b>все&nbsp;%{count}</b> записи"
+      multi_page: "Показаны результаты %{from} - %{to} из %{count}"
+      multi_page_html: "Показаны результаты <b>%{from}&nbsp; - &nbsp;%{to}</b> Всего найдено: <b>%{count}</b>"

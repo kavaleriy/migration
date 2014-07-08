@@ -1,10 +1,23 @@
 <div class="logo pull-left">
   <a href="<%= root_path %>"><div class="img"></div></a>
 </div>
-<a target="_blank" href="http://ukc.gov.ua/">
-    <div class="hot_phone pull-right">
+
+<a class="pull-right" target="_blank" href="http://ukc.gov.ua/">
+    <div class="hot_phone">
     </div>
 </a>
+
+<div class="lang pull-right">
+  <% if I18n.locale == I18n.default_locale %>
+      <%= image_tag('ukraine-flag-32x32.png') + " Укр " %>
+      <%= link_to image_tag('russia-flag-32x32.png', size: "24x24") + " Рус ", :locale=>'ru' %>
+  <% else %>
+      <%= image_tag('russia-flag-32x32.png') + " Рус " %>
+      <%= link_to image_tag('ukraine-flag-32x32.png', size: "24x24") + " Укр ", :locale=>'uk' %>
+  <%end%>
+
+</div>
+
 <div class="clearfix"></div>
 <p class="note col-lg-9"><%= t('layout.header.note') %></p>
 
