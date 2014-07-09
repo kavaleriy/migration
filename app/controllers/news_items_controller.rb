@@ -1,4 +1,5 @@
 class NewsItemsController < ApplicationController
+  before_filter :authenticate_user!
   load_and_authorize_resource
 
   before_action :set_news_item, only: [:show, :edit, :update, :destroy]

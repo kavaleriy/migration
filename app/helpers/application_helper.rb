@@ -12,14 +12,15 @@ module ApplicationHelper
 
   def work_class(koatuu_code)
     rubric = params[:home_search_rubric]
-    return '-' unless rubric
+    return { :places => "-" } unless rubric
 
     wp = Workplace.where(:koatuu_code => koatuu_code, :rubric => rubric).first
-    # wp_area = TrudGov.where(:koatuu_code => koatuu_code.slice(0,2).ljust(10, '0')).first
+    trud = TrudGov.where(:koatuu_code => koatuu_code.slice(0,2).ljust(10, '0')).first
 
     places = wp.places if wp
+    url = "http://www.trud.gov.ua/control/uk/index#rubId=#{rubric}&posId=0&typeSearch=1&startPos=1&browser_name=Netscape&page=0"
 
-    places || '-'
+    { :places => places.to_s || '-', :url => url }
   end
 
 end

@@ -11,15 +11,16 @@
 </thead>
 <tbody>
 <% @housings.each do |housing| %>
-    <% coatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
-    <% if coatuu %>
+<% coatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
+<% if coatuu %>
+    <% work = work_class(housing.koatuu_code) %>
     <tr>
       <td><%= coatuu[:area] %> </td>
       <td><%= coatuu[:name] || coatuu[:region] %> </td>
       <td><%= housing.house.name %></td>
       <td>
-        <a href="<%= static_centers_path %>#tel_0510100000" class=""><%= housing.qty_places %></a> /
-        <a href="<%= static_centers_path %>#tel_0510100000" class=""><%= work_class(housing.koatuu_code) %></a>
+        <a href="<%= static_centers_path %>#tel_0510100000"><%= housing.qty_places %></a> /
+        <a target="_blank" href="<%= work[:url] %>"><%= work[:places] %></a>
       </td>
       <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i></td>
       <td><i style="padding-left: 25px;" class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
