@@ -29,14 +29,13 @@ namespace :vacancies do
 
     resp = /countVacancies>(?<vac>\d+)<\/countVacancies/.match(resp)
 
-    resp['vac'].to_i if resp && resp['vac']
+    resp['vac'].to_i
   rescue => e
     msg = "TRUD.GOV.UA - can't get data: distr: #{distr_id}, rubric: #{rub_id}. \nError: (#{e.class.name}): #{e.message}"
     Rails.logger.info msg
     puts msg
 
     -1
-
   end
 
 end

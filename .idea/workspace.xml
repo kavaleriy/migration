@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d2dab3-1229-473d-b120-81030c766894" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/vacancy.rake" afterPath="$PROJECT_DIR$/lib/tasks/vacancy.rake" />
     </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,20 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="vacancy.rake" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="vacancy.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/vacancy.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="864">
-              <caret line="15" column="93" selection-start-line="15" selection-start-column="93" selection-end-line="15" selection-end-column="93" />
+            <state vertical-scroll-proportion="0.7411765" vertical-offset="144" max-vertical-offset="846">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4946565" vertical-offset="0" max-vertical-offset="655">
+            <state vertical-scroll-proportion="-12.96" vertical-offset="0" max-vertical-offset="432">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
@@ -141,8 +140,8 @@
         <option value="$PROJECT_DIR$/app/views/news_items/index.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/uk.bootstrap.yml" />
         <option value="$PROJECT_DIR$/app/views/home/_results.html.erb" />
-        <option value="$PROJECT_DIR$/lib/tasks/vacancy.rake" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/lib/tasks/vacancy.rake" />
       </list>
     </option>
   </component>
@@ -1195,18 +1194,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/vacancy.rake">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="864">
-          <caret line="15" column="93" selection-start-line="15" selection-start-column="93" selection-end-line="15" selection-end-column="93" />
+        <state vertical-scroll-proportion="-12.96" vertical-offset="0" max-vertical-offset="432">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/lib/tasks/vacancy.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4946565" vertical-offset="0" max-vertical-offset="655">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7411765" vertical-offset="144" max-vertical-offset="846">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
