@@ -62,11 +62,21 @@ end
                 :area => item[:area] }) if User.where( :email => email ).empty?
 end
 
-User.create({:email => 'news@gov.ua',
+un = User.create({:email => 'news@gov.ua',
               :password => '7-YjDbYb+',
-              :password_confirmation => '7-YjDbYb+',
-              :roles => [:editor] }) if User.where( :email => 'news@gov.ua' ).empty?
+              :password_confirmation => '7-YjDbYb+' }) if User.where( :email => 'news@gov.ua' ).empty?
+un.roles <<= :admin
+un.save
 
+
+User.all.each { |u| u.roles = u.roles << :editor; u.save }
+
+
+ua = User.create({:email => 'begemot.lery@mail.ru',
+             :password => ',tutvjn',
+             :password_confirmation => ',tutvjn', :area => "05" } )
+ua.roles = :admin
+ua.save
 
 
 news = [

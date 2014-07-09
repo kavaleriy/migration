@@ -1,6 +1,5 @@
 class HousingsController < ApplicationController
   before_filter :authenticate_user!
-  load_and_authorize_resource
 
   before_action :set_area
   before_action :set_housing, only: [:show, :edit, :update, :destroy]

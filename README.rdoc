@@ -37,7 +37,6 @@ RAILS_ENV=test rake koatuu:seed
 
 RAILS_ENV=test bundle
 RAILS_ENV=test rake assets:precompile
-RAILS_ENV=test unicorn -p 80 -D
 
 RAILS_ENV=test rake db:migrate
 RAILS_ENV=test rake koatuu:load

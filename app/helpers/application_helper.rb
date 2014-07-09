@@ -20,7 +20,7 @@ module ApplicationHelper
     places = wp.places if wp
     url = "http://www.trud.gov.ua/control/uk/index#rubId=#{rubric}&posId=0&typeSearch=1&startPos=1&browser_name=Netscape&page=0"
 
-    { :places => places.to_s || '-', :url => url }
+    { :places => places || '-', :url => url }
   end
 
 end
