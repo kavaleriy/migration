@@ -8,12 +8,15 @@ namespace :vacancies do
 
     Workplace.delete_all
 
-    TrudGov.where.not(:trud_code => nil).each { |rec|
+    Housing.group(:koatuu_code).each { |rec|
+      trud = TrudGov.where(:koatuu_code => rec.koatuu_code).where.not(:trud_code => [nil, '']).first
       rubrics.each {|rubric|
-        vacations = getdata(rec.trud_code, rubric)
+        vacations = getdata(trud.trud_code, rubric)
 
         wp = Workplace.find_or_create_by(:koatuu_code => rec.koatuu_code, :rubric => rubric).update({ :places => vacations }) if vacations > 0
-      }
+
+        puts "CRAWL #{trud.trud_code}: :koatuu_code => #{rec.koatuu_code}, :rubric => #{rubric}, :places => #{vacations}"
+      } unless trud.nil?
     }
   end
 
@@ -24,12 +27,16 @@ namespace :vacancies do
     url = URI("http://www.trud.gov.ua/searchDispVacRes?posId=0&distrId=#{distr_id}&typeSearch=2&rubId=#{rub_id}")
     resp = open(url).read
 
-    /countVacancies>(?<vac>\d+)<\/countVacancies/.match(resp)['vac'].to_i
+    resp = /countVacancies>(?<vac>\d+)<\/countVacancies/.match(resp)
 
+    resp['vac'].to_i if resp && resp['vac']
   rescue => e
     msg = "TRUD.GOV.UA - can't get data: distr: #{distr_id}, rubric: #{rub_id}. \nError: (#{e.class.name}): #{e.message}"
     Rails.logger.info msg
-    put msg
+    puts msg
+
+    -1
+
   end
 
 end

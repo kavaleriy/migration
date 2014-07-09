@@ -14,7 +14,7 @@
 
       <div class="anons col-sm-9">
 
-        <%= link_to t('.edit', :default => t("helpers.links.edit")),
+        <%= link_to t('helpers.titles.edit', :default => t("helpers.links.edit")),
                     edit_news_item_path(news_item), :class => 'btn btn-default btn-xs' %>
         <% if can? :delete, news_item %>
         <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

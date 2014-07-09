@@ -31,7 +31,7 @@
         <td><i class="<%= school_class(housing.has_school) %>"></i></td>
         <td><i class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('helpers.titles.edit', :default => t("helpers.links.edit")),
                       edit_housing_path(housing), :class => 'btn btn-default btn-xs' %>
         </td>
       </tr>

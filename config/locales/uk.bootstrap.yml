@@ -13,7 +13,7 @@ uk:
       edit: "Редагувати"
       save: "Зберегти"
     titles:
-      edit: "Редагувати %{model}"
-      save: "Зберегти %{model}"
-      new: "Додати %{model}"
-      delete: "Видалити %{model}"
+      edit: "Редагувати"
+      save: "Зберегти"
+      new: "Додати"
+      delete: "Видалити"

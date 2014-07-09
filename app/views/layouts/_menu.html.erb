@@ -1,8 +1,8 @@
 <ol class="breadcrumb">
-  <li><a class="active" href="<%= root_url %>"><i class="fa fa-home"></i> <%= t('layout.menu.main') %></a></li>
-  <li><a href="<%= static_centers_path %>"><i class="fa fa-flag-o"></i> <%= t('layout.menu.centers') %></a></li>
+  <li><a class="active" href="<%= root_url %>"><i class="fa fa-home"></i> <%= t('layouts.menu.main') %></a></li>
+  <li><a href="<%= static_centers_path %>"><i class="fa fa-flag-o"></i> <%= t('layouts.menu.centers') %></a></li>
   <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i> <%= t('layout.menu.dovidka') %> <b class="caret"></b></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i> <%= t('layouts.menu.dovidka') %> <b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li><a href="<%= static_sz_path %>"><%= t(".sz")%></a></li>
       <li><a href="<%= static_dms_path %>"><%= t(".ms")%></a></li>
@@ -10,7 +10,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layout.menu.laws') %> <b class="caret"></b></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layouts.menu.laws') %> <b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/2811-12"><%= t(".z1")%> »</a></li>
       <li><a target="_blank" href="http://zakon2.rada.gov.ua/laws/show/1058-15"><%= t(".z2")%> »</a></li>
@@ -19,7 +19,7 @@
     </ul>
   </li>
   <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layout.menu.analitic') %><b class="caret"></b></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('layouts.menu.analitic') %><b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li><a href="<%= report_amount_places_path %>"><%= t(".by_places")%></a></li>
         <li><a href="<%= report_amount_by_type_path %>"><%= t(".by_houses")%></a></li>
@@ -29,7 +29,7 @@
   </li>
   <% if user_signed_in? %>
       <li>
-        <a data-method="delete" href="<%= destroy_user_session_path %>" rel="nofollow"><i class="fa fa-user-md"></i> <%= t('layouts.Logout') %></a>
+        <a data-method="delete" href="<%= destroy_user_session_path %>" rel="nofollow"><i class="fa fa-user-md"></i> <%= t('layouts.menu.logout') %></a>
       </li>
   <% end %>
 </ol>
