@@ -1,4 +1,4 @@
-worker_processes Integer(ENV["WEB_CONCURRENCY"] || 64)
+worker_processes Integer(ENV["WEB_CONCURRENCY"] || 32)
 timeout 10
 preload_app true
 

@@ -9,11 +9,11 @@
 
 <div class="lang pull-right">
   <% if I18n.locale == I18n.default_locale %>
-      <%= image_tag('ukraine-flag-32x32.png') + " Укр " %>
-      <%= link_to image_tag('russia-flag-32x32.png', size: "24x24") + " Рус ", :locale=>'ru' %>
+      <%= image_tag('ukr_active.png') + " Укр " %>
+      <%= link_to image_tag('rus_neactive.png') + " Рус ", :locale=>'ru' %>
   <% else %>
-      <%= image_tag('russia-flag-32x32.png') + " Рус " %>
-      <%= link_to image_tag('ukraine-flag-32x32.png', size: "24x24") + " Укр ", :locale=>'uk' %>
+      <%= link_to image_tag('ukr_neactive.png') + " Укр ", :locale=>'uk' %>
+      <%= image_tag('rus_active.png') + " Рус " %>
   <%end%>
 
 </div>
