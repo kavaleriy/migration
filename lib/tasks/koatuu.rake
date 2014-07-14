@@ -38,6 +38,10 @@ namespace :koatuu do
     Koatuu.delete_all("code like '01%'")
     Koatuu.delete_all(:code => '8500000000') # simferopol
     Koatuu.where(:code => '8000000000').first.update( { :level => 1} ) # kyiv
+
+
+    Koatuu.where(:code => ['1210400000', '1211000000', '1410600000', '1412300000', '1413500000']).update_all( {:level => 2 } )
+
   end
 
 
