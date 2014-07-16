@@ -15,4 +15,13 @@ class StaticController < ApplicationController
 
   def zd
   end
+
+  def download_roadmap
+    send_file(
+        "#{Rails.root}/public/Дорожная карта (КМУ, Минсоцполитики).pdf",
+        filename: "Дорожная карта (КМУ, Минсоцполитики).pdf",
+        type: "application/pdf",
+        :x_sendfile=>true
+    )
+  end
 end

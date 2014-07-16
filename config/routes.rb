@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :trud_govs
 
+  get "static/download_roadmap"
+
   get 'home/map'
 
   get 'report/amount_places'
