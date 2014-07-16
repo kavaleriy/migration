@@ -1,10 +1,10 @@
-<h4>Звіт за <%= @dt %></h4>
+<h3>Звіт за <%= @dt %></h3>
 <h4>Загальна кількість місць в розрізі типу житла</h4>
 
 <table class="table">
   <% @rep.each do |area| %>
       <tr>
-        <td><h5><%= area[:name] %></h5></td>
+        <td><h4><%= area[:name] %></h4></td>
         <td></td>
       </tr>
       <% area[:houses].each do |house| %>

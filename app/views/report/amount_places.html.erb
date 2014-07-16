@@ -1,11 +1,11 @@
-<h4>Звіт за <%= @dt %></h4>
+<h3>Звіт за <%= @dt %></h3>
 <h4>Загальна кількість місць для проживання</h4>
 
 
 <table class="table">
   <% @rep.each do |area| %>
   <tr>
-    <td colspan="3"><h5><%= area[:name] %></h5></td>
+    <td colspan="3"><h4><%= area[:name] %></h4></td>
   </tr>
   <tr>
     <td>Код району</td>

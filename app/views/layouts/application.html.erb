@@ -7,7 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Інформаційний ресурс для громадян" %></title>
     <%= csrf_meta_tags %>
 
-    <!--<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon">-->
+    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -63,9 +63,10 @@
         </div>
 
         <div class="sidebar col-md-3 col-sm-12 col-xs-12">
+          <div class="roadmap">
+            <%= link_to t("layouts.banner.roadmap"), static_download_roadmap_url, :class => "" %>
+          </div>
           <%= render :partial => 'layouts/news' %>
-<hr>
-          <i class="fa fa-road"></i> <%= link_to t("layouts.banner.roadmap"), static_download_roadmap_url, :class => "" %>
         </div>
       </div>
 
