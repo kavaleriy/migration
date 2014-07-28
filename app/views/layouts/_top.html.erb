@@ -19,6 +19,31 @@
 </div>
 
 <div class="clearfix"></div>
-<p class="note col-lg-9"><%= t('layouts.header.note') %></p>
+
+
+<div class="col-sm-10" id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-wrap="false">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <p class="note"><%= t('layouts.header.note') %></p>
+    </div>
+    <div class="item">
+      <p class="info"><span class='fa fa-info-circle'></span> <%= t('layouts.header.alert').html_safe %></p>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="right carousel-control" href="#carousel" role="button" data-slide="prev" style="margin-right: 30px;">
+    <span class="fa fa-angle-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+    <span class="fa fa-angle-right"></span>
+  </a>
+
+
+</div>
 
 <a class="ask pull-right btn btn-primary btn-xs" href="mailto:support@minregion.gov.ua?subject=Питання по http://migrants.gov.ua"><i class="fa fa-envelope-o"></i> <%= t('.question') %> </a>
+
+

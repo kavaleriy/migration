@@ -42,9 +42,28 @@ h6 {
 
     margin: 20px 0 0px 0 0;
   }
-  .note {
-    color: #ffffff;
-    line-height: 21px;
+
+  #carousel {
+    margin: 10px 0px 15px 0px;
+    .carousel-inner {
+      p {
+        margin-right: 50px!important;
+      }
+    }
+
+    .carousel-control {
+      width: 15px!important;
+      background: none;
+    }
+    .note {
+    }
+    .info {
+    }
+    .info, .note {
+      line-height: 21px;
+      color: #ffffff;
+    }
+
   }
 }
 
