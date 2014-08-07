@@ -64,7 +64,21 @@
 
         <div class="sidebar col-md-3 col-sm-12 col-xs-12">
           <div class="roadmap">
-            <%= link_to t("layouts.banner.roadmap"), static_download_roadmap_url, :class => "" %>
+            <p class="head"><%= t("layouts.banner.roadmap") %></p>
+
+            <p>
+                <%= link_to static_download_roadmap1_url do%>
+                    <i class="fa fa-file-pdf-o"></i>
+                    <%= t("layouts.banner.roadmap1")%>
+                <% end%>
+            </p>
+
+            <p>
+                <%= link_to static_download_roadmap2_url do%>
+                    <i class="fa fa-file-pdf-o"></i>
+                    <%= t("layouts.banner.roadmap2")%>
+                <% end%>
+            </p>
           </div>
           <hr>
           <%= render :partial => 'layouts/news' %>

@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   resources :trud_govs
 
-  get "static/download_roadmap"
+  get "static/download_roadmap1"
+  get "static/download_roadmap2"
 
   get 'home/map'
 

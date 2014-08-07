@@ -83,22 +83,23 @@ h6 {
   }
 
   .roadmap {
-    background: asset_url("roadmap/button_normal.png") no-repeat;
-    &:hover {
-      background: asset_url("roadmap/button_hover.png") no-repeat;
-    }
-    &:active {
-      background: asset_url("roadmap/button_active.png") no-repeat;
-    }
-    height: 40px;
-    width: 260px;
-
     padding-top: 8px;
+
+    .head {
+      font-size: 20px;
+      padding-top: 4px;
+      //background: asset_url("roadmap/button_normal.png") no-repeat;
+      //width: 260px;
+      //height: 40px;
+      //padding-left: 50px;
+      //color:white;
+    }
+
     a {
-      color: white;
-      font-size: 14px;
-      margin-left: 50px;
+      font-size: 20px;
       text-decoration: none;
+      margin-left: 20px;
+      margin-bottom: 30px;
     }
   }
 
