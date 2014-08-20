@@ -4,9 +4,8 @@
   <th><%= t('.area') %></th>
   <th><%= t('.region') %></th>
   <th><%= t('.house') %></th>
-  <th><%= t('.places') %></th>
-  <th><%= t('.school') %></th>
-  <th><%= t('.kgarten') %></th>
+  <th><small><%= t('.places').html_safe %></small></th>
+  <th><small><%= t('.school') %> <%= t('.kgarten') %></small></th>
 </tr>
 </thead>
 <tbody>
@@ -22,8 +21,7 @@
         <a href="<%= static_centers_path %>#tel_0510100000"><%= housing.qty_places %></a> /
         <a target="_blank" href="<%= work[:url] %>"><%= work[:places] %></a>
       </td>
-      <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i></td>
-      <td><i style="padding-left: 25px;" class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
+      <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i> - <i style="padding-left: 25px;" class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
       <td>
        </td>
     </tr>
