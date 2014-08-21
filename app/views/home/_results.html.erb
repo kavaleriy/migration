@@ -5,7 +5,7 @@
   <th><%= t('.region') %></th>
   <th><%= t('.house') %></th>
   <th><small><%= t('.places').html_safe %></small></th>
-  <th><small><%= t('.school') %> <%= t('.kgarten') %></small></th>
+  <th><small><%= t('.school') %> / <%= t('.kgarten') %></small></th>
 </tr>
 </thead>
 <tbody>
@@ -21,7 +21,9 @@
         <a href="<%= static_centers_path %>#tel_0510100000"><%= housing.qty_places %></a> /
         <a target="_blank" href="<%= work[:url] %>"><%= work[:places] %></a>
       </td>
-      <td ><i style="padding-left: 25px;" class="<%= school_class(housing.has_school) %>"></i> - <i style="padding-left: 25px;" class="<%= kgarten_class(housing.has_kgarden) %>"></i></td>
+      <%- school = school_class(housing.has_school) %>
+      <%- garten = kgarten_class(housing.has_school) %>
+      <td ><i style="padding-left: 5px; color: <%= school[:color] %>" class="<%= school[:class] %>"></i> <i style="padding-left: 15px; color: <%= garten[:color] %>" class="<%= garten[:class] %>"></i></td>
       <td>
        </td>
     </tr>

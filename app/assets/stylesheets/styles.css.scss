@@ -75,35 +75,60 @@ h6 {
   padding: 20px;
 }
 
+
+
 .left {
-  padding: 10px 10px 10px 0px;
+  margin-left: -15px;
+  padding: 10px 0px 10px 0px;
+
+  div {
+    margin: 10px 0 5px 0px;
+    padding: 5px;
+  }
+
+  .head {
+    margin-left: 12px;
+  }
 
   a {
     text-decoration: none;
-    color: orangered;
+    color: #603506;
+    overflow: hidden;
   }
 
   .btn {
     width: 100%;
     text-align: left;
   }
+
   .roadmap {
+
+    background-color: rgba(0,0,0, 0.08);
   }
 }
 
+
+
 .sidebar {
   padding-right: 0;
+
+  a {
+    text-decoration: none;
+    color: #603506;
+    &:hover {
+      color: #1C0806;
+    }
+    //color: darkslateblue !important;
+  }
+
 
   .head {
     margin-bottom: 15px;
   }
 
   .news {
-    height: 600px;
+    max-height: 900px;
     overflow: auto;
-    a {
-        color: darkslateblue !important;
-    }
   }
 }
 

@@ -4,10 +4,14 @@ module ApplicationHelper
   end
 
   def school_class(val)
-    'fa fa-check-square-o' if Housing.has_school?(val)
+    cl = Housing.has_school?(val) ? 'fa fa-check-square-o' : 'fa fa-square-o'
+    color = Housing.has_school?(val) ? 'green' : 'lightgrey'
+    { :class => cl, :color => color }
   end
   def kgarten_class(val)
-    'fa fa-check-square-o' if Housing.has_kgarten?(val)
+    cl = Housing.has_kgarten?(val) ? 'fa fa-check-square-o' : 'fa fa-square-o'
+    color = Housing.has_kgarten?(val) ? 'green' : 'lightgrey'
+    { :class => cl, :color => color }
   end
 
   def work_class(koatuu_code)
