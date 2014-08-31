@@ -1,0 +1,79 @@
+<div id="map" class="col-sm-12"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+
+
+<script type="text/javascript">
+    $(function(){
+        function get_html_for_ev(d) {
+            return "<h5>dsadasdasdas</h5>"
+        }
+
+        $.getJSON("<%= api_get_koatuu_geo_path %>", function( data ) {
+            console.log(data)
+
+            var div = d3.select("body").append("div")
+                    .attr("class", "tooltip")
+                    .style("opacity", 0);
+
+
+            size = $('#map').width()
+            $('#map').css('margin-left', -80)
+
+            var r = Raphael('map', 1350, 950),
+                    attributes = {
+                        fill: '#00AEEC',
+                        stroke: '#cd1543',
+                        'stroke-width': 1,
+                        'stroke-linejoin': 'round',
+                        transform:"translate(623.5801,201.2119)",
+                        transform:"matrix(1.25,0,0,-1.25,0,950)"
+                    },
+                    arr = r.set();
+            for (var region in uk_map_paths) {
+                var obj = r.path(uk_map_paths[region].path);
+
+                obj.attr(attributes);
+                console.log(region)
+                if (['sector_31', 'sector_33', 'sector_37', 'sector_39', 'sector_48'].indexOf( region ) > -1) {
+                    obj.attr('fill', '#fff')
+                }
+                obj.data('fill', obj.attr('fill'))
+                obj.data('code', uk_map_paths[region].area)
+                obj.data('name', uk_map_paths[region].name)
+
+                arr.push(obj);
+
+                obj
+                        .hover(function(){
+                            div.transition()
+                                    .duration(200)
+                                    .style("opacity", .7)
+                                    .style("color", '#fff')
+                            div .html( get_html_for_ev('') )
+                                    .style("left", 220  + "px")
+                                    .style("top", 228 + "px");
+
+                            this.animate({
+                                fill: '#FFE661'
+                            }, 300);
+                        }, function(){
+                            div.transition()
+                                    .duration(200)
+                                    .style("opacity", 0);
+
+                            this.animate({
+                                fill: this.data('fill')
+                            }, 300);
+                        })
+                        .click(function(){
+                            console.log(this.data('name'))
+                        });
+            }
+
+            arr.transform("s0.5,0.5 0,0");
+        })
+
+    });
+</script>

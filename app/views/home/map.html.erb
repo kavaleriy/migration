@@ -21,6 +21,7 @@
     function get_regions(code, alon, alat, azoom) {
         console.log(code)
         $.getJSON("<%= api_get_koatuu_geo_path %>", { area: code }, function( data ) {
+            console.log(data)
             /* Создание маркеров области */
             CreateMarkers(LayerRayon, data);
 
