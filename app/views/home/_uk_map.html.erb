@@ -23,7 +23,7 @@
 
             var r = Raphael('map', 700, 400),
                     attributes = {
-                        fill: '#00AAF0',
+                        fill: '#00C9F0',
                         stroke: '#5A8FA5',
                         'stroke-width': 2,
                         'stroke-linejoin': 'round',
@@ -38,58 +38,61 @@
 
                 var area_data = $.grep(data, function(e){ return e.code == uk_map_paths[region].code; })[0];
 
-                if (area_data === undefined || ['sector_31', 'sector_33', 'sector_37', 'sector_39', 'sector_48'].indexOf( region ) > -1) {
-                    obj.attr('fill', '#fff')
+                if (area_data === undefined) {
+                    area_data = {code: uk_map_paths[region].code, area: "", name: uk_map_paths[region].name, qtt: 0 }
+                    obj.data('area', area_data )
+                    obj.attr('fill', '#4CE4EF')
                 } else {
                     obj.data('area', area_data )
-                    obj.data('fill', obj.attr('fill'))
-
-                    obj
-                        .attr('cursor', 'pointer')
-                        .hover(function(event){
-                                div.html( get_html_for_ev(this.data('area')) )
-                                        .style("left", event.offsetX-100 + "px")
-                                        .style("top", event.offsetY + 100 + "px");
-
-                                div.transition()
-                                    .duration(200)
-                                    .style("opacity", .9)
-                                    .style("color", '#fff')
-                            this.animate({
-                                fill: '#F0D06A'
-                            }, 100);
-                        }, function(){
-                                div.transition()
-                                        .duration(200)
-                                        .style("opacity", 0);
-
-                                if ($("#home_search_area").select2("val") == this.data('area').area) {
-                                    var _this = this
-                                    $('form.search').submit(function() {
-                                        if ($("#home_search_area").select2("val") != _this.data('area').area) {
-                                            _this.animate({
-                                                fill: _this.data('fill')
-                                            }, 200);
-                                        }
-                                    })
-
-                                    return
-                                }
-
-                                this.animate({
-                                    fill: this.data('fill')
-                                }, 200);
-                        })
-                        .click(function(){
-                                area = this.data('area')
-
-                                $("#home_search_area").select2("val", '' + area.area)
-                                $("#home_search_region").select2("val", '')
-
-                                $('form.search').submit()
-                        });
-
                 }
+                obj.data('fill', obj.attr('fill'))
+
+                obj
+                    .attr('cursor', 'pointer')
+                    .hover(function(event){
+                            div.html( get_html_for_ev(this.data('area')) )
+                                    .style("left", event.offsetX-100 + "px")
+                                    .style("top", event.offsetY + 100 + "px");
+
+                            div.transition()
+                                .duration(200)
+                                .style("opacity", .9)
+                                .style("color", '#fff')
+                        this.animate({
+                            fill: '#F0D06A'
+                        }, 100);
+                    }, function(){
+                            div.transition()
+                                    .duration(200)
+                                    .style("opacity", 0);
+
+                            console.log(this.data('area').area)
+                            if (this.data('area').area != '' && $("#home_search_area").select2("val") == this.data('area').area) {
+                                var _this = this
+                                $('form.search').submit(function() {
+                                    if ($("#home_search_area").select2("val") != _this.data('area').area) {
+                                        _this.animate({
+                                            fill: _this.data('fill')
+                                        }, 200);
+                                    }
+                                })
+                                return
+                            }
+
+                            this.animate({
+                                fill: this.data('fill')
+                            }, 200);
+                    })
+                    .click(function(){
+                            area = this.data('area')
+
+                            $("#home_search_area").select2("val", '' + area.area)
+                            $("#home_search_region").select2("val", '')
+
+                            $('form.search').submit()
+                    });
+
+
 
                 arr.push(obj);
             }
