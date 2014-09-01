@@ -20,7 +20,7 @@ module Migration
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :uk
 
-    WillPaginate.per_page = 10
+    WillPaginate.per_page = 6
 
     # http://stackoverflow.com/questions/19452853/actioncontrollerinvalidauthenticitytoken-when-disable-js-ajax-request
     config.action_view.embed_authenticity_token_in_remote_forms = true

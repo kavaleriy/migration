@@ -4,6 +4,11 @@ class HomeController < ApplicationController
   def index
     @area = Koatuu.areas_to_json.collect { |area| [ area[:name], area[:id] ] }
     @house = House.all.collect { |i| [ i.name, i.id.to_s ] }
+
+    respond_to do |format|
+      format.js { render :index }
+      format.html
+    end
   end
 
   def map
@@ -13,7 +18,6 @@ class HomeController < ApplicationController
   def set_housing
     params[:home_search_region] ||= ''
     params[:home_search_area] ||= ''
-
     koatuu = params[:home_search_region].slice(0,5)
     koatuu = params[:home_search_area].slice(0,2) if koatuu.empty?
 

@@ -21,7 +21,6 @@
     function get_regions(code, alon, alat, azoom) {
         console.log(code)
         $.getJSON("<%= api_get_koatuu_geo_path %>", { area: code }, function( data ) {
-            console.log(data)
             /* Создание маркеров области */
             CreateMarkers(LayerRayon, data);
 
@@ -59,7 +58,6 @@
 
         map.events.register("zoomend", map, function(e) { EventAfterZoom(e.object.zoom); });
         map.events.register("moveend", map, function(e) { Wcenter=e.object.center ; lat=Wcenter.lat; lon=Wcenter.lon;
-            console.log(lon + ',' + lat + ',' +  e.object.zoom);
             LimitTop=6863120.762734;LimitBottom=5504681.8962389 ;LimitLeft=2440783.7896614;LimitRight=4601811.453039;
             if (lon < LimitLeft  ||  lon > LimitRight  ||  lat > LimitTop  ||  lat < LimitBottom ){SetMapCenterZoom(3530470.0647431, 6243369.337484, 6);}
         });

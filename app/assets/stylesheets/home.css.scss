@@ -44,7 +44,28 @@
 }
 
 
-#mapdiv {
+#map {
+  zindex: 100;
+}
+.map_tooltip {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 130px;
+  overflow: hidden;
+  padding: 2px;
+  font: 12px sans-serif;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+
+  p {
+    font-size: 16px;
+
+  }
+  background-color: darkcyan;
+
   .olFramedCloudPopupContent {
     width: 220px;
     height: 110px;

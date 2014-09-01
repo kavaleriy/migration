@@ -9,7 +9,13 @@
     </div>
 <% end %>
 
+<div class="row">
+    <%= render partial: 'uk_map' %>
+</div>
+
 <div class="search-container row">
+
+
   <%= form_tag(root_path, method: "get", remote: true, class: 'search' ) do %>
 
       <div class="btn-group btn-group-justified">
@@ -39,7 +45,7 @@
   <% end %>
 
   <div id="results" class="">
-    <%= render partial: 'uk_map' %>
+    <%= render partial: 'results' %>
 
   </div>
 </div>
@@ -48,7 +54,6 @@
 <script id="script_home_search_area" type="text/javascript">
     $('input, select', 'form.search').on("change", function(e) {
         $('#results').addClass('spinner')
-
         if ($("#home_search_area").select2("val") == '')
             $("#home_search_region").select2("val", "")
 

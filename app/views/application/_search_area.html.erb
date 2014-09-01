@@ -20,7 +20,7 @@
                 }
             },
             initSelection: function(element, callback) {
-                var id=$(element).val();
+                var id= $(element).val();
                 if (id!=="") {
                     $.ajax("/api/get_koatuu", {
                         data: {

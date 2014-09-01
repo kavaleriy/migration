@@ -1,27 +1,27 @@
-<div id="map" class="col-sm-12"></div>
+<div class="uk_map"></div>
+
+    <div id="map" class="col-sm-12"></div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+<script src="assets/raphael-min.js"></script>
 
 
 <script type="text/javascript">
     $(function(){
-        function get_html_for_ev(d) {
-            return "<h5>dsadasdasdas</h5>"
+        function get_html_for_ev(area) {
+            return "<div id='map_tooltip'><h5>" + area.name + "</h5><hr/><p>для проживання: <b>" + area.qtt + "</b></p></div>"
         }
 
         $.getJSON("<%= api_get_koatuu_geo_path %>", function( data ) {
-            console.log(data)
-
-            var div = d3.select("body").append("div")
-                    .attr("class", "tooltip")
+            var div = d3.select(".uk_map").append("div")
+                    .attr("class", "map_tooltip")
                     .style("opacity", 0);
 
 
             size = $('#map').width()
-            $('#map').css('margin-left', -80)
+            $('#map').css('margin-left', -70)
 
-            var r = Raphael('map', 1350, 950),
+            var r = Raphael('map', 1350, 480),
                     attributes = {
                         fill: '#00AEEC',
                         stroke: '#cd1543',
@@ -35,41 +35,63 @@
                 var obj = r.path(uk_map_paths[region].path);
 
                 obj.attr(attributes);
-                console.log(region)
-                if (['sector_31', 'sector_33', 'sector_37', 'sector_39', 'sector_48'].indexOf( region ) > -1) {
+
+                var area_data = $.grep(data, function(e){ return e.code == uk_map_paths[region].code; })[0];
+
+                if (area_data === undefined || ['sector_31', 'sector_33', 'sector_37', 'sector_39', 'sector_48'].indexOf( region ) > -1) {
                     obj.attr('fill', '#fff')
-                }
-                obj.data('fill', obj.attr('fill'))
-                obj.data('code', uk_map_paths[region].area)
-                obj.data('name', uk_map_paths[region].name)
+                } else {
+                    obj.data('area', area_data )
+                    obj.data('fill', obj.attr('fill'))
 
-                arr.push(obj);
+                    obj
+                        .attr('cursor', 'pointer')
+                        .hover(function(event){
+                                div.html( get_html_for_ev(this.data('area')) )
+                                        .style("left", event.offsetX-100 + "px")
+                                        .style("top", event.offsetY + 50 + "px");
 
-                obj
-                        .hover(function(){
-                            div.transition()
+                                div.transition()
                                     .duration(200)
-                                    .style("opacity", .7)
+                                    .style("opacity", .9)
                                     .style("color", '#fff')
-                            div .html( get_html_for_ev('') )
-                                    .style("left", 220  + "px")
-                                    .style("top", 228 + "px");
-
                             this.animate({
                                 fill: '#FFE661'
                             }, 300);
                         }, function(){
-                            div.transition()
-                                    .duration(200)
-                                    .style("opacity", 0);
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", 0);
 
-                            this.animate({
-                                fill: this.data('fill')
-                            }, 300);
+                                if ($("#home_search_area").select2("val") == this.data('area').area) {
+                                    var _this = this
+                                    $('form.search').submit(function() {
+                                        if ($("#home_search_area").select2("val") != _this.data('area').area) {
+                                            _this.animate({
+                                                fill: _this.data('fill')
+                                            }, 300);
+                                        }
+                                    })
+
+                                    return
+                                }
+
+                                this.animate({
+                                    fill: this.data('fill')
+                                }, 300);
                         })
                         .click(function(){
-                            console.log(this.data('name'))
+                                area = this.data('area')
+
+                                $("#home_search_area").select2("val", '' + area.area)
+                                $("#home_search_region").select2("val", '')
+
+                                $('form.search').submit()
                         });
+
+                }
+
+                arr.push(obj);
             }
 
             arr.transform("s0.5,0.5 0,0");
@@ -77,3 +99,4 @@
 
     });
 </script>
+
