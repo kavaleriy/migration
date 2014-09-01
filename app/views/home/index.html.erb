@@ -9,12 +9,7 @@
     </div>
 <% end %>
 
-<div class="row">
-    <%= render partial: 'uk_map' %>
-</div>
-
 <div class="search-container row">
-
 
   <%= form_tag(root_path, method: "get", remote: true, class: 'search' ) do %>
 
@@ -43,6 +38,10 @@
       </div>
 
   <% end %>
+
+  <div class="row">
+    <%= render partial: 'uk_map' %>
+  </div>
 
   <div id="results" class="">
     <%= render partial: 'results' %>

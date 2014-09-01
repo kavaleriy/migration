@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30661ce7-3a37-4873-bd8f-3d9896db3799" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/d3map/d3.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/d3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/_search_area.html.erb" afterPath="$PROJECT_DIR$/app/views/application/_search_area.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_uk_map.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_uk_map.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.js.erb" afterPath="$PROJECT_DIR$/app/views/home/index.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/map.html.erb" afterPath="$PROJECT_DIR$/app/views/home/map.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/ru.yml" afterPath="$PROJECT_DIR$/config/locales/ru.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/d3map/uk_map.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/d3map/uk_map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,37 +49,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_uk_map.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_uk_map.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_uk_map.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="59" selection-start="2884" selection-end="2884" vertical-scroll-proportion="-6.9583335">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="18" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news_items.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/news_items.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_search_area.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/application/_search_area.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="223" selection-end="258" vertical-scroll-proportion="-3.125">
+            <state line="23" column="42" selection-start="698" selection-end="698" vertical-scroll-proportion="0.60314685">
               <folding />
             </state>
           </provider>
@@ -118,16 +79,7 @@
       <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ru.yml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="86" selection-start="3571" selection-end="3571" vertical-scroll-proportion="0.7584973">
+            <state line="34" column="0" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -172,10 +124,10 @@
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/_uk_map.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
         <option value="$PROJECT_DIR$/config/locales/ru.yml" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_uk_map.html.erb" />
       </list>
     </option>
   </component>
@@ -810,20 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="8" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.6167883">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
@@ -838,20 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_results.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="782" selection-end="782" vertical-scroll-proportion="0.37062937">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/_search_area.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="223" selection-end="258" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="29" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
@@ -859,9 +783,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_uk_map.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="59" selection-start="2884" selection-end="2884" vertical-scroll-proportion="-6.9583335">
+        <state line="108" column="0" selection-start="3669" selection-end="3669" vertical-scroll-proportion="0.8389982">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_results.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="782" selection-end="782" vertical-scroll-proportion="0.38686132">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/application/_search_area.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -873,16 +818,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="18" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.0">
+        <state line="45" column="0" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.9055944">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="86" selection-start="3571" selection-end="3571" vertical-scroll-proportion="0.7584973">
+        <state line="129" column="18" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.6291946">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_uk_map.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="42" selection-start="698" selection-end="698" vertical-scroll-proportion="0.60314685">
           <folding />
         </state>
       </provider>
