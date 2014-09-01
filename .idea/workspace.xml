@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30661ce7-3a37-4873-bd8f-3d9896db3799" name="Default" comment="" />
+    <list default="true" id="30661ce7-3a37-4873-bd8f-3d9896db3799" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_uk_map.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_uk_map.html.erb" />
+    </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409515207739" ignored="false" />
@@ -49,7 +51,16 @@
       <file leaf-file-name="_uk_map.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_uk_map.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="46" selection-start="2345" selection-end="2351" vertical-scroll-proportion="0.5769231">
+            <state line="10" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.26223776">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/map.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="35" selection-start="854" selection-end="885" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -731,13 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/map.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="641" selection-end="641" vertical-scroll-proportion="-0.58759123">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="12" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
@@ -829,9 +833,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/map.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="35" selection-start="854" selection-end="885" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_uk_map.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="46" selection-start="2345" selection-end="2351" vertical-scroll-proportion="0.5769231">
+        <state line="10" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.26223776">
           <folding />
         </state>
       </provider>
