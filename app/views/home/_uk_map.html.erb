@@ -21,11 +21,11 @@
             size = $('#map').width()
             $('#map').css('margin-left', -50)
 
-            var r = Raphael('map', 700, 350),
+            var r = Raphael('map', 700, 400),
                     attributes = {
-                        fill: '#00AEEC',
-                        stroke: '#cd1543',
-                        'stroke-width': 1,
+                        fill: '#00AAF0',
+                        stroke: '#5A8FA5',
+                        'stroke-width': 2,
                         'stroke-linejoin': 'round',
                         transform:"translate(623.5801,201.2119)",
                         transform:"matrix(1.25,0,0,-1.25,0,950)"
@@ -56,8 +56,8 @@
                                     .style("opacity", .9)
                                     .style("color", '#fff')
                             this.animate({
-                                fill: '#FFE661'
-                            }, 300);
+                                fill: '#F0D06A'
+                            }, 100);
                         }, function(){
                                 div.transition()
                                         .duration(200)
@@ -69,7 +69,7 @@
                                         if ($("#home_search_area").select2("val") != _this.data('area').area) {
                                             _this.animate({
                                                 fill: _this.data('fill')
-                                            }, 300);
+                                            }, 200);
                                         }
                                     })
 
@@ -78,7 +78,7 @@
 
                                 this.animate({
                                     fill: this.data('fill')
-                                }, 300);
+                                }, 200);
                         })
                         .click(function(){
                                 area = this.data('area')
@@ -94,7 +94,7 @@
                 arr.push(obj);
             }
 
-            arr.transform("s0.5,0.4 0,0");
+            arr.transform("s0.5,0.45 0,0");
         })
 
     });
