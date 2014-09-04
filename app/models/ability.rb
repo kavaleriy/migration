@@ -16,6 +16,8 @@ class Ability
       # be destroyed or have any other actions from the charts_controller.rb
       # executed)
       can [:read, :create, :update], [NewsItem, TrudGov, Housing]
+    else
+      can :manage, [Advert]
     end
   end
 

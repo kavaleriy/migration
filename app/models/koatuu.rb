@@ -27,7 +27,7 @@ class Koatuu < ActiveRecord::Base
     self.level([3, 31], code).order('name')
   end
 
-  def self.to_tree(code)
+  def self.to_tree(code = '')
     tree = []
 
     areas(code).each { |area|

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :housings
+  resources :adverts
+
   resources :news_items
 
   devise_for :users
@@ -40,8 +43,6 @@ Rails.application.routes.draw do
   get 'api/get_koatuu_geo'
 
   get 'centers/index'
-
-  resources :housings
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,63 @@
+<%- model_class = Advert -%>
+<div class="page-header">
+  <h2>Оголошення</h2>
+</div>
+
+<dl class="dl-horizontal">
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.koatuu_code') %>:</strong></dt>
+      <dd><%= get_koatuu_name(@advert.koatuu_code) %></dd>
+  </div>
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.house_id') %>:</strong></dt>
+      <dd><%= @advert.house.name %></dd>
+  </div>
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.address') %>:</strong></dt>
+      <dd><%= @advert.address %></dd>
+  </div>
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.qty_places') %>:</strong></dt>
+      <dd><%= @advert.qty_places %></dd>
+  </div>
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.cost') %>:</strong></dt>
+      <dd><%= @advert.cost %></dd>
+  </div>
+  <div class="col-sm-12">
+    <dt><strong><%= t('adverts.index.has_school') %>:</strong></dt>
+    <%- school = school_class(@advert.has_school) %>
+    <dd><i style="color: <%= school[:color] %>" class="<%= school[:class] %>"></i></dd>
+  </div>
+  <div class="col-sm-12">
+    <dt><strong><%= t('adverts.index.has_kgarden') %>:</strong></dt>
+    <%- garten = kgarten_class(@advert.has_kgarden) %>
+    <dd><i style="color: <%= garten[:color] %>" class="<%= garten[:class] %>"></i></dd>
+  </div>
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.email') %>:</strong></dt>
+      <dd><%= @advert.email %></dd>
+  </div>
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.fio') %>:</strong></dt>
+      <dd><%= @advert.fio %></dd>
+  </div>
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.phone') %>:</strong></dt>
+      <dd><%= @advert.phone %></dd>
+  </div>
+  <div class="col-sm-12">
+      <dt><strong><%= t('adverts.index.note') %>:</strong></dt>
+      <dd><%= @advert.note %></dd>
+  </div>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              adverts_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_advert_path(@advert), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              advert_path(@advert),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

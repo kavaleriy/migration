@@ -5,13 +5,12 @@
 
 <dl class="dl-horizontal">
   <dt><strong><%= t('housings.index.area') %>:</strong></dt>
-  <dd><%= koatuu_title(@housing.koatuu_code) %></dd>
+  <dd><%= (@housing.koatuu_code) %></dd>
   <dt><strong><%= t('housings.index.house') %>:</strong></dt>
   <dd><%= @housing.house.name %></dd>
   <dt><strong><%= t('housings.index.qttplaces') %>:</strong></dt>
   <dd><%= @housing.qty_places %></dd>
   <dt><strong><%= t('housings.index.qttwork') %>:</strong></dt>
-  <dd><%= @housing.qty_work %></dd>
   <dt><strong><%= t('housings.index.school') %>:</strong></dt>
   <dd><%= @housing.has_school %></dd>
   <dt><strong><%= t('housings.index.kgarten') %>:</strong></dt>

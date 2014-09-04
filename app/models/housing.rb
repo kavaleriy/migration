@@ -1,5 +1,6 @@
 class Housing < ActiveRecord::Base
   belongs_to :house
+  has_many :adverts
 
   after_save :log_housing
 
@@ -13,6 +14,7 @@ class Housing < ActiveRecord::Base
   def self.has_school?(val)
     val == 1
   end
+
   def self.has_kgarten?(val)
     val == 1
   end

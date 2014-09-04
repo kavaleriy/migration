@@ -80,5 +80,13 @@
       padding: 5px 10px;
     }
   }
+}
+
+#housing_add_advert {
+  z-index: 9999;
+
+  .modal-header {
+    background-color: darkcyan;
+  }
 
 }

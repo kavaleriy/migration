@@ -27,4 +27,9 @@ module ApplicationHelper
     { :places => places || '-', :url => url }
   end
 
+  def get_koatuu_name(code)
+    koatuu = Koatuu.coatuu_to_json(code)
+    "#{koatuu[:name]}"
+  end
+
 end

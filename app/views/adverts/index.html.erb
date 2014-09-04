@@ -1,0 +1,48 @@
+<%- model_class = Advert -%>
+<div class="page-header">
+  <h2><%=t '.title' %></h2>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= t('.koatuu_code') %></th>
+      <th><%= t('.house_id') %></th>
+      <th><%= t('.qty_places') %></th>
+      <th><%= t('.cost') %></th>
+      <th><%= t('.created_at') %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @adverts.each do |advert| %>
+      <tr>
+        <td><%= link_to get_koatuu_name(advert.koatuu_code), advert_path(advert) %></td>
+        <td><%= advert.house.name %></td>
+        <td><%= advert.qty_places %></td>
+        <td><%= advert.cost %></td>
+        <td><%=l advert.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_advert_path(advert), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      advert_path(advert),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+
+  <% end %>
+  </tbody>
+</table>
+
+
+<div class="flickr_pagination ">
+  <%= will_paginate @adverts, :container => false %>
+</div>
+
+
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_advert_path,
+            :class => 'btn btn-primary' %>

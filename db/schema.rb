@@ -11,12 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140709144816) do
+ActiveRecord::Schema.define(version: 20140902192525) do
+
+  create_table "adverts", force: true do |t|
+    t.string   "koatuu_code"
+    t.integer  "house_id"
+    t.string   "address"
+    t.integer  "cost"
+    t.integer  "qty_places"
+    t.integer  "has_school"
+    t.integer  "has_kgarden"
+    t.string   "email"
+    t.string   "fio"
+    t.string   "phone"
+    t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "geos", force: true do |t|
     t.string  "koatuu_code"
-    t.integer "lon"
-    t.integer "lat"
+    t.decimal "lon",         precision: 15, scale: 10
+    t.decimal "lat",         precision: 15, scale: 10
     t.integer "zoom"
   end
 
@@ -54,7 +70,7 @@ ActiveRecord::Schema.define(version: 20140709144816) do
     t.integer  "level"
   end
 
-  add_index "koatuus", ["code"], name: "index_koatuu_on_code"
+  add_index "koatuus", ["name"], name: "index_koatuu_on_code"
 
   create_table "news_items", force: true do |t|
     t.date     "issued"

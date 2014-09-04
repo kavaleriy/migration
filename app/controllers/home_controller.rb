@@ -30,5 +30,14 @@ class HomeController < ApplicationController
     @housings = @housings.where(:has_kgarden => 1) unless has_kgarden.nil?
 
     @housings = @housings.order('koatuu_code').paginate(:page => params[:page]) if @housings
+
+
+    #@adverts = Advert.where('qty_places > 0')
+    #@adverts = @adverts.where("koatuu_code like ?", "#{koatuu}%") unless koatuu.empty?
+    #@adverts = @adverts.where(:has_school => 1) unless scool.nil?
+    #@adverts = @adverts.where(:has_kgarden => 1) unless has_kgarden.nil?
+    #
+    #@housings = @adverts.order(created_at: :desc).paginate(:page => params[:page]) if @housings
+
   end
 end

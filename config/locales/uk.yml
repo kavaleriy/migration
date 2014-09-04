@@ -68,6 +68,9 @@ uk:
     menu:
       search: "Пошук житла"
       search_map: "Пошук житла на карті"
+      advert: "Оголошення на сайті"
+      add_houseadvert: "Місця для проживання"
+      add_jobadvert: "Робочі місця"
     results:
       area: "Область"
       region: "Район"
@@ -79,7 +82,7 @@ uk:
   housings:
     index:
       title: "Місця для проживання"
-      koatuu: "Розташування"
+      koatuu: "Місце розташування житла"
       house: "Житло"
       qtt: "Місць"
       qtt_placeholder: "Вкажіть кількість місць для проживання"
@@ -107,3 +110,28 @@ uk:
       sdm: "Оперативна група Міжвідомчого координаційного штабу в ДСНС України +38(044) 247-30-02, +38(044) 247-32-92"
       region: "Регіон"
       phone: "Контактний телефон"
+  adverts:
+    form:
+      hasschool: "Поруч є школа"
+      haskgarten: "Поруч є садочок"
+      motes: "Додаткова інформація"
+    index:
+      title: "Оголошення"
+      koatuu_code: "Місце розміщення"
+      house_id: "Тип житла"
+      address: "Адреса"
+      cost: "Вартість"
+      qty_places: "Місць"
+      created_at: "Розміщено"
+
+
+      has_school: "Поруч школа"
+      has_kgarden: "Поруч садочок"
+      email: "email"
+      fio: "Контактна особа"
+      phone: "Телефон"
+      note: "Примітки"
+  activerecord:
+    attributes:
+      advert:
+        qty_places: "Кількість місць для проживання"

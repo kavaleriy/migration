@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  housing_id: 1
+  email: MyString
+  fio: MyString
+  phone: MyString
+
+two:
+  housing_id: 1
+  email: MyString
+  fio: MyString
+  phone: MyString

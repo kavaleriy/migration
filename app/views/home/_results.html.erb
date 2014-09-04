@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table table-striped">
 <thead>
 <tr>
   <th><%= t('.area') %></th>
@@ -22,8 +22,8 @@
         <a target="_blank" href="<%= work[:url] %>"><%= work[:places] %></a>
       </td>
       <%- school = school_class(housing.has_school) %>
-      <%- garten = kgarten_class(housing.has_school) %>
-      <td ><i style="padding-left: 5px; color: <%= school[:color] %>" class="<%= school[:class] %>"></i> <i style="padding-left: 15px; color: <%= garten[:color] %>" class="<%= garten[:class] %>"></i></td>
+      <%- garden = kgarten_class(housing.has_kgarden) %>
+      <td ><i style="padding-left: 5px; color: <%= school[:color] %>" class="<%= school[:class] %>"></i> <i style="padding-left: 15px; color: <%= garden[:color] %>" class="<%= garden[:class] %>"></i></td>
       <td>
        </td>
     </tr>

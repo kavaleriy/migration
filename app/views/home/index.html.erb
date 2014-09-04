@@ -7,9 +7,30 @@
         <a class="" href="<%= home_map_path %>"><i class="fa fa-map-marker"></i> <%= t('home.menu.search_map') %></a>
       </div>
     </div>
+
+    <div class="btn-group pull-right" style="margin-right: 20px;">
+      <%= link_to t('home.menu.advert'), adverts_path, :class => "btn btn-success" %>
+      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+          <li>
+            <%= link_to new_advert_path, "data-no-turbolink" => true, :role => "menuitem" do %>
+                <%= t('home.menu.add_houseadvert') %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to new_advert_path, "data-no-turbolink" => true, :role => "menuitem" do %>
+                <%= t('home.menu.add_jobadvert') %>
+            <% end %>
+          </li>
+      </ul>
+    </div>
+
 <% end %>
 
-<div class="search-container row">
+<div class="search-container">
 
   <%= form_tag(root_path, method: "get", remote: true, class: 'search' ) do %>
 
@@ -25,7 +46,11 @@
         </div>
       </div>
 
+      <br>
+
       <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+        </div>
         <div class="btn-group">
           <label><%= check_box_tag('home_search_has_school') %> <%= t('home.search.school') %></label>
         </div>

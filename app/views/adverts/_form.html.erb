@@ -1,0 +1,153 @@
+<% if @advert.errors.any? %>
+    <div class="alert-dismissible">
+      <div class="alert alert-danger" role="alert">
+        <h3>ПОМИЛКА ЗБЕРЕЖЕННЯ</h3>
+        <ul class="">
+            <% @advert.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+        </ul>
+      </div>
+    </div>
+<% end %>
+
+<%= form_for @advert, :html => { :class => 'form-horizontal' } do |f| %>
+
+    <div id="wizard" class="swMain">
+      <ul>
+        <li><a href="#step-1">
+          <label class="stepNumber">1</label>
+                <span class="stepDesc">
+                   Крок 1<br />
+                   <small>Інформація про житло</small>
+                </span>
+        </a></li>
+        <li><a href="#step-2">
+          <label class="stepNumber">2</label>
+                <span class="stepDesc">
+                   Крок 2<br />
+                   <small>Контактна інформація</small>
+                </span>
+        </a></li>
+        <li><a href="#step-3">
+          <label class="stepNumber">3</label>
+                <span class="stepDesc">
+                   Крок 3<br />
+                   <small>Публікація оголошення</small>
+                </span>
+        </a></li>
+      </ul>
+
+      <div id="step-1">
+        <h2 class="StepTitle"><%= t('housings.index.koatuu') %></h2>
+        <br/>
+        <div class="form-group">
+          <div class="controls">
+            <%= f.select :koatuu_code, grouped_options_for_select(get_koatuu_tree(), @advert.koatuu_code), { prompt: false },  :class => 'form-control' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label t('housings.index.house'), :class => 'control-label' %>
+          <div class="controls">
+            <%= f.select :house_id, House.all.collect {|p| [ p.name, p.id ] }, { prompt: false }, :class => 'form-control' %>
+          </div>
+        </div>
+        <br/>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-home"></i></div>
+            <%= f.text_field :address, :class => 'form-control', placeholder: "Адреса разташування житла" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-8 control-label"><b>Місць для проживання</b></label>
+          <div class="controls col-sm-4">
+            <%= f.text_field :qty_places, :class => 'form-control', placeholder: "кількість" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-8 control-label">Вартість проживання</label>
+          <div class="controls  col-sm-4">
+            <%= f.text_field :cost, :class => 'form-control', placeholder: "грн/міс" %>
+          </div>
+        </div>
+        <h2 class="StepTitle"><%= t('.motes') %></h2>
+        <br/>
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group form-group">
+            <label class="col-lg-5"><%= f.check_box :has_school %> <%= t('.hasschool') %></label>
+            <label class="col-lg-5"><%= f.check_box :has_kgarden %> <%= t('.haskgarten') %></label>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-2">
+        <h2 class="StepTitle">Інформація для зворотнього зв'язку</h2>
+        <div class="form-group">
+          <label for="inputEmail3" class="control-label">E-Mail</label>
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+            <%= f.text_field :email, :class => 'form-control', :readonly => true, placeholder: "example@example.com" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="control-label">Вкажіть Прізвище, Ім'я, По-батькові</label>
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-user-md"></i></div>
+            <%= f.text_field :fio, :class => 'form-control', placeholder: "Прізвище, Ім'я, По-батькові" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="control-label">Вкажіть телефон</label>
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-mobile"></i></div>
+            <%= f.text_field :phone, { :class => 'form-control' } %>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-3">
+        <h2 class="StepTitle">Примітки</h2>
+        <div class="form-group">
+          <div class="controls">
+            <%= f.text_area :note, {:rows => 10, :class => 'form-control'} %>
+          </div>
+        </div>
+
+        <!--<h2 class="StepTitle">Для збереження даних введіть код CAPTCHA</h2>-->
+        <!--<%= recaptcha_tags ajax: true %>-->
+      </div>
+    </div>
+    <!-- End SmartWizard Content -->
+
+<% end %>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $("form #advert_koatuu_code").select2();
+        $("form #advert_house_id").select2();
+    });
+
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        // Smart Wizard
+        $('form #wizard').smartWizard( {
+            enableAllSteps: true,
+            labelNext:'Далі', // label for Next button
+            labelPrevious:'Назад', // label for Previous button
+            labelFinish:'Опублікувати',
+            onFinish: onFinishCallback
+        });
+
+        function onFinishCallback(){
+            $('form').submit()
+        }
+    });
+
+</script>

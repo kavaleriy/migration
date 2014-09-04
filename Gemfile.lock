@@ -120,6 +120,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    recaptcha (0.3.6)
     ref (1.0.5)
     role_model (0.8.1)
     roo (1.13.2)
@@ -193,6 +194,7 @@ DEPENDENCIES
   openlayers-rails
   pry-rails
   rails (= 4.1.1)
+  recaptcha
   role_model
   roo
   sass-rails (~> 4.0.3)

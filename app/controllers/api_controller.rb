@@ -24,26 +24,31 @@ class ApiController < ApplicationController
   end
 
   def get_koatuu_geo
-
     area = params[:area]
+    cache_id = "map_qtt#{area}"
 
-    if area
-      qtt = (Koatuu.acities(area) + Koatuu.regions(area)).collect { |region|
-        code = region.code.slice(0, 5)
-        { code: code, area: area, region: region.code, name: region.name, qtt: Housing.group_qtt(code)}
+    qtt = Rails.cache.read(cache_id)
+    if qtt.nil?
+      if area
+        qtt = (Koatuu.acities(area) + Koatuu.regions(area)).collect { |region|
+          code = region.code.slice(0, 5)
+          { code: code, area: area, region: region.code, name: region.name, qtt: Housing.group_qtt(code)}
+        }
+      else
+        qtt = Koatuu.areas.collect { |area|
+          code = area.code.slice(0, 2)
+          { code: code, area: area.code, name: area.name, qtt: Housing.group_qtt(code)}
+        }
+      end
+
+      qtt = qtt.reject {|v| v[:qtt] == 0 }
+      qtt.map { |row|
+        geo = Geo.where(:koatuu_code => row[:code]).first
+        row[:geo] = { lon: geo.lon, lat: geo.lat, zoom: geo.zoom } if geo
       }
-    else
-      qtt = Koatuu.areas.collect { |area|
-        code = area.code.slice(0, 2)
-        { code: code, area: area.code, name: area.name, qtt: Housing.group_qtt(code)}
-      }
+
+      Rails.cache.write(cache_id, qtt, timeToLive: (15 * 60).seconds)
     end
-
-    qtt = qtt.reject {|v| v[:qtt] == 0 }
-    qtt.map { |row|
-      geo = Geo.where(:koatuu_code => row[:code]).first
-      row[:geo] = { lon: geo.lon, lat: geo.lat, zoom: geo.zoom } if geo
-    }
 
     render json: qtt, status: :ok
   end
