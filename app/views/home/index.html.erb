@@ -21,9 +21,9 @@
             <% end %>
           </li>
           <li>
-            <%= link_to new_advert_path, "data-no-turbolink" => true, :role => "menuitem" do %>
-                <%= t('home.menu.add_jobadvert') %>
-            <% end %>
+            <!--<%= link_to new_advert_path, "data-no-turbolink" => true, :role => "menuitem" do %>-->
+                <!--<%= t('home.menu.add_jobadvert') %>-->
+            <!--<% end %>-->
           </li>
       </ul>
     </div>
@@ -68,16 +68,39 @@
     <%= render partial: 'uk_map' %>
   </div>
 
-  <div id="results" class="">
-    <%= render partial: 'results' %>
 
+  <div id="spinner"></div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#res_housings" role="tab" data-toggle="tab"><%= t('.housings') %></a></li>
+    <li><a href="#res_adverts" role="tab" data-toggle="tab"><%= t('.adverts') %></a></li>
+    <li><a href="#res_adverts_work" role="tab" data-toggle="tab"><%= t('.adverts_work') %></a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="res_housings">
+      <div id="tbl_housings">
+          <%= render partial: 'results', :locals => { :places => @housings } %>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="res_adverts">
+      <div id="tbl_adverts">
+        <%= render partial: 'results_advert', :locals => { :places => @adverts } %>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="res_adverts_work">
+      <div id="tbl_adverts_work">
+        <%= render partial: 'no_results', :locals => { :places => @adverts } %>
+      </div>
+    </div>
   </div>
 </div>
 
 
 <script id="script_home_search_area" type="text/javascript">
     $('input, select', 'form.search').on("change", function(e) {
-        $('#results').addClass('spinner')
+        $('#spinner').addClass('spinner')
         if ($("#home_search_area").select2("val") == '')
             $("#home_search_region").select2("val", "")
 

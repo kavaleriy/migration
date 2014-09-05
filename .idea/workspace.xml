@@ -2,78 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30661ce7-3a37-4873-bd8f-3d9896db3799" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/recaptcha.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/_results_advert.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/ru.activerecord.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/uk.activerecord.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adverts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/adverts/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_left.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_left.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.erb" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_no_results.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_no_results.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_results.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_results.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_uk_map.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_uk_map.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/advert.rb" afterPath="$PROJECT_DIR$/app/models/advert.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/adverts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/adverts_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adverts/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/adverts/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/housing.rb" afterPath="$PROJECT_DIR$/app/models/housing.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adverts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/adverts/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/koatuu.rb" afterPath="$PROJECT_DIR$/app/models/koatuu.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.js.erb" afterPath="$PROJECT_DIR$/app/views/home/index.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adverts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/adverts/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/housings/show.html.erb" afterPath="$PROJECT_DIR$/app/views/housings/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/ru.bootstrap.yml" afterPath="$PROJECT_DIR$/config/locales/ru.bootstrap.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/ru.yml" afterPath="$PROJECT_DIR$/config/locales/ru.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adverts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/adverts/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/static_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/static_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/uk.bootstrap.yml" afterPath="$PROJECT_DIR$/config/locales/uk.bootstrap.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/uk.yml" afterPath="$PROJECT_DIR$/config/locales/uk.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="migration.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409852711328" ignored="false" />
+    <file path="/Dummy.txt" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409929699559" ignored="false" />
     <file path="/_top.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1406557378170" ignored="false" />
-    <file path="/temp.yml" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409812239926" ignored="false" />
+    <file path="/temp.yml" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409929699559" ignored="false" />
     <file path="/styles.css.scss" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409761869272" ignored="false" />
-    <file path="/uk.yml" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409812364367" ignored="false" />
-    <file path="/ru.yml" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409565484615" ignored="false" />
+    <file path="/uk.yml" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409915011516" ignored="false" />
+    <file path="/ru.yml" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409929799839" ignored="false" />
     <file path="$PROJECT_DIR$/../budget/Gemfile" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1406892377686" ignored="false" />
     <file path="$PROJECT_DIR$/../budget/config/environments/development.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1406892377686" ignored="false" />
     <file path="$PROJECT_DIR$/../budget/config/initializers/ckeditor.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1406892377686" ignored="false" />
     <file path="/application.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1408543418713" ignored="false" />
-    <file path="/a.dummy" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409856995039" ignored="false" />
+    <file path="/a.dummy" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409926766970" ignored="false" />
     <file path="/_left.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1408605573744" ignored="false" />
-    <file path="/_results.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409853935850" ignored="false" />
-    <file path="/application_helper.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409765234359" ignored="false" />
+    <file path="/_results.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409918295558" ignored="false" />
+    <file path="/application_helper.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409919701569" ignored="false" />
     <file path="/uk_map.js" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409574758491" ignored="false" />
-    <file path="/_uk_map.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409575182909" ignored="false" />
-    <file path="/index.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409857381684" ignored="false" />
+    <file path="/_uk_map.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409909199754" ignored="false" />
+    <file path="/index.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409919289035" ignored="false" />
     <file path="/map.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409522761703" ignored="false" />
-    <file path="/home.css.scss" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409598628630" ignored="false" />
-    <file path="/home_controller.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409856547804" ignored="false" />
-    <file path="/index.js.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409562716321" ignored="false" />
+    <file path="/home.css.scss" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409860969525" ignored="false" />
+    <file path="/home_controller.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409927589383" ignored="false" />
+    <file path="/index.js.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409928022443" ignored="false" />
     <file path="/_search_area.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409561664129" ignored="false" />
-    <file path="/api_controller.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409767512687" ignored="false" />
+    <file path="/api_controller.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409929527868" ignored="false" />
     <file path="/_add_advert.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409685333191" ignored="false" />
     <file path="/application.css.scss" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409653355642" ignored="false" />
     <file path="/smart_wizard.css" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409690952218" ignored="false" />
     <file path="/20140902192030_housing_add_address_note.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409686246606" ignored="false" />
     <file path="/20140902193151_housing_add_advert.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409686413519" ignored="false" />
     <file path="/housing.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409686500128" ignored="false" />
-    <file path="/advert.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409778367093" ignored="false" />
-    <file path="/_form.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409854364686" ignored="false" />
+    <file path="/advert.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409914428996" ignored="false" />
+    <file path="/_form.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409915065135" ignored="false" />
     <file path="/routes.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409687024604" ignored="false" />
-    <file path="/show.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409853631857" ignored="false" />
+    <file path="/show.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409913438538" ignored="false" />
     <file path="/20140902192525_create_adverts.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409693671232" ignored="false" />
-    <file path="/adverts_controller.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409857408702" ignored="false" />
-    <file path="/development.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409731114715" ignored="false" />
+    <file path="/adverts_controller.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409918817185" ignored="false" />
+    <file path="/development.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409858813012" ignored="false" />
     <file path="/koatuu.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409731798155" ignored="false" />
-    <file path="/new.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409857813784" ignored="false" />
+    <file path="/new.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409858224331" ignored="false" />
     <file path="/ability.rb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409768610868" ignored="false" />
     <file path="/*.regexp" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409768180117" ignored="false" />
-    <file path="/edit.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409775811694" ignored="false" />
-    <file path="/_links.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409857572694" ignored="false" />
+    <file path="/edit.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409913169521" ignored="false" />
+    <file path="/_links.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409858251084" ignored="false" />
+    <file path="/_no_results.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409859888485" ignored="false" />
+    <file path="/ru.activerecord.yml" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409912106815" ignored="false" />
+    <file path="/uk.activerecord.yml" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409914828718" ignored="false" />
+    <file path="/_results_advert.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1409929889949" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +103,7 @@
       <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="30" selection-start="689" selection-end="705" vertical-scroll-proportion="0.0">
+            <state line="40" column="73" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,60 +112,7 @@
       <file leaf-file-name="adverts_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/adverts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="72" selection-start="553" selection-end="553" vertical-scroll-proportion="-8.225806">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_links.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="-10.625">
-              <folding>
-                <element signature="e#258#286#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="23" selection-start="935" selection-end="952" vertical-scroll-proportion="-13.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="8" selection-start="145" selection-end="145" vertical-scroll-proportion="0.08211679">
-              <folding>
-                <element signature="n#t('devise.sessions.sign_up')#0;n#!!top" expanded="true" />
-                <element signature="e#565#593#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="94" selection-start="575" selection-end="575" vertical-scroll-proportion="-8.125">
-              <folding>
-                <element signature="n#t('devise.sessions.sign_in')#0;n#!!top" expanded="true" />
-                <element signature="e#518#546#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/adverts/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="11" selection-start="1344" selection-end="1344" vertical-scroll-proportion="-15.333333">
+            <state line="94" column="0" selection-start="2672" selection-end="2672" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -167,28 +121,70 @@
       <file leaf-file-name="advert.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/advert.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="89" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+            <state line="11" column="61" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_results.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/_results.html.erb">
+      <file leaf-file-name="api_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1172" selection-end="1344" vertical-scroll-proportion="-18.541666">
-              <folding>
-                <element signature="n#style#0;n#i#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#1;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="35" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <file leaf-file-name="_results_advert.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/_results_advert.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="25" selection-end="168" vertical-scroll-proportion="0.0">
+            <state line="5" column="27" selection-start="135" selection-end="135" vertical-scroll-proportion="0.13686131">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="housing.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/housing.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="415" selection-end="518" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uk.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/uk.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="88" column="6" selection-start="3009" selection-end="3009" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ru.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="6" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="12" selection-start="974" selection-end="974" vertical-scroll-proportion="-14.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.rdoc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.rdoc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="0" selection-start="824" selection-end="877" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,22 +208,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/locales/uk.yml" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/advert.rb" />
-        <option value="$PROJECT_DIR$/app/views/adverts/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/housing.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/_results.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/adverts/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/adverts/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/static_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_left.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_results.html.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/adverts/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/adverts_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/devise/shared/_links.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/advert.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api_controller.rb" />
+        <option value="$PROJECT_DIR$/config/locales/ru.yml" />
+        <option value="$PROJECT_DIR$/config/locales/uk.yml" />
+        <option value="$PROJECT_DIR$/app/views/home/_results_advert.html.erb" />
       </list>
     </option>
   </component>
@@ -264,7 +260,6 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -293,139 +288,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart_wizard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart_wizard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,42 +321,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="locales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -555,151 +382,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="housings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sessions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -832,31 +515,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -868,11 +530,13 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/db" />
+      <recent name="$PROJECT_DIR$/app/views/home" />
+      <recent name="$PROJECT_DIR$/config/locales" />
       <recent name="$PROJECT_DIR$/app/assets/images/left" />
       <recent name="$PROJECT_DIR$/app/assets/images/roadmap" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/vendor/assets/javascripts" />
       <recent name="$PROJECT_DIR$/db/" />
       <recent name="$PROJECT_DIR$/db/development.sqlite3" />
@@ -1011,7 +675,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30249307" sideWeight="0.67060083" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30637118" sideWeight="0.67060083" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1096,126 +760,115 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/adverts/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_top.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="80" selection-start="3579" selection-end="3579" vertical-scroll-proportion="-23.75">
+        <state line="5" column="25" selection-start="175" selection-end="184" vertical-scroll-proportion="0.14018692">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/adverts/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
+        <state line="4" column="28" selection-start="115" selection-end="119" vertical-scroll-proportion="0.10948905">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_results.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1172" selection-end="1344" vertical-scroll-proportion="-18.541666">
-          <folding>
-            <element signature="n#style#0;n#i#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#1;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/housing.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="2" selection-start="677" selection-end="677" vertical-scroll-proportion="0.4755245">
+        <state line="43" column="27" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.76642334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/housings_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="330" selection-end="330" vertical-scroll-proportion="0.28846154">
+        <state line="68" column="29" selection-start="2570" selection-end="2570" vertical-scroll-proportion="-21.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/housings/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="338" selection-end="338" vertical-scroll-proportion="0.24635036">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/housings/_table.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.560219">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="25" selection-end="168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/advert.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="89" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+        <state line="8" column="81" selection-start="394" selection-end="394" vertical-scroll-proportion="-5.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="30" selection-start="689" selection-end="705" vertical-scroll-proportion="0.0">
+        <state line="40" column="73" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/adverts/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="11" selection-start="1344" selection-end="1344" vertical-scroll-proportion="-15.333333">
+        <state line="45" column="0" selection-start="824" selection-end="877" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/adverts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="72" selection-start="553" selection-end="553" vertical-scroll-proportion="-8.225806">
+        <state line="94" column="0" selection-start="2672" selection-end="2672" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/housing.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="-10.625">
-          <folding>
-            <element signature="e#258#286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="94" selection-start="575" selection-end="575" vertical-scroll-proportion="-8.125">
-          <folding>
-            <element signature="n#t('devise.sessions.sign_in')#0;n#!!top" expanded="true" />
-            <element signature="e#518#546#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="23" selection-start="935" selection-end="952" vertical-scroll-proportion="-13.125">
+        <state line="25" column="0" selection-start="415" selection-end="518" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="8" selection-start="145" selection-end="145" vertical-scroll-proportion="0.08211679">
-          <folding>
-            <element signature="n#t('devise.sessions.sign_up')#0;n#!!top" expanded="true" />
-            <element signature="e#565#593#0" expanded="true" />
-          </folding>
+        <state line="20" column="16" selection-start="961" selection-end="961" vertical-scroll-proportion="0.5244755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="12" selection-start="974" selection-end="974" vertical-scroll-proportion="-14.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/advert.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="61" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/uk.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="6" selection-start="3009" selection-end="3009" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="6" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_results_advert.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="27" selection-start="135" selection-end="135" vertical-scroll-proportion="0.13686131">
+          <folding />
         </state>
       </provider>
     </entry>

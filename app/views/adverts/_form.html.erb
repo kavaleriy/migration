@@ -1,7 +1,7 @@
 <% if @advert.errors.any? %>
     <div class="alert-dismissible">
       <div class="alert alert-danger" role="alert">
-        <h3>ПОМИЛКА ЗБЕРЕЖЕННЯ</h3>
+        <h3><%= t('.error_title')%></h3>
         <ul class="">
             <% @advert.errors.full_messages.each do |msg| %>
               <li><%= msg %></li>
@@ -18,22 +18,22 @@
         <li><a href="#step-1">
           <label class="stepNumber">1</label>
                 <span class="stepDesc">
-                   Крок 1<br />
-                   <small>Інформація про житло</small>
+                   <%= t('.step')%> 1<br />
+                   <small><%= t('.place')%></small>
                 </span>
         </a></li>
         <li><a href="#step-2">
           <label class="stepNumber">2</label>
                 <span class="stepDesc">
-                   Крок 2<br />
-                   <small>Контактна інформація</small>
+                   <%= t('.step')%> 2<br />
+                   <small><%= t('.contact')%></small>
                 </span>
         </a></li>
         <li><a href="#step-3">
           <label class="stepNumber">3</label>
                 <span class="stepDesc">
-                   Крок 3<br />
-                   <small>Публікація оголошення</small>
+                   <%= t('.step')%> 3<br />
+                   <small><%= t('.publish')%></small>
                 </span>
         </a></li>
       </ul>
@@ -56,20 +56,20 @@
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-home"></i></div>
-            <%= f.text_field :address, :class => 'form-control', placeholder: "Адреса разташування житла" %>
+            <%= f.text_field :address, :class => 'form-control', placeholder: t('.addr_placeholder') %>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="inputEmail3" class="col-sm-8 control-label"><b>Місць для проживання</b></label>
+          <label for="inputEmail3" class="col-sm-8 control-label"><b><%= t('.qtt_places')%></b></label>
           <div class="controls col-sm-4">
-            <%= f.text_field :qty_places, :class => 'form-control', placeholder: "кількість" %>
+            <%= f.text_field :qty_places, :class => 'form-control', placeholder: t('.qtt_placeholder') %>
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail3" class="col-sm-8 control-label">Вартість проживання</label>
+          <label for="inputEmail3" class="col-sm-8 control-label"><%= t('.cost')%></label>
           <div class="controls  col-sm-4">
-            <%= f.text_field :cost, :class => 'form-control', placeholder: "грн/міс" %>
+            <%= f.text_field :cost, :class => 'form-control', placeholder: t('.cost_placeholder') %>
           </div>
         </div>
         <h2 class="StepTitle"><%= t('.motes') %></h2>
@@ -83,7 +83,7 @@
       </div>
 
       <div id="step-2">
-        <h2 class="StepTitle">Інформація для зворотнього зв'язку</h2>
+        <h2 class="StepTitle"><%= t('.contact_step') %></h2>
         <div class="form-group">
           <label for="inputEmail3" class="control-label">E-Mail</label>
           <div class="input-group">
@@ -92,14 +92,14 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail3" class="control-label">Вкажіть Прізвище, Ім'я, По-батькові</label>
+          <label for="inputEmail3" class="control-label"><%= t('.fio') %></label>
           <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-user-md"></i></div>
-            <%= f.text_field :fio, :class => 'form-control', placeholder: "Прізвище, Ім'я, По-батькові" %>
+            <%= f.text_field :fio, :class => 'form-control', placeholder: t('.fio_placeholder') %>
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail3" class="control-label">Вкажіть телефон</label>
+          <label for="inputEmail3" class="control-label"><b><%= t('.phone') %></b></label>
           <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-mobile"></i></div>
             <%= f.text_field :phone, { :class => 'form-control' } %>
@@ -108,7 +108,7 @@
       </div>
 
       <div id="step-3">
-        <h2 class="StepTitle">Примітки</h2>
+        <h2 class="StepTitle"><%= t('.notes') %></h2>
         <div class="form-group">
           <div class="controls">
             <%= f.text_area :note, {:rows => 10, :class => 'form-control'} %>
@@ -139,9 +139,9 @@
         // Smart Wizard
         $('form #wizard').smartWizard( {
             enableAllSteps: true,
-            labelNext:'Далі', // label for Next button
-            labelPrevious:'Назад', // label for Previous button
-            labelFinish:'Опублікувати',
+            labelNext: '<%= t('wizard.next') %>', // label for Next button
+            labelPrevious:'<%= t('wizard.back') %>', // label for Previous button
+            labelFinish: '<%= t('wizard.finish') %>',
             onFinish: onFinishCallback
         });
 

@@ -1,0 +1,6 @@
+ru:
+  activerecord:
+    attributes:
+      advert:
+        qty_places: "Количество мест для проживания"
+        phone: "Телефон контактного лица"

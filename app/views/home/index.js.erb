@@ -1,9 +1,16 @@
 <% if @housings && @housings.count > 0 %>
-    $("#results").html("<%= escape_javascript(render partial: 'results') %>");
+    $("#tbl_housings").html("<%= escape_javascript(render partial: 'results', :locals => { :places => @housings }) %>");
 <% else %>
-    $("#results").html("<%= escape_javascript(render partial: 'no_results') %>");
+    $("#tbl_housings").html("<%= escape_javascript(render partial: 'no_results') %>");
 <% end %>
 
 
-$("#results").removeClass('spinner').fadeIn(100);
+<% if @adverts && @adverts.count > 0 %>
+    $("#tbl_adverts").html("<%= escape_javascript(render partial: 'results_advert', :locals => { :places => @adverts }) %>");
+<% else %>
+    $("#tbl_adverts").html("<%= escape_javascript(render partial: 'no_results') %>");
+<% end %>
+
+
+$("#spinner").removeClass('spinner').fadeIn(100);
 

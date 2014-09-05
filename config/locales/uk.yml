@@ -26,6 +26,10 @@ uk:
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
+  wizard:
+      next: "Далі"
+      back: "Назад"
+      finish: "Готово"
   layouts:
     header:
       note: "На сайті розміщена інформація для громадян, які переселяються з тимчасово окупованої території АР Крим та районів ведення антитерористичної операції в інші регіони України"
@@ -56,6 +60,7 @@ uk:
       roadmap: "ДОРОЖНЯ КАРТА"
       roadmap1: "Соціальний захист"
       roadmap2: "Пошук роботи"
+      roadmap3: "Довідники"
   home:
     search:
       area_placeholder: "Виберіть область"
@@ -69,16 +74,26 @@ uk:
       search: "Пошук житла"
       search_map: "Пошук житла на карті"
       advert: "Оголошення на сайті"
-      add_houseadvert: "Місця для проживання"
-      add_jobadvert: "Робочі місця"
+      add_houseadvert: "Додати житло"
+      add_jobadvert: "Додати вакансію"
     results:
-      area: "Область"
-      region: "Район"
+      area: "Розташування"
       house: "Житло"
       places: "Місць /<br>Вакансій"
       school: "Школа"
       kgarten: "Садочок"
       empty: "По Вашому запиту нічого не знайдено."
+    results_advert:
+      area: "Розташування"
+      house: "Житло"
+      places: "Місць /<br>Вартість"
+      school: "Школа"
+      kgarten: "Садочок"
+      empty: "По Вашому запиту нічого не знайдено."
+    index:
+      housings: "Житло"
+      adverts: "Приватні оголошення"
+      adverts_work: "Робочі місця"
   housings:
     index:
       title: "Місця для проживання"
@@ -115,6 +130,21 @@ uk:
       hasschool: "Поруч є школа"
       haskgarten: "Поруч є садочок"
       motes: "Додаткова інформація"
+      error_title: "ПОМИЛКА ЗБЕРЕЖЕННЯ"
+      step: "Крок"
+      publish: "Публікація оголошення"
+      contact: "Контактна інформація"
+      place: "Інформація про житло"
+      qtt_places: "Місць для проживання"
+      qtt_placeholder: "кількість"
+      cost: "Вартість проживання"
+      cost_placeholder: "грн/міс"
+      addr_placeholder: "Адреса разташування житла"
+      contact_step: "Інформація для зворотнього зв'язку"
+      fio: "Вкажіть Прізвище, Ім'я, По-батькові"
+      fio_placeholder: "Прізвище, Ім'я, По-батькові"
+      phone: "Вкажіть телефон"
+      notes: "Примітки"
     index:
       title: "Оголошення"
       koatuu_code: "Місце розміщення"
@@ -122,16 +152,16 @@ uk:
       address: "Адреса"
       cost: "Вартість"
       qty_places: "Місць"
-      created_at: "Розміщено"
-
-
+      created: "Розміщено"
       has_school: "Поруч школа"
       has_kgarden: "Поруч садочок"
       email: "email"
       fio: "Контактна особа"
       phone: "Телефон"
       note: "Примітки"
-  activerecord:
-    attributes:
-      advert:
-        qty_places: "Кількість місць для проживання"
+    edit:
+      title: "Редагувати оголошення"
+    new:
+      title: "Розмістити оголошення"
+    show:
+      title: "Оголошення"

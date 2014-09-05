@@ -2,24 +2,32 @@
 <thead>
 <tr>
   <th><%= t('.area') %></th>
-  <th><%= t('.region') %></th>
   <th><%= t('.house') %></th>
-  <th><small><%= t('.places').html_safe %></small></th>
-  <th><small><%= t('.school') %> / <%= t('.kgarten') %></small></th>
+  <% if places.first.respond_to?(:cost) %>
+      <th><small><%= t('.cost').html_safe %></small></th>
+  <% else %>
+      <th><small><%= t('.places').html_safe %></small></th>
+  <% end %>
+  <th><small><%= t('.school') %> /<br> <%= t('.kgarten') %></small></th>
 </tr>
 </thead>
 <tbody>
-<% @housings.each do |housing| %>
+<% places.each do |housing| %>
 <% coatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
 <% if coatuu %>
     <% work = work_class(housing.koatuu_code) %>
     <tr>
-      <td><%= coatuu[:area] %> </td>
-      <td><%= coatuu[:name] || coatuu[:region] %> </td>
+      <td>
+        <%= "#{coatuu[:area]}" %>
+        <br>
+        <%= "#{coatuu[:name] || coatuu[:region]}" %>
+      </td>
       <td><%= housing.house.name %></td>
       <td>
+
         <a href="<%= static_centers_path %>#tel_0510100000"><%= housing.qty_places %></a> /
         <a target="_blank" href="<%= work[:url] %>"><%= work[:places] %></a>
+
       </td>
       <%- school = school_class(housing.has_school) %>
       <%- garden = kgarten_class(housing.has_kgarden) %>
@@ -33,9 +41,6 @@
 </table>
 
 <div class="flickr_pagination ">
-  <%= paginate @housings, :container => false %>
-  <div class="page_info">
-    <!--<%= page_entries_info @housings %>-->
-  </div>
+  <%= paginate places, :container => false %>
 </div>
 

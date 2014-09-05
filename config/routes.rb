@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get "static/download_roadmap1"
   get "static/download_roadmap2"
+  get "static/download_roadmap3"
 
   get 'home/map'
 

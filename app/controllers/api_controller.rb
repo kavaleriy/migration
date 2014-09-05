@@ -28,16 +28,17 @@ class ApiController < ApplicationController
     cache_id = "map_qtt#{area}"
 
     qtt = Rails.cache.read(cache_id)
+    qtt = nil
     if qtt.nil?
       if area
         qtt = (Koatuu.acities(area) + Koatuu.regions(area)).collect { |region|
           code = region.code.slice(0, 5)
-          { code: code, area: area, region: region.code, name: region.name, qtt: Housing.group_qtt(code)}
+          { code: code, area: area, region: region.code, name: region.name, qtt: Housing.group_qtt(code) + Advert.group_qtt(code)}
         }
       else
         qtt = Koatuu.areas.collect { |area|
           code = area.code.slice(0, 2)
-          { code: code, area: area.code, name: area.name, qtt: Housing.group_qtt(code)}
+          { code: code, area: area.code, name: area.name, qtt: Housing.group_qtt(code) + Advert.group_qtt(code)}
         }
       end
 
@@ -47,7 +48,7 @@ class ApiController < ApplicationController
         row[:geo] = { lon: geo.lon, lat: geo.lat, zoom: geo.zoom } if geo
       }
 
-      Rails.cache.write(cache_id, qtt, timeToLive: (15 * 60).seconds)
+      Rails.cache.write(cache_id, qtt, timeToLive: (5 * 60).seconds)
     end
 
     render json: qtt, status: :ok

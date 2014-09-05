@@ -33,4 +33,14 @@ class StaticController < ApplicationController
         :x_sendfile=>true
     )
   end
+
+  def download_roadmap3
+    send_file(
+        "#{Rails.root}/public/2014_09-05-dor_kart.pdf",
+        filename: "2014_09-05-dor_kart.pdf",
+        type: "application/pdf",
+        :x_sendfile=>true
+    )
+  end
+
 end

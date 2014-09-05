@@ -1,0 +1,45 @@
+<table class="table table-striped">
+<thead>
+<tr>
+  <th><%= t('.area') %></th>
+  <th><%= t('.house') %></th>
+  <th><small><%= t('.places').html_safe %></small></th>
+  <th><small><%= t('.school') %> /<br> <%= t('.kgarten') %></small></th>
+</tr>
+</thead>
+<tbody>
+<% places.each do |housing| %>
+<% coatuu = Koatuu.coatuu_to_json(housing.koatuu_code) %>
+<% if coatuu %>
+    <% work = work_class(housing.koatuu_code) %>
+    <tr>
+      <td>
+        <%= "#{coatuu[:area]}" %>
+        <br>
+        <%= "#{coatuu[:name] || coatuu[:region]}" %>
+        <% if housing.respond_to?(:address) %>
+          <br>
+          <%= housing[:address] %>
+        <% end %>
+      </td>
+      <td><%= housing.house.name %></td>
+      <td>
+
+        <a href="<%= static_centers_path %>#tel_0510100000"><%= housing.qty_places %></a> /
+        <%= housing[:cost] %>
+      </td>
+      <%- school = school_class(housing.has_school) %>
+      <%- garden = kgarten_class(housing.has_kgarden) %>
+      <td ><i style="padding-left: 5px; color: <%= school[:color] %>" class="<%= school[:class] %>"></i> <i style="padding-left: 15px; color: <%= garden[:color] %>" class="<%= garden[:class] %>"></i></td>
+      <td>
+       </td>
+    </tr>
+    <% end %>
+<% end %>
+</tbody>
+</table>
+
+<div class="flickr_pagination ">
+  <%= paginate(places, :param_name => 'adverts_page') %>
+</div>
+

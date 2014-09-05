@@ -4,7 +4,7 @@ class AdvertsController < ApplicationController
 
   before_action :set_advert, only: [:show, :edit, :update, :destroy]
 
-  after_action :set_cookies, only: [:create, :update]
+  before_action :set_cookies, only: [:create, :update]
 
   # GET /adverts
   # GET /adverts.json
@@ -37,7 +37,7 @@ class AdvertsController < ApplicationController
   def create
 
     @advert = Advert.new(advert_params)
-    if !verify_recaptcha
+    #if !verify_recaptcha
       respond_to do |format|
         if @advert.save
           format.html { redirect_to @advert, notice: 'Ваше оголошення розміщено на сайті!' }
@@ -45,13 +45,13 @@ class AdvertsController < ApplicationController
           format.html { render :new }
         end
       end
-    else
-      #binding.pry
-      respond_to do |format|
-        format.html { render :new, notice: 'невірний CAPTCHA код.' }
-        format.js { render json: { notice: 'невірний CAPTCHA код.' }, status: :unprocessable_entity }
-      end
-    end
+    #else
+    #  #binding.pry
+    #  respond_to do |format|
+    #    format.html { render :new, notice: 'невірний CAPTCHA код.' }
+    #    format.js { render json: { notice: 'невірний CAPTCHA код.' }, status: :unprocessable_entity }
+    #  end
+    #end
   end
 
   # PATCH/PUT /adverts/1
@@ -90,8 +90,8 @@ class AdvertsController < ApplicationController
     end
 
     def set_cookies
-      response.set_cookie('user_fio', @advert.fio)
-      response.set_cookie('user_phone', @advert.phone)
+      response.set_cookie('user_fio', advert_params[:fio])
+      response.set_cookie('user_phone', advert_params[:phone])
     end
 
 end

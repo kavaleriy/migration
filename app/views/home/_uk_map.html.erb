@@ -18,12 +18,18 @@
                     .style("opacity", 0);
 
 
+            var color = d3.scale.linear()
+                    .range(['rgb(240,249,232)','rgb(123,204,196)','rgb(67,162,202)','rgb(8,104,172)'])
+            color.domain([
+                0, d3.max(data, function(d) { return d.qtt})
+            ])
+
+
             size = $('#map').width()
             $('#map').css('margin-left', -50)
 
             var r = Raphael('map', 700, 400),
                     attributes = {
-                        fill: '#00C9F0',
                         stroke: '#5A8FA5',
                         'stroke-width': 2,
                         'stroke-linejoin': 'round',
@@ -41,10 +47,12 @@
                 if (area_data === undefined) {
                     area_data = {code: uk_map_paths[region].code, area: "", name: uk_map_paths[region].name, qtt: 0 }
                     obj.data('area', area_data )
-                    obj.attr('fill', '#4CE4EF')
+                    obj.attr('fill', '#fff')
                 } else {
                     obj.data('area', area_data )
+                    obj.attr('fill', color(area_data.qtt))
                 }
+
                 obj.data('fill', obj.attr('fill'))
 
                 obj
@@ -66,7 +74,6 @@
                                     .duration(200)
                                     .style("opacity", 0);
 
-                            console.log(this.data('area').area)
                             if (this.data('area').area != '' && $("#home_search_area").select2("val") == this.data('area').area) {
                                 var _this = this
                                 $('form.search').submit(function() {

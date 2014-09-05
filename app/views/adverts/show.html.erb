@@ -1,6 +1,6 @@
 <%- model_class = Advert -%>
 <div class="page-header">
-  <h2>Оголошення</h2>
+  <h3><%= t('.title')%></h3>
 </div>
 
 <dl class="dl-horizontal">
@@ -51,6 +51,7 @@
       <dd><%= @advert.note %></dd>
   </div>
 </dl>
+
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               adverts_path, :class => 'btn btn-default'  %>
