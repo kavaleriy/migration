@@ -1,0 +1,153 @@
+<% if @advert.errors.any? %>
+    <div class="alert-dismissible">
+      <div class="alert alert-danger" role="alert">
+        <h3><%= t('.error_title')%></h3>
+        <ul class="">
+          <% @advert.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+<% end %>
+
+<%= form_for @advert, :html => { :class => 'form-horizontal' } do |f| %>
+
+    <div id="wizard" class="swMain">
+      <ul>
+        <li><a href="#step-1">
+          <label class="stepNumber">1</label>
+                <span class="stepDesc">
+                   <%= t('.step')%> 1<br />
+                   <small><%= t('.place')%></small>
+                </span>
+        </a></li>
+        <li><a href="#step-2">
+          <label class="stepNumber">2</label>
+                <span class="stepDesc">
+                   <%= t('.step')%> 2<br />
+                   <small><%= t('.contact')%></small>
+                </span>
+        </a></li>
+        <li><a href="#step-3">
+          <label class="stepNumber">3</label>
+                <span class="stepDesc">
+                   <%= t('.step')%> 3<br />
+                   <small><%= t('.publish')%></small>
+                </span>
+        </a></li>
+      </ul>
+
+      <div id="step-1">
+        <h2 class="StepTitle"><%= t('housings.index.koatuu') %></h2>
+        <br/>
+        <div class="form-group">
+          <div class="controls">
+            <%= f.select :koatuu_code, grouped_options_for_select(get_koatuu_tree(), ( @advert_work.advert == nil ? nil : @advert_work.advert.koatuu_code)), { prompt: false },  :class => 'form-control' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label t('.rubric'), :class => 'control-label' %>
+          <div class="controls">
+            <%= render partial: 'home/work' %>
+          </div>
+        </div>
+        <br/>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-home"></i></div>
+            <%= f.text_field :address, :class => 'form-control', placeholder: t('.addr_placeholder') %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-8 control-label"><b><%= t('.qtt_places')%></b></label>
+          <div class="controls col-sm-4">
+            <%= f.text_field :qty_places, :class => 'form-control', placeholder: t('.qtt_placeholder') %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-8 control-label"><%= t('.cost')%></label>
+          <div class="controls  col-sm-4">
+            <%= f.text_field :cost, :class => 'form-control', placeholder: t('.cost_placeholder') %>
+          </div>
+        </div>
+        <h2 class="StepTitle"><%= t('.motes') %></h2>
+        <br/>
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group form-group">
+            <label class="col-lg-5"><%= f.check_box :has_school %> <%= t('.hasschool') %></label>
+            <label class="col-lg-5"><%= f.check_box :has_kgarden %> <%= t('.haskgarten') %></label>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-2">
+        <h2 class="StepTitle"><%= t('.contact_step') %></h2>
+        <div class="form-group">
+          <label for="inputEmail3" class="control-label">E-Mail</label>
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+            <%= f.text_field :email, :class => 'form-control', :readonly => true, placeholder: "example@example.com" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="control-label"><%= t('.fio') %></label>
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-user-md"></i></div>
+            <%= f.text_field :fio, :class => 'form-control', placeholder: t('.fio_placeholder') %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="control-label"><b><%= t('.phone') %></b></label>
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-mobile"></i></div>
+            <%= f.text_field :phone, { :class => 'form-control' } %>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-3">
+        <h2 class="StepTitle"><%= t('.notes') %></h2>
+        <div class="form-group">
+          <div class="controls">
+            <%= f.text_area :note, {:rows => 10, :class => 'form-control'} %>
+          </div>
+        </div>
+
+        <!--<h2 class="StepTitle">Для збереження даних введіть код CAPTCHA</h2>-->
+        <!--<%= recaptcha_tags ajax: true %>-->
+      </div>
+    </div>
+    <!-- End SmartWizard Content -->
+
+<% end %>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $("form #advert_koatuu_code").select2();
+        $("form #advert_house_id").select2();
+    });
+
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        // Smart Wizard
+        $('form #wizard').smartWizard( {
+            enableAllSteps: true,
+            labelNext: '<%= t('wizard.next') %>', // label for Next button
+            labelPrevious:'<%= t('wizard.back') %>', // label for Previous button
+            labelFinish: '<%= t('wizard.finish') %>',
+            onFinish: onFinishCallback
+        });
+
+        function onFinishCallback(){
+            $('form').submit()
+        }
+    });
+
+</script>

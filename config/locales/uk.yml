@@ -73,7 +73,7 @@ uk:
     menu:
       search: "Пошук житла"
       search_map: "Пошук житла на карті"
-      advert: "Оголошення на сайті"
+      advert: "Розмістити оголошення"
       add_houseadvert: "Додати житло"
       add_jobadvert: "Додати вакансію"
     results:
@@ -91,8 +91,8 @@ uk:
       kgarten: "Садочок"
       empty: "По Вашому запиту нічого не знайдено."
     index:
-      housings: "Житло"
-      adverts: "Приватні оголошення"
+      housings: "Житло від держави"
+      adverts: "Приватне житло"
       adverts_work: "Робочі місця"
   housings:
     index:

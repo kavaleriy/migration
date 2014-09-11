@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  koatuu_code: MyString
+  email: MyString
+  fio: MyString
+  phone: MyString
+  note: MyString
+  rubric: MyString
+  places: 1
+  salary: 1
+
+two:
+  koatuu_code: MyString
+  email: MyString
+  fio: MyString
+  phone: MyString
+  note: MyString
+  rubric: MyString
+  places: 1
+  salary: 1

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :housings
   resources :adverts
+  resources :advert_works
+
+  resources :housings
+
 
   resources :news_items
 

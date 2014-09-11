@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140902192525) do
+ActiveRecord::Schema.define(version: 20140911092421) do
+
+  create_table "advert_works", force: true do |t|
+    t.integer  "advert_id"
+    t.string   "rubric"
+    t.integer  "places"
+    t.integer  "salary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "adverts", force: true do |t|
     t.string   "koatuu_code"

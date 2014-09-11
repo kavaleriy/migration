@@ -21,9 +21,9 @@
             <% end %>
           </li>
           <li>
-            <!--<%= link_to new_advert_path, "data-no-turbolink" => true, :role => "menuitem" do %>-->
-                <!--<%= t('home.menu.add_jobadvert') %>-->
-            <!--<% end %>-->
+            <%= link_to new_advert_advert_work_path(1), "data-no-turbolink" => true, :role => "menuitem" do %>
+                <%= t('home.menu.add_jobadvert') %>
+            <% end %>
           </li>
       </ul>
     </div>
@@ -95,6 +95,7 @@
       </div>
     </div>
   </div>
+  <p class="note"><%= %></p>
 </div>
 
 
