@@ -145,6 +145,9 @@ uk:
       fio_placeholder: "Прізвище, Ім'я, По-батькові"
       phone: "Вкажіть телефон"
       notes: "Примітки"
+      created: "Ваше оголошення розміщено на сайті!"
+      updated: "Зміни в оголошення збережено"
+      destroyed: "Оголошення видалено"
     index:
       title: "Оголошення"
       koatuu_code: "Місце розміщення"
@@ -159,9 +162,26 @@ uk:
       fio: "Контактна особа"
       phone: "Телефон"
       note: "Примітки"
+      type: "Оголошення"
+      advert_work: "Робота"
+      advert_rent: "Житло"
+      new_rent: "Додати житло"
+      new_work: "Додати роботу"
     edit:
       title: "Редагувати оголошення"
     new:
       title: "Розмістити оголошення"
     show:
       title: "Оголошення"
+  advert_works:
+    form:
+      places: "Вакансій"
+      places_placeholder: "кількість"
+      salary: "Зарплата"
+      salary_placeholder: "грн."
+      work: "Робота"
+      profession: "Професія"
+    show:
+      title: "Робота"
+    index:
+      title: "Оголошення про роботу"

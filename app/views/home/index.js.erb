@@ -12,5 +12,12 @@
 <% end %>
 
 
+<% if @advert_works && @advert_works.count > 0 %>
+    $("#tbl_advert_works").html("<%= escape_javascript(render partial: 'results_advert_work', :locals => { :places => @advert_works }) %>");
+<% else %>
+    $("#tbl_advert_works").html("<%= escape_javascript(render partial: 'no_results') %>");
+<% end %>
+
+
 $("#spinner").removeClass('spinner').fadeIn(100);
 

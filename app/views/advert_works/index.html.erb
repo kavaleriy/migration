@@ -1,25 +1,23 @@
 <%- model_class = AdvertWork -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.title' %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:advert_id) %></th>
-      <th><%= model_class.human_attribute_name(:rubric) %></th>
-      <th><%= model_class.human_attribute_name(:places) %></th>
-      <th><%= model_class.human_attribute_name(:salary) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= t('adverts.index.koatuu_code') %></th>
+      <th><%= t('advert_works.form.profession') %></th>
+      <th><%= t('advert_works.form.places') %></th>
+      <th><%= t('advert_works.form.salary') %></th>
+      <th><%= t('adverts.index.created') %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @advert_works.each do |advert_work| %>
       <tr>
-        <td><%= link_to advert_work.id, advert_work_path(advert_work) %></td>
-        <td><%= advert_work.advert_id %></td>
-        <td><%= advert_work.rubric %></td>
+        <td><%= link_to get_koatuu_name(advert_work.advert.koatuu_code), advert_work_path(advert_work) %></td>
+        <td><%= advert_work.profession.name %></td>
         <td><%= advert_work.places %></td>
         <td><%= advert_work.salary %></td>
         <td><%=l advert_work.created_at %></td>
@@ -36,6 +34,10 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="flickr_pagination ">
+  <%= will_paginate @advert_works, :container => false %>
+</div>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_advert_work_path,

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :professions
+
   resources :adverts
   resources :advert_works
 
@@ -45,6 +47,8 @@ Rails.application.routes.draw do
   get 'api/get_regions'
 
   get 'api/get_koatuu_geo'
+
+  get 'api/get_professions'
 
   get 'centers/index'
 

@@ -10,7 +10,7 @@
   </div>
   <div class="col-sm-12">
       <dt><strong><%= t('adverts.index.house_id') %>:</strong></dt>
-      <dd><%= @advert.house.name %></dd>
+      <dd><%= @advert.house.name unless @advert.house.nil? %></dd>
   </div>
   <div class="col-sm-12">
       <dt><strong><%= t('adverts.index.address') %>:</strong></dt>

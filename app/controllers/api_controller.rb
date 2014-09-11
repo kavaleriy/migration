@@ -33,25 +33,36 @@ class ApiController < ApplicationController
       if area
         qtt = (Koatuu.acities(area) + Koatuu.regions(area)).collect { |region|
           code = region.code.slice(0, 5)
-          { code: code, area: area, region: region.code, name: region.name, qtt: Housing.group_qtt(code) + Advert.group_qtt(code)}
+          { code: code, area: area, region: region.code, name: region.name, qtt: Housing.group_qtt(code) + Advert.group_qtt(code), qtt_work: AdvertWork.group_qtt(code)}
         }
       else
         qtt = Koatuu.areas.collect { |area|
           code = area.code.slice(0, 2)
-          { code: code, area: area.code, name: area.name, qtt: Housing.group_qtt(code) + Advert.group_qtt(code)}
+          { code: code, area: area.code, name: area.name, qtt: Housing.group_qtt(code) + Advert.group_qtt(code), qtt_work: AdvertWork.group_qtt(code)}
         }
       end
 
-      qtt = qtt.reject {|v| v[:qtt] == 0 }
+      qtt = qtt.reject {|v| v[:qtt] == 0 && v[:qtt_work] == 0 }
       qtt.map { |row|
         geo = Geo.where(:koatuu_code => row[:code]).first
         row[:geo] = { lon: geo.lon, lat: geo.lat, zoom: geo.zoom } if geo
       }
 
-      Rails.cache.write(cache_id, qtt, timeToLive: (5 * 60).seconds)
+      Rails.cache.write(cache_id, qtt, timeToLive: (60).seconds)
     end
 
     render json: qtt, status: :ok
   end
+
+
+  def get_professions
+    prof = Profession.to_json(params[:q])
+
+    respond_to do |format|
+      format.json { render json: prof, status: :ok }
+    end
+  end
+
+
 
 end

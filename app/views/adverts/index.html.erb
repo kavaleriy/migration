@@ -3,27 +3,40 @@
   <h2><%=t '.title' %></h2>
 </div>
 <table class="table">
-  <thead>
-    <tr>
-      <th><%= t('.koatuu_code') %></th>
-      <th><%= t('.house_id') %></th>
-      <th><%= t('.qty_places') %></th>
-      <th><%= t('.cost') %></th>
-      <th><%= t('.created') %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
+  <th><%= t('.koatuu_code') %></th>
+  <th><%= t('.type') %></th>
+  <th><%= t('.qty_places') %></th>
+  <th><%= t('.cost') %></th>
+  <th><%= t('.created') %></th>
+  <th><%=t '.actions', :default => t("helpers.actions") %></th>
   <tbody>
     <% @adverts.each do |advert| %>
       <tr>
-        <td><%= link_to get_koatuu_name(advert.koatuu_code), advert_path(advert) %></td>
-        <td><%= advert.house.name %></td>
-        <td><%= advert.qty_places %></td>
-        <td><%= advert.cost %></td>
+        <td><%= get_koatuu_name(advert.koatuu_code) %></td>
+
+        <% if advert.advert_work %>
+            <td>
+              <%= link_to "#{t('.advert_work')}: #{advert.advert_work.profession.name}", advert_work_path(advert.advert_work)%>
+            </td>
+            <td><%= advert.advert_work.places %></td>
+            <td><%= advert.advert_work.salary %></td>
+        <% else %>
+            <td>
+              <%= link_to "#{t('.advert_rent')}: #{advert.house.nil? ? '' : advert.house.name }", advert_path(advert)%>
+            </td>
+            <td><%= advert.qty_places %></td>
+            <td><%= advert.cost %></td>
+        <% end %>
+
         <td><%=l advert.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_advert_path(advert), :class => 'btn btn-default btn-xs' %>
+          <% if advert.advert_work %>
+              <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                          edit_advert_work_path(advert.advert_work), :class => 'btn btn-default btn-xs' %>
+          <% else %>
+              <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                          edit_advert_path(advert), :class => 'btn btn-default btn-xs' %>
+          <% end %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       advert_path(advert),
                       :method => :delete,
@@ -42,7 +55,11 @@
 </div>
 
 
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<hr>
+<%= link_to t('.new_rent', :default => t("helpers.links.new")),
             new_advert_path,
-            :class => 'btn btn-primary' %>
+            :class => 'btn btn-success' %>
+
+<%= link_to t('.new_work', :default => t("helpers.links.new")),
+            new_advert_work_path,
+            :class => 'btn btn-success' %>

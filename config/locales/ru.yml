@@ -72,7 +72,7 @@ ru:
     menu:
       search: "Поиск жилья"
       search_map: "Поиск жилья на карте"
-      advert: "Объявления на сайте"
+      advert: "Добавить объявление"
       add_houseadvert: "Добавить жильё"
       add_jobadvert: "Добавить работу"
     results:
@@ -92,9 +92,9 @@ ru:
       kgarten: "Садик"
       empty: "По Вашему запросу ничего не найдено."
     index:
-      housings: "Жильё"
-      adverts: "Объявления о жилье"
-      adverts_work: "Объявления о рабочих местах"
+      housings: "Жильё от государства"
+      adverts: "Частное жилье"
+      adverts_work: "Рабочие места"
   housings:
     index:
       title: "Места для проживания"
@@ -146,6 +146,9 @@ ru:
       fio_placeholder: "Фамилия, Имя, Отчество"
       phone: "Укажите телефон"
       notes: "Примечания"
+      created: "Объявление размещено на сайте!"
+      updated: "Изменения в объявление сохранены"
+      destroyed: "Объявление удалено"
     index:
       title: "Объявления"
       koatuu_code: "Размещение"
@@ -160,9 +163,26 @@ ru:
       fio: "Контактное лицо"
       phone: "Телефон"
       note: "Примечания"
+      type: "Объявления"
+      advert_work: "Работа"
+      advert_rent: "Жильё "
+      new_rent: "Добавить жильё"
+      new_work: "Добавить работу"
     edit:
       title: "Редактировать объявление"
     new:
       title: "Разместить объявление"
     show:
       title: "Объявление"
+  advert_works:
+    form:
+      places: "Вакансий"
+      places_placeholder: "Количество"
+      salary: "Зарплата"
+      salary_placeholder: "грн."
+      work: "Работа"
+      profession: "Профессия"
+    show:
+      title: "Работа"
+    index:
+      title: "Объявление о работе"

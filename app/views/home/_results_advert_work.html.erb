@@ -1,0 +1,33 @@
+<table class="table table-striped">
+<thead>
+<tr>
+  <th><%= t('adverts.index.koatuu_code') %></th>
+  <th><%= t('advert_works.form.profession') %></th>
+  <th><small><%= t('advert_works.form.places').html_safe %> / <br/><%= t('advert_works.form.salary').html_safe %></small></th>
+</tr>
+</thead>
+<tbody>
+<% places.each do |housing| %>
+<% coatuu = Koatuu.coatuu_to_json(housing.advert[:koatuu_code]) %>
+<% if coatuu %>
+    <% work = work_class(housing.advert[:koatuu_code]) %>
+    <tr>
+      <td>
+        <%= "#{coatuu[:area]}" %>
+        <br>
+        <%= "#{coatuu[:name] || coatuu[:region]}" %>
+      </td>
+      <td><%= housing.profession.name %></td>
+      <td>
+        <a href="<%= static_centers_path %>#tel_0510100000"><%= housing.places %></a> /
+        <%= housing[:salary] %>
+      </td>
+    </tr>
+    <% end %>
+<% end %>
+</tbody>
+</table>
+
+<div class="flickr_pagination ">
+  <%= paginate(places, :param_name => 'advert_works_page') %>
+</div>

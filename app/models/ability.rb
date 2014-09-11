@@ -17,7 +17,7 @@ class Ability
       # executed)
       can [:read, :create, :update], [NewsItem, TrudGov, Housing]
     else
-      can :manage, [Advert]
+      can :manage, [Advert, AdvertWork]
     end
   end
 

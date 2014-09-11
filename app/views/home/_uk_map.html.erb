@@ -9,7 +9,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         function get_html_for_ev(area) {
-            return "<div id='map_tooltip'><h5>" + area.name + "</h5><hr/><p>для проживання: <b>" + area.qtt + "</b></p></div>"
+            return "<div id='map_tooltip'><h5>" + area.name + "</h5><hr/><p>для проживання: <b>" + area.qtt + "</b></p><p>вакансій: <b>" + area.qtt_work + "</b></p></div>"
         }
 
         $.getJSON("<%= api_get_koatuu_geo_path %>", function( data ) {
@@ -45,12 +45,12 @@
                 var area_data = $.grep(data, function(e){ return e.code == uk_map_paths[region].code; })[0];
 
                 if (area_data === undefined) {
-                    area_data = {code: uk_map_paths[region].code, area: "", name: uk_map_paths[region].name, qtt: 0 }
+                    area_data = {code: uk_map_paths[region].code, area: "", name: uk_map_paths[region].name, qtt: 0, qtt_work: 0 }
                     obj.data('area', area_data )
                     obj.attr('fill', '#fff')
                 } else {
                     obj.data('area', area_data )
-                    obj.attr('fill', color(area_data.qtt))
+                    obj.attr('fill', color(area_data.qtt + area_data.qtt_work))
                 }
 
                 obj.data('fill', obj.attr('fill'))

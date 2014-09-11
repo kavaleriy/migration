@@ -15,7 +15,7 @@ class AdvertsController < ApplicationController
       @adverts = Advert.users_adverts(current_user.email)
     end
 
-    @adverts = @adverts.paginate(:page => params[:page], :per_page => 50)
+    @adverts = @adverts.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /adverts/1
@@ -40,7 +40,7 @@ class AdvertsController < ApplicationController
     #if !verify_recaptcha
       respond_to do |format|
         if @advert.save
-          format.html { redirect_to @advert, notice: 'Ваше оголошення розміщено на сайті!' }
+          format.html { redirect_to @advert, notice: t('adverts.form.created') }
         else
           format.html { render :new }
         end
@@ -59,7 +59,7 @@ class AdvertsController < ApplicationController
   def update
     respond_to do |format|
       if @advert.update(advert_params)
-        format.html { redirect_to @advert, notice: 'Зміни в оголошення збережено.' }
+        format.html { redirect_to @advert, notice: t('adverts.form.updated') }
         format.json { render :show, status: :ok, location: @advert }
       else
         format.html { render :edit }
@@ -73,7 +73,7 @@ class AdvertsController < ApplicationController
   def destroy
     @advert.destroy
     respond_to do |format|
-      format.html { redirect_to adverts_url, notice: 'Оголошення видалено.' }
+      format.html { redirect_to adverts_url, notice: t('adverts.form.destroyed') }
       format.json { head :no_content }
     end
   end
