@@ -10,7 +10,7 @@ class AdvertsController < ApplicationController
   # GET /adverts.json
   def index
     if current_user.has_role? :editor
-      @adverts = Advert.where('qty_places > 0').order(:created_at => :desc)
+      @adverts = Advert.order(:created_at => :desc)
     else
       @adverts = Advert.users_adverts(current_user.email)
     end
