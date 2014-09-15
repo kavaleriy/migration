@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30661ce7-3a37-4873-bd8f-3d9896db3799" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_facebook.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_top.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_top.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_left.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_left.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -11,9 +10,10 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1410772922080" ignored="false" />
     <file path="/_results_advert.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1410503783555" ignored="false" />
-    <file path="/styles.css.scss" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1410774420686" ignored="false" />
+    <file path="/styles.css.scss" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1410776149933" ignored="false" />
     <file path="/_top.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1410774394742" ignored="false" />
     <file path="/application.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1410773960793" ignored="false" />
+    <file path="/_left.html.erb" changelist="30661ce7-3a37-4873-bd8f-3d9896db3799" time="1410775887880" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,15 +69,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="12" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/advert_works/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,8 +81,22 @@
       <file leaf-file-name="styles.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="267" column="0" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.8770492">
+            <state line="119" column="41" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.70140517">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_left.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_left.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="48" selection-start="837" selection-end="837" vertical-scroll-proportion="-17.5">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/locales/uk.activerecord.yml" />
         <option value="$PROJECT_DIR$/config/locales/ru.activerecord.yml" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
@@ -160,6 +164,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_facebook.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_top.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_left.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss" />
       </list>
     </option>
@@ -835,13 +840,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/_results_advert.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/advert.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="41" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
@@ -942,9 +940,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_left.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="48" selection-start="837" selection-end="837" vertical-scroll-proportion="-17.5">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="267" column="0" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.8770492">
+        <state line="119" column="41" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.70140517">
           <folding />
         </state>
       </provider>
