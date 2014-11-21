@@ -77,3 +77,5 @@ gem 'will_paginate'
 
 # https://github.com/ambethia/recaptcha/
 gem "recaptcha", :require => "recaptcha/rails"
+
+gem 'sanitize'
