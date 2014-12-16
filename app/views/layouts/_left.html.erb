@@ -5,6 +5,13 @@
   <p class="head"><%= t("layouts.banner.roadmap") %></p>
 
   <p>
+    <%= link_to static_download_roadmap_v4_url, :class => "btn btn-default" do%>
+        <i class="fa fa-file-pdf-o"></i>
+        <%= t("layouts.banner.roadmap_v4")%>
+    <%end%>
+  </p>
+
+  <p>
     <%= link_to static_download_roadmap1_url, :class => "btn btn-default" do%>
         <i class="fa fa-file-pdf-o"></i>
         <%= t("layouts.banner.roadmap1")%>

@@ -26,8 +26,8 @@
         <% if issued %>
             <span><%= l issued, format: '%d %B' %></span> -
         <% end %>
-        <a target="_blank" href="<%= Sanitize.clean(news_item.url, remove_contents: ['script', 'style']) %>">
-          <%= Sanitize.clean(news_item.content.html_safe, remove_contents: ['script', 'style']) %>
+        <a target="_blank" href="<%= Sanitize.clean(news_item.url, remove_contents: ['script']) %>">
+          <%= Sanitize.clean(news_item.content.html_safe, remove_contents: ['script']) %>
         </a>
       </div>
       <div class="col-sm-1">
