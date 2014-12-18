@@ -16,37 +16,37 @@ class StaticController < ApplicationController
   def zd
   end
 
-  def download_roadmap_v4
+  def download1
     send_file(
-        "#{Rails.root}/public/download_roadmap_20141217.pdf",
-        filename: "download_roadmap_20141217.pdf",
+        "#{Rails.root}/public/Довідник.pdf",
+        filename: "Довідник.pdf",
         type: "application/pdf",
         :x_sendfile=>true
     )
   end
 
-  def download_roadmap1
+  def download2
     send_file(
-        "#{Rails.root}/public/Дорожная карта (КМУ, Минсоцполитики).pdf",
-        filename: "Дорожная карта (КМУ, Минсоцполитики).pdf",
+        "#{Rails.root}/public/Соціальний захист.pdf",
+        filename: "Соціальний захист.pdf",
         type: "application/pdf",
         :x_sendfile=>true
     )
   end
 
-  def download_roadmap2
+  def download3
     send_file(
-        "#{Rails.root}/public/UNDP_employm_IDPsUkraine.pdf",
-        filename: "UNDP_employm_IDPsUkraine.pdf",
+        "#{Rails.root}/public/Пошук роботи.pdf",
+        filename: "Пошук роботи.pdf",
         type: "application/pdf",
         :x_sendfile=>true
     )
   end
 
-  def download_roadmap3
+  def download4
     send_file(
-        "#{Rails.root}/public/2014_09-05-dor_kart.pdf",
-        filename: "2014_09-05-dor_kart.pdf",
+        "#{Rails.root}/public/Реєстрація.pdf",
+        filename: "Реєстрація.pdf",
         type: "application/pdf",
         :x_sendfile=>true
     )

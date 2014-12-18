@@ -58,10 +58,10 @@ uk:
       by_houses: "Загальна кількість місць в розрізі типу житла"
     banner:
       roadmap: "ДОРОЖНЯ КАРТА"
-      roadmap_v4: "Видання 4"
-      roadmap1: "Соціальний захист"
-      roadmap2: "Пошук роботи"
-      roadmap3: "Довідники"
+      download1: "Довідник"
+      download2: "Соціальний захист"
+      download3: "Пошук роботи"
+      download4: "Реєстрація"
   home:
     search:
       area_placeholder: "Виберіть область"

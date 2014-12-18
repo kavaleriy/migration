@@ -58,10 +58,10 @@ ru:
       by_houses: "Общее количество мест в розрезе видов жилья"
     banner:
       roadmap: "ДОРОЖНАЯ КАРТА"
-      roadmap_v4: "Издание 4"
-      roadmap1: "Соц. защита"
-      roadmap2: "Поиск работы"
-      roadmap3: "Справочники"
+      download1: "Справочник"
+      download2: "Соц. защита"
+      download3: "Поиск работы"
+      download4: "Регистрация"
   home:
     search:
       area_placeholder: "Укажите область"

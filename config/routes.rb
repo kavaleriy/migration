@@ -13,10 +13,10 @@ Rails.application.routes.draw do
 
   resources :trud_govs
 
-  get "static/download_roadmap_v4"
-  get "static/download_roadmap1"
-  get "static/download_roadmap2"
-  get "static/download_roadmap3"
+  get "static/download1"
+  get "static/download2"
+  get "static/download3"
+  get "static/download4"
 
   get 'home/map'
 
