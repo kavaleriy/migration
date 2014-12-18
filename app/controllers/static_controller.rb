@@ -18,7 +18,7 @@ class StaticController < ApplicationController
 
   def download_roadmap_v4
     send_file(
-        "#{Rails.root}/public/static_download_roadmap_20141217.pdf",
+        "#{Rails.root}/public/download_roadmap_20141217.pdf",
         filename: "download_roadmap_20141217.pdf",
         type: "application/pdf",
         :x_sendfile=>true
