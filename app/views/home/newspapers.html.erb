@@ -1,0 +1,5 @@
+<% @newspapers.each do |newspaper| %>
+    <div class="col-xs-10 col-xs-offset-1">
+        <%= newspaper.embed.html_safe %>
+    </div>
+<% end %>

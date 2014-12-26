@@ -33,6 +33,15 @@
   </p>
 </div>
 
+<span class="banner col-sm-12" style="height: 80px;">
+    <%= link_to home_newspapers_path, :class => "" do%>
+      <div>
+        <i class="fa fa-newspaper-o"></i>
+        <%= t("layouts.newspapers")%>
+      </div>
+    <%end%>
+</span>
+
 <span class="banner col-sm-12" style="height: 100px;">
     <%= link_to 'http://dmsu.gov.ua/informatsiya-dlya-pereselentsiv-iz-zoni-ato', {:class => "", :target => "_blank"} do%>
         <div>

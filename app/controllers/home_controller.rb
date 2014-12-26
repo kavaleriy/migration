@@ -14,6 +14,10 @@ class HomeController < ApplicationController
   def map
   end
 
+  def newspapers
+    @newspapers = Newspaper.all.order(:created_at => :desc)
+  end
+
   private
   def set_housing
     params[:home_search_region] ||= ''

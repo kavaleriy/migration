@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :newspapers
+
   resources :professions
 
   resources :adverts
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :trud_govs
+
+  get "home_newspapers" => 'home#newspapers'
 
   get "static/download1"
   get "static/download2"

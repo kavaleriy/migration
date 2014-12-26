@@ -1,0 +1,14 @@
+<%= form_for @newspaper, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :embed, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :embed, :class => 'form-control' %>
+    </div>
+  </div>
+
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            newspapers_path, :class => 'btn btn-default' %>
+ 
+<% end %>

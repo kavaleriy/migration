@@ -62,6 +62,7 @@ uk:
       download2: "Соціальний захист"
       download3: "Пошук роботи"
       download4: "Реєстрація"
+    newspapers: "Газети для переселенців"
   home:
     search:
       area_placeholder: "Виберіть область"

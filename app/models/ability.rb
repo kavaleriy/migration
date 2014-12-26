@@ -15,7 +15,7 @@ class Ability
       # but can only read, create and update charts (ie they cannot
       # be destroyed or have any other actions from the charts_controller.rb
       # executed)
-      can [:read, :create, :update], [NewsItem, TrudGov, Housing]
+      can [:read, :create, :update], [Newspaper, NewsItem, TrudGov, Housing]
     else
       can :manage, [Advert, AdvertWork]
     end
