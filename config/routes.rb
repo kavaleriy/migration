@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "static/download2"
   get "static/download3"
   get "static/download4"
+  get "static/download5"
 
   get 'home/map'
 

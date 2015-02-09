@@ -52,4 +52,13 @@ class StaticController < ApplicationController
     )
   end
 
+  def download5
+    send_file(
+        "#{Rails.root}/public/Q&A_VPO_23.01.2015.doc",
+        filename: "Q&A_VPO_23.01.2015.doc",
+        type: "application/doc",
+        :x_sendfile=>true
+    )
+  end
+
 end

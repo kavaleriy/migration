@@ -19,6 +19,13 @@
   </p>
 
   <p>
+    <%= link_to static_download5_url, :class => "btn btn-default" do%>
+        <i class="fa fa-file-pdf-o"></i>
+        <%= t("layouts.banner.download5")%>
+    <%end%>
+  </p>
+
+  <p>
     <%= link_to static_download3_url, :class => "btn btn-default" do%>
         <i class="fa fa-file-pdf-o"></i>
         <%= t("layouts.banner.download3")%>
@@ -31,13 +38,15 @@
         <%= t("layouts.banner.download4")%>
     <%end%>
   </p>
+
 </div>
 
 <span class="banner col-sm-12" style="height: 80px;">
     <%= link_to home_newspapers_path, :class => "" do%>
       <div>
-        <i class="fa fa-newspaper-o"></i>
-        <%= t("layouts.newspapers")%>
+        <p style="opacity: 1; z-index: 2; color: #411600"><%= t("layouts.newspapers")%></p>
+        <p style="background: url('/assets/left/newspaper.jpg') 10px rgba(0, 0, 0, 0.5);opacity: 0.3; top: 0; left: 0; position: absolute; z-index: 1; width: 100%; height: 100%;"></p>
+
       </div>
     <%end%>
 </span>
@@ -45,8 +54,8 @@
 <span class="banner col-sm-12" style="height: 100px;">
     <%= link_to 'http://dmsu.gov.ua/informatsiya-dlya-pereselentsiv-iz-zoni-ato', {:class => "", :target => "_blank"} do%>
         <div>
-              Інформація для громадян, які втратили паспорт
-          <p style="background: url('http://static.dmsu.gov.ua/images/poslugi/passpor_grom.jpg') 10px;opacity: 1; top: 0; left: 0; position: absolute; z-index: -1; width: 100%; height: 100%;"></p>
+          <p style="opacity: 1; z-index: 2; color: #411600"><%= t("layouts.lost_passport")%></p>
+          <p style="background: url('http://static.dmsu.gov.ua/images/poslugi/passpor_grom.jpg') 10px;opacity: 0.2; top: 0; left: 0; position: absolute; z-index: 1; width: 100%; height: 100%;"></p>
         </div>
     <%end%>
 </span>
@@ -54,7 +63,7 @@
 <span class="banner col-sm-12" style="height: 125px;">
     <%= link_to 'http://www.minjust.gov.ua/50014', {:class => "", :target => "_blank"} do%>
         <div>
-          Інформація для фізичних осіб-підприємців з Донбасу
+          <%= t("layouts.entrepreneurs")%>
         </div>
     <%end%>
 </span>
