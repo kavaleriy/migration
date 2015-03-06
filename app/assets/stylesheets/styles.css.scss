@@ -75,7 +75,10 @@ h6 {
   padding: 20px 0 20px 20px;
 }
 
-
+.modal-header .close{
+  color: #000000;
+  margin-top: -10px;
+}
 
 .left {
   margin-left: -15px;
@@ -108,10 +111,19 @@ h6 {
   .roadmap {
     background-color: rgba(0,0,0, 0.08);
   }
-
+  .roadmap.panel-group a{
+    font-size: 14px;
+    white-space: normal;
+  }
+  .panel-body .btn{
+    padding: 9px 4px 8px 20px;
+  }
+  .lafa{
+    margin-left: -16px;
+  }
   .banner {
     padding: 0;
-    margin: 10px 0 20px 0px;
+    margin: 7px 0 15px;
     height: 110px;
     overflow: hidden;
     background-color: rgba(0,0,0, 0.07);

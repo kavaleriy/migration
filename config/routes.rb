@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get "static/download4"
   get "static/download5"
 
+
+
   get 'home/map'
 
   get 'report/amount_places'
