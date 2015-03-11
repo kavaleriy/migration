@@ -90,7 +90,8 @@ h6 {
   }
 
   .head {
-    margin-left: 12px;
+    text-align: center;
+    font-size: 18px;
   }
 
   a {
@@ -142,7 +143,11 @@ h6 {
   }
 }
 
-
+.fa-chevron-down, .fa-chevron-up{
+  color: #63390B;
+  margin-left: 45%;
+  cursor: pointer;
+}
 
 .sidebar {
   padding-right: 0;

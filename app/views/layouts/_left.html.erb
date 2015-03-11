@@ -1,7 +1,7 @@
 <img src="/assets/left/left_info_1.png" style="width: 100%"></img>
 <img src="/assets/left/left_info_3.png" style="width: 100%"></img>
 
-<div class="roadmap panel-group" id="accordion">
+<div class="roadmap panel-group accordion-caret accordion-group" id="accordion">
     <p class="head" style="margin-bottom: 0"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= t("layouts.banner.roadmap") %></a></p>
     <div id="collapseOne" class="panel-collapse collapse" style="margin-top: 0; padding: 0">
         <div class="panel-body" style="padding: 0">
@@ -39,10 +39,7 @@
 
               <a class="btn btn-default" href='/Посібник «Як вижити в зоні АТО».pdf' target="blank" style="word-wrap: break-word; display: block; white-space: normal">
                 <i class="fa fa-file-pdf-o lafa" style="margin-left: -16px"></i>
-
-
                         <%= t("layouts.banner.download6")%>
-
               </a>
             </p>
           <p>
@@ -71,54 +68,94 @@
           </p>
         </div>
     </div>
+  <i class="fa fa-chevron-down"></i>
 </div>
 
-<span class="banner col-sm-12" style="height: 75px;">
-    <%= link_to home_newspapers_path, :class => "" do%>
-      <div>
-        <p style="opacity: 1; z-index: 2; color: #411600"><%= t("layouts.newspapers")%></p>
-        <p style="background: url('/assets/left/newspaper.jpg') 10px rgba(0, 0, 0, 0.5);opacity: 0.3; top: 0; left: 0; position: absolute; z-index: 1; width: 100%; height: 100%;"></p>
 
-      </div>
-    <%end%>
-</span>
+<div class="roadmap panel-group accordion-caret accordion-group" id="accordion_banner">
+  <p class="head" style="margin-bottom: 0"><a class="collapsed" data-toggle="collapse" data-parent="#accordion_banner" href="#collapseOneBanner"><%= t("layouts.banner.infografics") %></a></p>
+  <div id="collapseOneBanner" class="panel-collapse collapse" style="margin-top: 0; padding: 0">
+    <div class="panel-body" style="padding: 0">
+      <p class="banner col-sm-12" style="height: 240px;">
+        <a href="#myModal" data-toggle="modal" name="banner_help.png" class="modal_link">
+            <%= t("layouts.help_evacuation")%>
+            <img src="/assets/left/banner_help.png" style="width: 100%; height: 100%">
+        </a>
+      </p>
+      <p class="banner col-sm-12" style="height: 155px;">
+        <a href="#myModal" data-toggle="modal" name="soc_zahyst_child.png" class="modal_link">
+            <%= t("layouts.child_welfare")%>
+            <img src="/assets/left/soc_zahyst_child.png" style="width: 100%; height: 100%">
+        </a>
+      </p>
+      <p class="banner col-sm-12" style="height: 200px;">
+        <a href="#myModal" data-toggle="modal" name="adoption.png" class="modal_link">
+          <%= t("layouts.adoption")%>
+          <img src="/assets/left/adoption.png" style="width: 100%; height: 100%">
+        </a>
+      </p>
+    </div>
+  </div>
+  <i class="fa fa-chevron-down"></i>
+</div>
 
-<span class="banner col-sm-12" style="height: 90px;">
-    <%= link_to 'http://dmsu.gov.ua/informatsiya-dlya-pereselentsiv-iz-zoni-ato', {:class => "", :target => "_blank"} do%>
-        <div>
-          <p style="opacity: 1; z-index: 2; color: #411600"><%= t("layouts.lost_passport")%></p>
-          <p style="background: url('http://static.dmsu.gov.ua/images/poslugi/passpor_grom.jpg') 10px;opacity: 0.2; top: 0; left: 0; position: absolute; z-index: 1; width: 100%; height: 100%;"></p>
+<div class="roadmap panel-group accordion-caret accordion-group" id="accordion_links">
+  <p class="head" style="margin-bottom: 0"><a class="collapsed" data-toggle="collapse" data-parent="#accordion_links" href="#collapseOneLinks"><%= t("layouts.banner.links") %></a></p>
+  <div id="collapseOneLinks" class="panel-collapse collapse" style="margin-top: 0; padding: 0">
+    <div class="panel-body" style="padding: 0">
+        <div class="banner col-sm-12" style="height: 75px;">
+            <%= link_to home_newspapers_path, :class => "" do%>
+              <div>
+                <p style="opacity: 1; z-index: 2; color: #411600"><%= t("layouts.newspapers")%></p>
+                <p style="background: url('/assets/left/newspaper.jpg') 10px rgba(0, 0, 0, 0.5);opacity: 0.3; top: 0; left: 0; position: absolute; z-index: 1; width: 100%; height: 100%;"></p>
+
+              </div>
+            <%end%>
         </div>
-    <%end%>
-</span>
-
-<span class="banner col-sm-12" style="height: 110px;">
-    <%= link_to 'http://www.minjust.gov.ua/50014', {:class => "", :target => "_blank"} do%>
-        <div>
-          <%= t("layouts.entrepreneurs")%>
+        <div class="banner col-sm-12" style="height: 90px;">
+            <%= link_to 'http://dmsu.gov.ua/informatsiya-dlya-pereselentsiv-iz-zoni-ato', {:class => "", :target => "_blank"} do%>
+                <div>
+                  <p style="opacity: 1; z-index: 2; color: #411600"><%= t("layouts.lost_passport")%></p>
+                  <p style="background: url('http://static.dmsu.gov.ua/images/poslugi/passpor_grom.jpg') 10px;opacity: 0.2; top: 0; left: 0; position: absolute; z-index: 1; width: 100%; height: 100%;"></p>
+                </div>
+            <%end%>
         </div>
-    <%end%>
-</span>
-<span class="banner col-sm-12" style="height: 95px;">
-    <%= link_to 'http://unhcr.org.ua/en/?option=com_content&view=article&layout=edit&id=1293', {:class => "", :target => "_blank"} do%>
-      <div>
-        <%= t("layouts.international_standards_help")%>
-      </div>
-    <%end%>
-</span>
-<span class="banner col-sm-12" style="height: 70px;">
-    <a href="#myModal" data-toggle="modal" name="soc_zahyst_child.png" class="modal_link">
-        <div>
-          <%= t("layouts.child_welfare")%>
+
+        <div class="banner col-sm-12" style="height: 110px;">
+            <%= link_to 'http://www.minjust.gov.ua/50014', {:class => "", :target => "_blank"} do%>
+                <div>
+                  <%= t("layouts.entrepreneurs")%>
+                </div>
+            <%end%>
         </div>
-    </a>
-</span>
-<span class="banner col-sm-12" style="height: 70px;">
-    <a href="#myModal" data-toggle="modal" name="adoption.png" class="modal_link">
-      <div>
-        <%= t("layouts.adoption")%>
-      </div>
-    </a>
-</span>
+        <div class="banner col-sm-12" style="height: 95px;">
+            <%= link_to 'http://unhcr.org.ua/en/?option=com_content&view=article&layout=edit&id=1293', {:class => "", :target => "_blank"} do%>
+              <div>
+                <%= t("layouts.international_standards_help")%>
+              </div>
+            <%end%>
+        </div>
+    </div>
+  </div>
+  <i class="fa fa-chevron-down"></i>
+</div>
 
 
+
+<script>
+$(document).ready(function(){
+    $('.collapsed').on('click', function () {
+        var icon = $(this).parent().parent().children('.fa');
+        console.log($(this).parent().parent());
+        if(icon.attr('class')=="fa fa-chevron-down"){
+            $(this).parent().parent().children('.fa').removeClass("fa-chevron-down").addClass("fa-chevron-up");
+        }
+        else{
+            $(this).parent().parent().children('.fa').removeClass("fa-chevron-up").addClass("fa-chevron-down");
+        }
+    });
+    $('.fa.fa-chevron-down').on('click', function () {
+        $(this).parent().find('.head a').click();
+    });
+});
+</script>
