@@ -60,5 +60,44 @@ class StaticController < ApplicationController
         :x_sendfile=>true
     )
   end
-
+  def download6
+    send_file(
+        "#{Rails.root}/public/Посібник «Як вижити в зоні АТО».pdf",
+        filename: "Посібник «Як вижити в зоні АТО».pdf",
+        type: "application/pdf",
+        :x_sendfile=>true
+    )
+  end
+  def download7
+    send_file(
+        "#{Rails.root}/public/Методичні рекомендацій для першої психологічної допомоги.pdf",
+        filename: "Методичні рекомендацій для першої психологічної допомоги.pdf",
+        type: "application/pdf",
+        :x_sendfile=>true
+    )
+  end
+  def download10
+    send_file(
+        "#{Rails.root}/public/migrants_buklet.pdf",
+        filename: "migrants_buklet.pdf",
+        type: "application/pdf",
+        :x_sendfile=>true
+    )
+  end
+  def download9
+    send_file(
+        "#{Rails.root}/public/посібник UNICEF для батьків та дітей щодо небезпеки мін.pdf",
+        filename: "посібник UNICEF для батьків та дітей щодо небезпеки мін.pdf",
+        type: "application/pdf",
+        :x_sendfile=>true
+    )
+  end
+  def download8
+    send_file(
+        "#{Rails.root}/public/плакат UNICEF для батьків та дітей щодо небезпеки мін.pdf",
+        filename: "плакат UNICEF для батьків та дітей щодо небезпеки мін.pdf",
+        type: "application/pdf",
+        :x_sendfile=>true
+    )
+  end
 end

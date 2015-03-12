@@ -22,9 +22,11 @@ Rails.application.routes.draw do
   get "static/download3"
   get "static/download4"
   get "static/download5"
-
-
-
+  get "static/download6"
+  get "static/download7"
+  get "static/download10"
+  get "static/download9"
+  get "static/download8"
   get 'home/map'
 
   get 'report/amount_places'
