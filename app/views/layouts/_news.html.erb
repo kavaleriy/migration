@@ -11,7 +11,7 @@
           <span><%= l issued, format: '%d %B' %></span> -
         <% end %>
         <a target="_blank" href="<%= Sanitize.clean(news_item.url, remove_contents: ['script']) %>">
-          <%= Sanitize.clean(news_item.content.html_safe, remove_contents: ['script']) %>
+          <%= Sanitize.fragment(news_item.content, Sanitize::Config::RELAXED).html_safe %>
         </a>
     </div>
 
