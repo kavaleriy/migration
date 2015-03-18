@@ -10,6 +10,7 @@ class Ability
       # an admin can do everything
       can :manage, :all
     elsif user.has_role? :editor
+      can :read, :all
       # an editor can do everything to documents and reports
       can :manage, [House]
       # but can only read, create and update charts (ie they cannot

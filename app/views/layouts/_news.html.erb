@@ -5,14 +5,24 @@
 <div class="news">
 <% @news_items.each do |news_item| %>
     <% issued = news_item.issued %>
+    <% text = Sanitize.fragment(news_item.content, Sanitize::Config::RELAXED).html_safe %>
 
     <div class="anons">
         <% if issued %>
           <span><%= l issued, format: '%d %B' %></span> -
         <% end %>
-        <a target="_blank" href="<%= Sanitize.clean(news_item.url, remove_contents: ['script']) %>">
-          <%= Sanitize.fragment(news_item.content, Sanitize::Config::RELAXED).html_safe %>
-        </a>
+        <% if not news_item.page.blank? %>
+          <a href="<%= news_item_path(news_item) %>">
+            <%= text %>
+          </a>
+        <% elsif news_item.url.blank? %>
+          <%= text %>
+        <% else %>
+          <a target="_blank" href="<%= Sanitize.clean(news_item.url, remove_contents: ['script']) %>">
+            <%= text %>
+          </a>
+        <% end %>
+
     </div>
 
 <% end %>

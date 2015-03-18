@@ -24,3 +24,7 @@ en:
   adverts:
 
   index:
+
+  news_items:
+    show:
+      details: "Details"

@@ -203,3 +203,6 @@ ru:
       title: "Работа"
     index:
       title: "Объявление о работе"
+  news_items:
+    show:
+      details: "Подробнее"
