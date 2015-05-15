@@ -68,6 +68,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'home#index'
 
+  match "*path", :to => "application#render_404", via: [:get]
+  #get match '/go/(*url)', to: redirect('/404')
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,6 +1,13 @@
+<% content_for :title, t(".name1") %>
 <div class="panel-default">
 <!-- Default panel contents -->
-<div class="panel-heading"><i class="fa fa-info-circle"></i> ДОВІДКОВА ІНФОРМАЦІЯ | Список регіональних підрозділів Державної міграційної служби</div>
+<div class="panel-heading">
+  <h1><%= t(".name1")%></h1>
+</div>
+<% content_for :breadcrombs_title, t("static.reference_title") %>
+<% content_for :breadcrombs_fa_class, "fa fa-info-circle" %>
+<% content_for :breadcrombs_second_title, t(".name1") %>
+
 <div class="panel-body">
 
     <table class="table table-striped management-dms" style="font-size: 13px; background: #fff;">

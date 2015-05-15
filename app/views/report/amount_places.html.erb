@@ -1,7 +1,10 @@
+<% content_for :title, t(".name1") %>
+<div class="panel-heading">
+  <h1><%= t(".name1")%></h1>
+</div>
+<% content_for :breadcrombs_title, t("report.main_title") %>
+<% content_for :breadcrombs_second_title, t(".name1") %>
 <h3>Звіт за <%= @dt %></h3>
-<h4>Загальна кількість місць для проживання</h4>
-
-
 <table class="table">
   <% @rep.each do |area| %>
   <tr>

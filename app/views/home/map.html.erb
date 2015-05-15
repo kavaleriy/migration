@@ -1,3 +1,4 @@
+<% content_for :title, t("home.menu.search_map") %>
 <% content_for :sub_menu do %>
     <div class="search-heading">
       <div class="col-md-4 active">
@@ -8,7 +9,9 @@
       </div>
     </div>
 <% end %>
-
+<div class="panel-heading">
+  <h1><%= t("home.menu.search_map") %></h1>
+</div>
 <div class="search-container row">
 
   <div id="mapdiv" class="row" style=" height:600px;">

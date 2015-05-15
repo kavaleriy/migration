@@ -1,3 +1,4 @@
+
 <% content_for :sub_menu do %>
     <div class="search-heading">
       <div class="col-md-4 active">
@@ -29,7 +30,9 @@
     </div>
 
 <% end %>
-
+<div class="panel-heading">
+  <h1><%= t("home.menu.search") %></h1>
+</div>
 <div class="search-container">
 
   <%= form_tag(root_path, method: "get", remote: true, class: 'search' ) do %>

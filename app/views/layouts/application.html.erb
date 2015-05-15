@@ -1,13 +1,23 @@
+<%  host = request.original_url.split(/[?]/)[0] %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Інформаційний ресурс для громадян" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : t('layouts.header.title') %></title>
     <%= csrf_meta_tags %>
-
+    <!-- link -->
+    <link rel="alternate" hreflang="uk" href="<%= host %>?locale=uk">
+    <% if(content_for?(:hreflang)) %>
+        <link rel="alternate" hreflang="ru" href="<%= request.base_url + yield(:hreflang) %>?locale=ru">
+        <link rel="alternate" hreflang="uk" href="<%= request.base_url + yield(:hreflang) %>?locale=uk">
+    <% else %>
+        <link rel="alternate" hreflang="ru" href="http://migrants.gov.ua/?locale=ru">
+        <link rel="alternate" hreflang="uk" href="http://migrants.gov.ua/?locale=uk">
+    <% end %>
     <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon">
+
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -53,6 +63,25 @@
       </div>
 
       <div class="main row">
+        <% if(content_for?(:breadcrombs_second_title)) %>
+            <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs">
+              <a href="http://migrants.gov.ua" itemprop="url" style="float: left; display: block">
+                <span itemprop="title">
+                  <%= t("static.main_title")%>
+                  <% if(content_for?(:breadcrombs_title)) %>
+                      | <i class="<%= yield(:breadcrombs_fa_class) %>"></i> <%= yield(:breadcrombs_title) %>
+                  <% end %>
+                </span>
+              </a>
+              <div itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="float: left">
+                &nbsp; › &nbsp;
+                <a href="http://migrants.gov.ua<%= static_sz_path %>" itemprop="url">
+                  <span itemprop="title"><%= yield(:breadcrombs_second_title) %></span>
+                </a>
+              </div>
+              <div class="clear"></div>
+            </div>
+        <% end %>
         <div class="left col-md-2 col-sm-12 col-xs-12">
           <%= render :partial => 'layouts/left' %>
         </div>
