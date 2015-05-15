@@ -80,12 +80,26 @@
 </head>
 <body>
 <div class="container">
+    <div class="header row">
+        <div itemscope itemtype="http://schema.org/Organization" class="logo pull-left">
+            <a itemprop="url" href="http://migrants.gov.ua">
+                <img itemprop="logo" alt="Информация для переселенцев и беженцев из АР Крым и зоны АТО" width="539" height="83" src="http://migrants.gov.ua/assets/logo-1d991a84120300a039498089f98a981b.png" />
+            </a>
+        </div>
+        <a class="pull-right" target="_blank" href="http://ukc.gov.ua/">
+            <div class="hot_phone">
+            </div>
+        </a>
+        <div class="clearfix"></div>
+    </div>
+    <div class="menu row">
+        <%= render :partial => 'layouts/menu' %>
+    </div>
     <div class="dialog">
         <div>
-            <h1>The page you were looking for doesn't exist.</h1>
-            <p>You may have mistyped the address or the page may have moved.</p>
+            <h1>На жаль сторінку не знайдено.<br><br>404</h1>
         </div>
-        <p>If you are the application owner check the logs for more information.</p>
+        <p>The page you were looking for doesn't exist.</p>
     </div>
 </div>
 </body>

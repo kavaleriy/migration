@@ -29,4 +29,16 @@ class ApplicationController < ActionController::Base
     @news_items = NewsItem.where(:published => true).paginate(:page => params[:page], :per_page => 25)
   end
 
+  def action
+    # here the code
+
+    render :status => 404
+  end
+  def render_404
+    respond_to do |format|
+      format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
+      format.xml  { head :not_found }
+      format.any  { head :not_found }
+    end
+  end
 end

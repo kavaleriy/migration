@@ -3035,7 +3035,7 @@ input[type="button"].btn-block {
   overflow: hidden;
   background-color: #e5e5e5;
 }
-.dropdown-menu > li > a {
+.dropdown-menu > li > a, .dropdown-menu > li > noindex > a {
   display: block;
   padding: 3px 20px;
   clear: both;
@@ -4938,6 +4938,10 @@ a.list-group-item-danger.active:focus {
 }
 .panel-group .panel-heading {
   border-bottom: 0;
+}
+.panel-heading h1{
+    margin: 0;
+    font-size: 32px;
 }
 .panel-group .panel-heading + .panel-collapse .panel-body {
   border-top: 1px solid #dddddd;

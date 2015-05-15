@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://migrants.gov.ua/</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/centers</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/sz</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/dms</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/zd</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/report/amount_places</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/report/amount_by_type</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/home/map</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download1</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download2</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download3</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download4</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download6</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download7</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download10</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download9</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download8</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/home_newspapers</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/?locale=ru</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/centers?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/sz?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/dms?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/zd?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/report/amount_places?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/report/amount_by_type?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/home/map?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download1?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download2?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download3?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download4?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download6?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download7?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download10?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download9?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/static/download8?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://migrants.gov.ua/home_newspapers?locale=ru</loc>
+  <priority>0.64</priority>
+</url>
+</urlset>
