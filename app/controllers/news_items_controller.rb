@@ -17,7 +17,7 @@ class NewsItemsController < ApplicationController
 
   # GET /news_items/new
   def new
-    @news_item = NewsItem.new
+    @news_item = NewsItem.new(:issued => Date.today)
   end
 
   # GET /news_items/1/edit
@@ -72,6 +72,6 @@ class NewsItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_item_params
-      params.require(:news_item).permit(:issued, :content, :url, :published, :boost)
+      params.require(:news_item).permit(:issued, :content, :url, :page, :published, :boost)
     end
 end

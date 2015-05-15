@@ -225,3 +225,6 @@ uk:
       title: "Робота"
     index:
       title: "Оголошення про роботу"
+  news_items:
+    show:
+      details: "Детальніше"

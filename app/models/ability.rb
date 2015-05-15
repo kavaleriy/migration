@@ -10,12 +10,13 @@ class Ability
       # an admin can do everything
       can :manage, :all
     elsif user.has_role? :editor
+      can :read, :all
       # an editor can do everything to documents and reports
       can :manage, [House]
       # but can only read, create and update charts (ie they cannot
       # be destroyed or have any other actions from the charts_controller.rb
       # executed)
-      can [:read, :create, :update], [Newspaper, NewsItem, TrudGov, Housing]
+      can [:read, :create, :update], [Newspaper, NewsItem, TrudGov, Housing, Advert, AdvertWork]
     else
       can :manage, [Advert, AdvertWork]
     end
