@@ -4,12 +4,16 @@
 </div>
 
 <% content_for :breadcrombs_second_title, t('layouts.menu.centers') %>
-<h4><i class="fa fa-exclamation"></i> <%= t(".head") %></h4>
-
-<hr>
-<h4><%= t(".sdm") %></h4>
-
-<hr>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <i class="fa fa-exclamation"></i> <%= t(".head") %>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= t(".sdm") %>
+  </div>
+</div>
 
 <table class="table col-md-12 table-striped" style="background-color: #f2f2f2;" border="0" cellspacing="0" cellpadding="0">
   <tbody>
@@ -18,9 +22,9 @@
 
       <p class="TableParagraph"><strong>п/п</strong></p></td>
     <td width="288" valign="top">
-      <p class="TableParagraph"><strong>Р</strong><strong>егі</strong><strong>о</strong><strong>н</strong></p></td>
+      <p class="TableParagraph"><strong>Регіон</strong></p></td>
     <td width="295" valign="top"><p class="TableParagraph">
-      <strong>Кон</strong><strong>т</strong><strong>ак</strong><strong>т</strong><strong>ний</strong><strong> </strong><strong>те</strong><strong>лефон</strong>
+      <strong>Контакний телефон</strong>
     </p></td>
   </tr>
   <tr style="text-align: center;">
