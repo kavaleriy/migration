@@ -22,7 +22,10 @@
           <%= housing[:address] %>
         <% end %>
       </td>
-      <td><%= housing.house.name %></td>
+      <td><%= housing.house.name %>
+        <br/>
+        <small>тел. <%= housing.phone %></small>
+      </td>
       <td>
 
         <a href="<%= static_centers_path %>#tel_0510100000"><%= housing.qty_places %></a> /
