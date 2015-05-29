@@ -36,8 +36,6 @@ class HomeController < ApplicationController
 
     @housings = @housings.order('koatuu_code').paginate(:page => params[:page]) if @housings
 
-
-
     @adverts = Advert.where('qty_places > 0')
     @adverts = @adverts.where("koatuu_code like ?", "#{koatuu}%") unless koatuu.empty?
     @adverts = @adverts.where(:has_school => 1) unless scool.nil?
@@ -50,9 +48,8 @@ class HomeController < ApplicationController
     @advert_works = AdvertWork.all
     @advert_works = @advert_works.includes(:advert).references(:advert).where("adverts.koatuu_code like ?", "#{koatuu}%") unless koatuu.empty?
     @advert_works = @advert_works.includes(:profession).references(:profession).where("professions.id" => params[:home_search_rubric]) unless params[:home_search_rubric].empty?
-    @advert_works = @advert_works.where("datetime(created_at) >= ?",  Date.current - 3.months)
+    @advert_works = @advert_works.where("datetime(:created_at) >= ?",  Date.current - 3.months)
 
-    # binding.pry
     @advert_works = @advert_works.order(created_at: :desc).paginate(:page => params[:advert_works_page]) if @advert_works
   end
 end

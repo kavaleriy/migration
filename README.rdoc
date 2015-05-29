@@ -42,6 +42,7 @@ RAILS_ENV=test rake db:migrate
 RAILS_ENV=test rake koatuu:load
 RAILS_ENV=test rake koatuu:export_trud
 RAILS_ENV=test rake vacancies:crawl
+
 RAILS_ENV=test unicorn -p 80 -c config/unicorn.rb -D
 
 20140714
